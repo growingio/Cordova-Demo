@@ -33,12 +33,12 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         app.initGrowingIO();
-        alert('track');
+
+
     },
 
     onDeviceResume: function() {
-        app.initGrowingIO();
-        alert('track');
+        // app.initGrowingIO();
     },
 
     // Update DOM on a Received Event
@@ -66,64 +66,62 @@ var app = {
         var onFail = function(msg) {
           alert(msg);
         };
-        gio.page('pagename');
-        gio.setPageVariable('pagename', {"key":"value"});
 
         document.getElementById("track1").addEventListener("click", function() {
-            alert('track');
-            gio.track("purchase", onSucc, onFail);
+           
+            gio.track("", onSucc, onFail);
+              alert('调用了track');
         });
 
         document.getElementById("track2").addEventListener("click", function() {
-            alert('track');
-            gio.track("purchase", 234234.123123, onSucc, onFail);
+
+            gio.track("track2", 234234.123123, onSucc, onFail);
         });
 
         document.getElementById("track3").addEventListener("click", function() {
-            alert('track');
-            gio.track('order', {'prodId':'pid121212'}, onSucc, onFail);
+
+            gio.track('track3', {'prodId':'pid121212'}, onSucc, onFail);
         });
 
         document.getElementById("track4").addEventListener("click", function() {
-            alert('track');
-            gio.track("purchase", 234234344.22, { item: '123' }, onSucc, onFail);
+
+            gio.track("track4", 234234344.22, { item: '123' }, onSucc, onFail);
         });
 
         document.getElementById("trackWithNumber").addEventListener("click", function() {
-            alert('trackWithNumber');
 
-            gio.track("purchase", { item: '123' }, onSucc, onFail);
+            gio.track("trackWithNumber", { item: '123' }, onSucc, onFail);
         });
 
         document.getElementById("setEvar").addEventListener("click", function() {
-            alert('setEvar');
-            gio.setEvar({'campaignId':'1234567890', 'campaignOwner':'李四'});
+
+            gio.setEvar({'campaignId':'setEvar', 'campaignOwner':'李四'}, onSucc, onFail);
 
         });
 
         document.getElementById("page").addEventListener("click", function() {
-            alert('page');
-            gio.page('我的天啊');
+
+            gio.page('pageeeeeee',onSucc,onFail);
         });
 
         document.getElementById("setPeopleVariable").addEventListener("click", function() {
-            alert('setPeopleVariable');
-            gio.setPeopleVariable({'VIPLevel':'Silver', 'gender':'male'});
+
+            gio.setPeopleVariable({'这是中文中文':'setPeopleVariable', 'gender':'male'}, onSucc, onFail);
         });
 
         document.getElementById("setPageVariable").addEventListener("click", function() {
-            alert('setPageVariable');
-            gio.setPageVariable('这是page',{'pageName': 'Home Page', 'author': 'Zhang San'})
+
+            gio.setPageVariable('中文中文',{'setPageVariable': 'Home Page', 'author': 'Zhang San'}, onSucc, onFail)
         });
 
         document.getElementById("setUserId").addEventListener("click", function() {
-            alert('setUserId');
-            gio.setUserId('王颖颖');
+
+            gio.setUserId('中文中文', onSucc, onFail);
         });
 
         document.getElementById("clearUserId").addEventListener("click", function() {
-            alert('clearUserId');
-            gio.clearUserId();
+
+            gio.clearUserId(onSucc, onFail);
         });
 
       } catch(err) {

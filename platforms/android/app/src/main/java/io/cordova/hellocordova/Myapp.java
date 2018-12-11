@@ -18,7 +18,6 @@ public class Myapp extends Application {
         super.onCreate();
         GrowingIO.startWithConfiguration(this, new Configuration()
                 .setChannel("XXX应用商店")
-                .setTestMode(true)
-                .setDebugMode(true));
+                .setTestMode(true));
     }
 }
