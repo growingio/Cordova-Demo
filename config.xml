@@ -23,8 +23,8 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-growingio" spec="~1.2.0" />
     <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="4.5.4" />
     <engine name="browser" spec="^5.0.3" />
+    <plugin name="cordova-plugin-growingio" spec="~1.2.0" />
 </widget>

@@ -1,0 +1,1 @@
+../../../../GrowingCoreKit/GrowingCoreKit/GrowingCoreKit.framework/Headers/GrowingCoreKit.h

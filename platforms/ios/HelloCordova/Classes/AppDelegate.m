@@ -33,9 +33,11 @@
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    
-     [Growing startWithAccountId:@"0a1b4118dd954ec3bcc69da5138bdb96"];
-    
+    //启动GrowingIO，替换为您的ID
+     [Growing startWithAccountId:@"您的项目ID"];
+    // 其他配置
+    // 开启Growing调试日志可以开启日志
+    // [Growing setEnableLog:YES];
     
     self.viewController = [[MainViewController alloc] init];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];

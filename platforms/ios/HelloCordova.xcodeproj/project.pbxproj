@@ -5,7 +5,9 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
+		051BEB196E304AC3908C65F0 /* GrowingIOCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD66D51C6F74E1CAFBA54F7 /* GrowingIOCordovaPlugin.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
@@ -20,9 +22,7 @@
 		6E89F39E20529C9900D91521 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89F39D20529C9900D91521 /* libicucore.tbd */; };
 		6E89F3A020529CA300D91521 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89F39F20529CA300D91521 /* libsqlite3.tbd */; };
 		6E89F3A220529CAF00D91521 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89F3A120529CAF00D91521 /* CoreLocation.framework */; };
-		6E89F3A520529CFE00D91521 /* libGrowing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89F3A320529CFE00D91521 /* libGrowing.a */; };
 		6EE85B7D2052A556008DD5E0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE85B7C2052A556008DD5E0 /* Launch Screen.storyboard */; };
-		051BEB196E304AC3908C65F0 /* GrowingIOCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD66D51C6F74E1CAFBA54F7 /* GrowingIOCordovaPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,18 +68,16 @@
 		6E89F39D20529C9900D91521 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6E89F39F20529CA300D91521 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6E89F3A120529CAF00D91521 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		6E89F3A320529CFE00D91521 /* libGrowing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGrowing.a; sourceTree = "<group>"; };
-		6E89F3A420529CFE00D91521 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
 		6EE85B7C2052A556008DD5E0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A145A5873875EFE05D8164D5 /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD66D51C6F74E1CAFBA54F7 /* GrowingIOCordovaPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GrowingIOCordovaPlugin.m; path = "cordova-plugin-growingio/GrowingIOCordovaPlugin.m"; sourceTree = "<group>"; };
 		C27B76BE9557FA3CBB11DFA9 /* Pods-HelloCordova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCordova.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCordova/Pods-HelloCordova.release.xcconfig"; sourceTree = "<group>"; };
 		CF139C3FC640CD05C46895C8 /* Pods-HelloCordova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloCordova.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloCordova/Pods-HelloCordova.debug.xcconfig"; sourceTree = "<group>"; };
+		D2C6C0C9E3604907BAAA121E /* GrowingIOCordovaPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GrowingIOCordovaPlugin.h; path = "cordova-plugin-growingio/GrowingIOCordovaPlugin.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
-		AFD66D51C6F74E1CAFBA54F7 /* GrowingIOCordovaPlugin.m */ = {isa = PBXFileReference; name = "GrowingIOCordovaPlugin.m"; path = "cordova-plugin-growingio/GrowingIOCordovaPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		D2C6C0C9E3604907BAAA121E /* GrowingIOCordovaPlugin.h */ = {isa = PBXFileReference; name = "GrowingIOCordovaPlugin.h"; path = "cordova-plugin-growingio/GrowingIOCordovaPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 				6E89F3A020529CA300D91521 /* libsqlite3.tbd in Frameworks */,
 				6E89F39E20529C9900D91521 /* libicucore.tbd in Frameworks */,
 				6E89F39C20529C8D00D91521 /* AdSupport.framework in Frameworks */,
-				6E89F3A520529CFE00D91521 /* libGrowing.a in Frameworks */,
 				6E89F39A20529C8300D91521 /* SystemConfiguration.framework in Frameworks */,
 				6E89F39820529C7A00D91521 /* CoreTelephony.framework in Frameworks */,
 				6E89F39620529C7100D91521 /* Security.framework in Frameworks */,
@@ -129,8 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				6EE85B7C2052A556008DD5E0 /* Launch Screen.storyboard */,
-				6E89F3A420529CFE00D91521 /* Growing.h */,
-				6E89F3A320529CFE00D91521 /* libGrowing.a */,
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
 				EB87FDF11871DA420020F90C /* Staging */,
@@ -414,6 +409,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.hellocordova.a;
 				PRODUCT_NAME = HelloCordova;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -443,6 +439,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.hellocordova.a;
 				PRODUCT_NAME = HelloCordova;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

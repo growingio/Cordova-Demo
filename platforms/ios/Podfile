@@ -6,6 +6,9 @@ target 'HelloCordova' do
   # use_frameworks!
 
   # Pods for HelloCordova
-#  pod 'GrowingIO'
+  
+pod 'GrowingCoreKit'
 
 end
+
+

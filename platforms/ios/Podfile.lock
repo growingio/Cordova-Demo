@@ -1,3 +1,15 @@
-PODFILE CHECKSUM: 886782e35572a79f84c900c3aa5df5a91308ff4b
+PODS:
+  - Growing (2.6.4)
+  - GrowingCoreKit (2.6.4):
+    - Growing (~> 2.6.4)
+
+DEPENDENCIES:
+  - GrowingCoreKit
+
+SPEC CHECKSUMS:
+  Growing: b7367780b8bc61476de1f52fe2b04887a203e7cd
+  GrowingCoreKit: 904fd258f462b52b6b7b37a29051ad3eb5aa2fcc
+
+PODFILE CHECKSUM: cd73238d84429ad97666cd071e223a2a63688c01
 
 COCOAPODS: 1.4.0

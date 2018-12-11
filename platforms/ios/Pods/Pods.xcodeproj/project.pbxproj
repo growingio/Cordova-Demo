@@ -12,10 +12,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		588AF1A42BF9AF0C8C145ED52175904E /* GrowingCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowingCoreKit.framework; path = GrowingCoreKit/GrowingCoreKit.framework; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F3217B9BF6004EEDA25CDBB2F389539 /* Pods-HelloCordova-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HelloCordova-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EC87CC0FD86A169EB0600755B9C7A7C /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HelloCordova.a"; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A613CB0F79A9F38BF933244BF7819D27 /* Growing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Growing.h; path = PublicHeader/Growing.h; sourceTree = "<group>"; };
 		B3CC54CC4CA3C27E438986C02677B9D2 /* Pods-HelloCordova-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HelloCordova-frameworks.sh"; sourceTree = "<group>"; };
 		BE4055063B44379921328530D4DAEFD7 /* Pods-HelloCordova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloCordova.release.xcconfig"; sourceTree = "<group>"; };
 		C11762970E8663E83E8272B64E1255E4 /* Pods-HelloCordova-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HelloCordova-dummy.m"; sourceTree = "<group>"; };
@@ -36,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD9AA24BAC0F1B9332A1F94ECDA60B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1DD5BEF82221F9192CF046838D529 /* Growing */,
+				849D739A7D47A3B8347B8A1EC3782DAE /* GrowingCoreKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		51F5C2A3EDEC874ADFD71A277A761C69 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,9 +60,27 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1FD9AA24BAC0F1B9332A1F94ECDA60B7 /* Pods */,
 				F39E5E5EFB267488C8B9178927CD705B /* Products */,
 				51F5C2A3EDEC874ADFD71A277A761C69 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8022A3852AED93E491A827E3FCF5091A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				588AF1A42BF9AF0C8C145ED52175904E /* GrowingCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849D739A7D47A3B8347B8A1EC3782DAE /* GrowingCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				8022A3852AED93E491A827E3FCF5091A /* Frameworks */,
+			);
+			name = GrowingCoreKit;
+			path = GrowingCoreKit;
 			sourceTree = "<group>";
 		};
 		AA2182B89435096F81E44FF7F5ECAF0C /* Pods-HelloCordova */ = {
@@ -83,6 +112,15 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D4E1DD5BEF82221F9192CF046838D529 /* Growing */ = {
+			isa = PBXGroup;
+			children = (
+				A613CB0F79A9F38BF933244BF7819D27 /* Growing.h */,
+			);
+			name = Growing;
+			path = Growing;
 			sourceTree = "<group>";
 		};
 		F39E5E5EFB267488C8B9178927CD705B /* Products */ = {

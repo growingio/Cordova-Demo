@@ -29,11 +29,11 @@ NS_INLINE NSString *GROWGetTimestamp() {
         id userId = arguments[0];
         if ([userId isKindOfClass:[NSString class]]) {
             [self dispatchInMainThread:^{
-                [Growing setPluginUserId:userId];
+                [Growing setUserId:userId];
             }];
         } else if ([userId isKindOfClass:[NSNumber class]]) {
             [self dispatchInMainThread:^{
-                [Growing setPluginUserId:((NSNumber *)userId).stringValue];
+                [Growing setUserId:((NSNumber *)userId).stringValue];
             }];
         } else {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument userId must be string or number type"];
@@ -49,7 +49,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
     CDVPluginResult * pluginResult = nil;
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"clearUserId success"];
     [self dispatchInMainThread: ^{
-        [Growing clearPluginUserId];
+        [Growing clearUserId];
     }];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -98,7 +98,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
     if (arguments.count == 1) {
         NSString *pageName = arguments[0];
         [self dispatchInMainThread:^{
-            [Growing trackPageWithPageName:pageName pageTime:GROWGetTimestamp()];
+//            [Growing trackPageWithPageName:pageName pageTime:GROWGetTimestamp()];
         }];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
@@ -127,7 +127,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
         NSString *pageName = arguments[0];
         NSDictionary *pageLevelVariables = arguments[1];
         [self dispatchInMainThread:^{
-            [Growing setPageVariable:pageLevelVariables toPage:pageName];
+//            [Growing setPageVariable:pageLevelVariables toPage:pageName];
         }];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
