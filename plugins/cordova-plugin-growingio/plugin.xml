@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-growingio"
+        version="1.2.0">
+
+    <name>GrowingIO</name>
+
+    <description>GrowingIO Cordova Plugin</description>
+
+    <author>Deng Huaxin</author>
+    <keywords>growingio, cordova, phonegap, ionic, plugin, android, ios</keywords>
+
+    <js-module src="www/growingio.js" name="GrowingIO">
+        <clobbers target="growingio"/>
+    </js-module>
+
+
+    <platform name="android">
+
+        <!-- config.xml -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GrowingIO">
+                <param name="android-package" value="com.growingio.android.GrowingIOCordovaPlugin"/>
+            </feature>
+        </config-file>
+
+        <!-- Plugin files -->
+        <source-file src="src/com/growingio/android/GrowingIOCordovaPlugin.java" target-dir="src/com/growingio/android/"/>
+
+        <!-- AndroidManifest.xml -->
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        </config-file>
+
+    </platform>
+    <platform name="ios">
+        
+        <!-- config.xml -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="GrowingIO">
+                <param name="ios-package" value="GrowingIOCordovaPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        
+        <!-- Plugin files-->
+        <header-file src="src/com/growingio/ios/GrowingIOCordovaPlugin.h"/>
+        <source-file src="src/com/growingio/ios/GrowingIOCordovaPlugin.m"/>
+    </platform>
+
+</plugin>
