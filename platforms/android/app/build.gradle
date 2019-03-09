@@ -270,7 +270,7 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     // SUB-PROJECT DEPENDENCIES END
 
-    compile 'com.growingio.android:vds-android-agent:track-2.6.3@aar'
+    compile 'com.growingio.android:vds-android-agent:track-2.7.0@aar'
     compile 'com.android.support:support-fragment:24.2.0'
 
 }

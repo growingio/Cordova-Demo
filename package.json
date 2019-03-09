@@ -12,9 +12,8 @@
     "dependencies": {
         "cordova-android": "^7.0.0",
         "cordova-browser": "^5.0.3",
-        "cordova-growingio-plugin": "^1.2.2",
+        "cordova-growingio-plugin": "^2.7.0",
         "cordova-ios": "4.5.4",
-        "cordova-plugin-growingio": "~1.2.0",
         "cordova-plugin-whitelist": "^1.3.3"
     },
     "cordova": {

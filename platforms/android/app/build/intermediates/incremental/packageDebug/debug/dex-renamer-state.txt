@@ -1,0 +1,4 @@
+#Sat Mar 09 10:55:08 CST 2019
+base.0=/Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

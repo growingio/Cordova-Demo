@@ -47,7 +47,6 @@ __内容__
 1. 打开 `APP/build.gradle` 文件，并且加入以下代码
 
 ```
-    apply plugin: 'com.android.application'
     android {
        defaultConfig {
           resValue("string", "growingio_project_id", "您的项目 ID")
@@ -55,7 +54,7 @@ __内容__
        }
     }
     dependencies {
-        compile 'com.growingio.android:vds-android-agent:2.3.0@aar'
+        compile 'com.growingio.android:vds-android-agent:track-2.6.0@aar'
     }
 ```
 
@@ -97,9 +96,10 @@ __内容__
 >
 > 网络访问权限
 >
-> 为了使用 GrowingIO 采集行为数据，你的应用程序需要具有网络访问权限，所以你需要添加以下两个权限。<br/>
+> 为了使用 GrowingIO 采集行为数据，你的应用程序需要具有网络访问权限和悬浮窗权限(悬浮窗权限时Debugger期间使用的)，所以你需要添加以下权限。<br/>
 > `<uses-permission android:name="android.permission.INTERNET" />`<br/>
 > `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
+> `<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>`
 >
 
 <br/>
@@ -297,6 +297,25 @@ gio.clearUserId();
 gio.setPeopleVariable({ name: '玎玎', email: 'dingding@growingio.com' })
 ```
 
+
+### 设置访问级别变量
+
+##### setVisitor(visitorVariables, onSuccess, onFail)
+设置访问用户有关的属性
+
+##### 参数说明
+
+| 参数名           | 类型    | 是否必填 | 描述     |
+| :----:           | :-----: | :------: | :----:   |
+| visitorVariables | Object  | 是       | 用户属性 |
+| onSuccess | Function | 否 | 设置成功后触发的回调函数 |
+| onFail    | Function | 否 | 设置失败后触发的回调函数 |
+
+##### 实例 
+```
+gio.setVisitor({'testversion': '开启日志'})
+```
+
 ### 设置转化变量
 
 #### setEvar(conversionVariables, onSuccess, onFail)
@@ -315,44 +334,4 @@ gio.setPeopleVariable({ name: '玎玎', email: 'dingding@growingio.com' })
 
 ```
 gio.setEvar({ campaign: 'XXX' })
-```
-### 发送page事件
-
-#### page(page, onSuccess, onFail)
-
-
-
-##### 参数说明
-
-| 参数名 | 类型  | 是否必填 | 描述  |
-| :-----: | :------: | :------: | :-----: |
-| page | String | 是  | 转化级属性 |
-| onSuccess | Function | 否 | 设置成功后触发的回调函数 |
-| onFail    | Function | 否 | 设置失败后触发的回调函数 |
-
-##### 示例
-
-```
-gio.page('mainPage')
-```
-
-### 页面级变量
-
-#### setPageVariable(page, pageLevelVariables, onSuccess, onFail)
-
-
-
-##### 参数说明
-
-| 参数名 | 类型  | 是否必填 | 描述  |
-| :-----: | :------: | :------: | :-----: |
-| page | String | 是  |   |
-| pageLevelVariables | Object | 是  |   |
-| onSuccess | Function | 否 | 设置成功后触发的回调函数 |
-| onFail    | Function | 否 | 设置失败后触发的回调函数 |
-
-##### 示例
-
-```
-gio.setPageVariable('mainPage', {type : '商品'})
 ```

@@ -24,24 +24,6 @@ GrowingIO.clearUserId = function(onSuccess, onFail) {
     exec(onSuccess, onFail, 'GrowingIO', 'clearUserId', []);
 }
 
-GrowingIO.page = function(page, onSuccess, onFail) {
-	if ((!page || typeof page != 'string') && typeof(onFail) === 'function') {
-		return onFail(errors.invalid('page', page));
-	}
-	exec(onSuccess, onFail, 'GrowingIO', 'page', [page]);
-}
-
-
-GrowingIO.setPageVariable = function(page, pageLevelVariables, onSuccess, onFail){
-	if ((!page || typeof page != 'string') && typeof(onFail) === 'function') {
-		return onFail(errors.invalid('page', page));
-	}
-	if ((!pageLevelVariables || typeof(pageLevelVariables) != 'object') && typeof(onFail) === 'function') {
-		return onFail(errors.invalid('pageLevelVariables', pageLevelVariables));
-	}
-	exec(onSuccess, onFail, 'GrowingIO', 'setPageVariable', [page, pageLevelVariables]);
-}
-
 GrowingIO.setEvar = function(conversionVariables, onSuccess, onFail){
 	if ((!conversionVariables || typeof(conversionVariables) != 'object') && typeof(onFail) === 'function') {
 		return onFail(errors.invalid('conversionVariables', conversionVariables));
@@ -54,6 +36,13 @@ GrowingIO.setPeopleVariable = function(peopleVariables, onSuccess, onFail){
 		return onFail(errors.invalid('peopleVariables', peopleVariables));
 	}
 	exec(onSuccess, onFail, 'GrowingIO', 'setPeopleVariable', [peopleVariables]);
+}
+
+GrowingIO.setVisitor = function(visitorVariables, onSuccess, onFail){
+	if ((!visitorVariables || typeof(visitorVariables) != 'object') && typeof(onFail) === 'function') {
+		return onFail(errors.invalid('visitorVariables', peopleVariables));
+	}
+	exec(onSuccess, onFail, 'GrowingIO', 'setVisitor', [peopleVariables]);
 }
 
 module.exports = GrowingIO;

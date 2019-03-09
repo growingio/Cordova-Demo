@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Values from default config. -->
+    <string name="growingio_project_id" translatable="false">您的项目id</string>
+    <string name="growingio_url_scheme" translatable="false">您的 URL scheme</string>
+
+</resources>

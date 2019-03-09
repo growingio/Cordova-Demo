@@ -22,13 +22,13 @@ import java.util.Map;
 
 public class GrowingIOCordovaPlugin extends CordovaPlugin{
     private final static String TAG = "GIO.CordovaPlugin";
+    private String trackPageName = null;
 
     private enum Action {
         SETUSERID("setUserId"),
         CLEARUSERID("clearUserId"),
         TRACK("track"),
-        PAGE("page"),
-        SETPAGEVARIABLE("setPageVariable"),
+	SETVISITOR("setVisitor"),
         SETEVAR("setEvar"),
         SETPEOPLEVARIABLE("setPeopleVariable");
 
@@ -73,58 +73,17 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
                 return cleanUserId(args, callbackContext);
             case TRACK:
                 return track(args, callbackContext);
-            case PAGE:
-                return page(args, callbackContext);
-            case SETPAGEVARIABLE:
-                return setPageVariable(args, callbackContext);
             case SETEVAR:
                 return setEvar(args, callbackContext);
             case SETPEOPLEVARIABLE:
                 return setPeopleVariable(args, callbackContext);
+	    case SETVISITOR:
+		return setVisitor(args, callbackContext);
         }
         return false;
     }
 
-    private boolean page(JSONArray jsonArray, CallbackContext callbackContext) {
-        try {
-            if (jsonArray.length() == 0) {
-                callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-                return false;
-            }
-            String pageName = jsonArray.optString(0);
-            if (TextUtils.isEmpty(pageName)) {
-                callbackContext.error("page of GrowingIO.page() can not be empty!");
-                return false;
-            }
-            GrowingIO.getInstance().trackPage(pageName);
-            return true;
-        } catch (Exception e) {
-            callbackContext.error(e.getMessage());
-            e.printStackTrace();
-        }
-        return false;
-    }
 
-    private boolean setPageVariable(JSONArray jsonArray, CallbackContext callbackContext) {
-        if (jsonArray.length() == 0) {
-            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-            return false;
-        }
-        try {
-            if (jsonArray.opt(0) != null && jsonArray.opt(0) instanceof String) {
-                if (jsonArray.opt(1) != null && jsonArray.opt(1) instanceof JSONObject) {
-                    GrowingIO.getInstance().setPageVariable(jsonArray.optString(0), jsonArray.optJSONObject(1));
-                    return true;
-                }
-            }
-            callbackContext.error("Argment error!");
-            return false;
-        } catch (Throwable e) {
-            callbackContext.error(e.getMessage());
-            e.printStackTrace();
-        }
-        return false;
-    }
 
     private boolean setPeopleVariable(JSONArray jsonArray, CallbackContext callbackContext) {
         if (jsonArray.length() == 0) {
@@ -144,6 +103,25 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
         }
         return true;
     }
+
+	private boolean setVisitor(JSONArray jsonArray, CallbackContext callbackContext) {
+		        if (jsonArray.length() == 0) {
+            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
+            return false;
+        }
+        try {
+            if (jsonArray.get(0) != null && jsonArray.get(0) instanceof JSONObject) {
+                GrowingIO.getInstance().setVisitor((JSONObject) jsonArray.get(0));
+            } else {
+                callbackContext.error("The argment must be JSONObject!");
+                return false;
+            }
+        } catch (JSONException e) {
+            callbackContext.error(e.getMessage());
+            e.printStackTrace();
+        }
+        return true;
+	}
 
     private boolean setEvar(JSONArray jsonArray, CallbackContext callbackContext) {
         if (jsonArray.length() == 0) {
@@ -199,18 +177,23 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
                 callbackContext.error("Argment error, The length of JSONArray can not be 0!");
                 return false;
             }
-            if (jsonArray.opt(0) != null && jsonArray.opt(0) instanceof String) {
-                if (jsonArray.opt(1) != null && jsonArray.opt(1) instanceof Number) {
-                    if (jsonArray.opt(2) != null && jsonArray.opt(2) instanceof JSONObject) {
-                        GrowingIO.getInstance().track(jsonArray.optString(0), (Number) jsonArray.opt(1), jsonArray.optJSONObject(2));
-                        return true;
-                    }
-                    GrowingIO.getInstance().track(jsonArray.optString(0), (Number) jsonArray.opt(1));
-                    return true;
-                }
-                GrowingIO.getInstance().track(jsonArray.optString(0));
-                return true;
-            }
+			Object first = jsonArray.opt(0);
+			Object second = jsonArray.opt(1);
+			Object third = jsonArray.opt(2);
+			if (first instanceof String){
+				if (second instanceof Number){
+					if (third instanceof JSONObject){
+						GrowingIO.getInstance().track((String)first, (Number)second, (JSONObject) third);
+					}else{
+						GrowingIO.getInstance().track((String)first, (Number)second);
+					}
+				}else if (second instanceof JSONObject){
+					GrowingIO.getInstance().track((String)first, (JSONObject)second);
+				}else{
+					GrowingIO.getInstance().track((String)first);
+				}		
+				return true;
+			}
             callbackContext.error("Argment error, The length of JSONArray can not be 0!");
             return false;
         } catch (Exception e) {

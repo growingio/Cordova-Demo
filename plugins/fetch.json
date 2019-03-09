@@ -10,7 +10,7 @@
   "cordova-plugin-growingio": {
     "source": {
       "type": "registry",
-      "id": "cordova-growingio-plugin@^1.2.0"
+      "id": "cordova-growingio-plugin"
     },
     "is_top_level": true,
     "variables": {}

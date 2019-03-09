@@ -13,9 +13,8 @@
 - (void)setUserId:(CDVInvokedUrlCommand*)command;
 - (void)clearUserId:(CDVInvokedUrlCommand*)command;
 - (void)track:(CDVInvokedUrlCommand*)command;
-- (void)page:(CDVInvokedUrlCommand*)command;
-- (void)setPageVariable:(CDVInvokedUrlCommand*)command;
 - (void)setEvar:(CDVInvokedUrlCommand*)command;
 - (void)setPeopleVariable:(CDVInvokedUrlCommand*)command;
+- (void)setVisitor:(CDVInvokedUrlCommand*)command;
 @end
 

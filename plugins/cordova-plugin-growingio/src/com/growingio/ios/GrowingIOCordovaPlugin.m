@@ -32,7 +32,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"userid length can not > 1000 or = 0"];
             } else {
                 [self dispatchInMainThread:^{
-                    [Growing setPluginUserId:userId];
+                    [Growing setUserId:userId];
                 }];
             }
         } else if ([userId isKindOfClass:[NSNumber class]]) {
@@ -41,7 +41,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"userid length can not > 1000 or = 0"];
             } else {
                 [self dispatchInMainThread:^{
-                    [Growing setPluginUserId:userid];
+                    [Growing setUserId:userid];
                 }];
             }
         } else {
@@ -58,7 +58,7 @@ NS_INLINE NSString *GROWGetTimestamp() {
     CDVPluginResult * pluginResult = nil;
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"clearUserId success"];
     [self dispatchInMainThread: ^{
-        [Growing clearPluginUserId];
+        [Growing clearUserId];
     }];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -99,28 +99,10 @@ NS_INLINE NSString *GROWGetTimestamp() {
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
-- (void)page:(CDVInvokedUrlCommand*)command
-{
-    CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"page success"];
-    
-    NSArray *arguments = command.arguments;
-    if (arguments.count == 1) {
-        NSString *pageName = arguments[0];
-        if (pageName.length == 0 || pageName.length > 1000) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"pageName length can not > 1000 or = 0"];
-        } else {
-            [self dispatchInMainThread:^{
-                [Growing trackPageWithPageName:pageName pageTime:GROWGetTimestamp()];
-            }];
-        }
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
 
+- (void)setVisitor:(CDVInvokedUrlCommand*)command{
+    [self performPluginSelName:@"setVisitor" command:command];
+}
 
 - (void)setEvar:(CDVInvokedUrlCommand*)command
 {
@@ -130,24 +112,6 @@ NS_INLINE NSString *GROWGetTimestamp() {
 - (void)setPeopleVariable:(CDVInvokedUrlCommand*)command
 {
     [self performPluginSelName:@"setPeopleVariable" command:command];
-}
-
-- (void)setPageVariable:(CDVInvokedUrlCommand*)command
-{
-    CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setPageVariable success"];
-    NSArray *arguments = command.arguments;
-    if (arguments.count == 2) {
-        NSString *pageName = arguments[0];
-        NSDictionary *pageLevelVariables = arguments[1];
-        [self dispatchInMainThread:^{
-            [Growing setPageVariable:pageLevelVariables toPage:pageName];
-        }];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 - (void)performPluginSelName:(NSString *)selName command:(CDVInvokedUrlCommand *)command
@@ -164,6 +128,8 @@ NS_INLINE NSString *GROWGetTimestamp() {
                     [Growing setEvar:variables];
                 } else if ([selName isEqualToString:@"setPeopleVariable"]) {
                     [Growing setPeopleVariable:variables];
+                }else if([selName isEqualToString:@"setVisitor"]) {
+                    [Growing setVisitor:variables];
                 }
             }];
         } else {

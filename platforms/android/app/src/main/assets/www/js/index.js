@@ -69,8 +69,8 @@ var app = {
 
         document.getElementById("track1").addEventListener("click", function() {
            
-            gio.track("", onSucc, onFail);
-              alert('调用了track');
+            gio.track("yukk", onSucc, onFail);
+              
         });
 
         document.getElementById("track2").addEventListener("click", function() {
@@ -90,7 +90,7 @@ var app = {
 
         document.getElementById("trackWithNumber").addEventListener("click", function() {
 
-            gio.track("trackWithNumber", { item: '123' }, onSucc, onFail);
+            gio.track("trackWithNumber", { item: 123 }, onSucc, onFail);
         });
 
         document.getElementById("setEvar").addEventListener("click", function() {

@@ -1,0 +1,161 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:1:1-10:12
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:17:1-27:12
+MERGED from [:CordovaLib] /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/9eb79b656e33ea9401c8cff242830e1c/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/6cbd125f3635d7ec9ead78e3efbf8076/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/76c7a0f2f358aa3c51169cf569efc41e/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/18ee10a9c6b2092168e11e0813bfe109/AndroidManifest.xml:17:1-27:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:102-135
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:74-101
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+	android:hardwareAccelerated
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
+	xmlns:android
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:136-194
+	android:versionCode
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:46-73
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml
+supports-screens
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:5-191
+	android:largeScreens
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:49-76
+	android:smallScreens
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:132-159
+	android:normalScreens
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:77-105
+	android:xlargeScreens
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:160-188
+	android:resizeable
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:106-131
+	android:anyDensity
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:3:23-48
+uses-permission#android.permission.INTERNET
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:4:5-66
+MERGED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:4:5-66
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:5:5-79
+MERGED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:5:5-78
+MERGED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:6:5-78
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:6:22-75
+application
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:5-20:19
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/9eb79b656e33ea9401c8cff242830e1c/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/9eb79b656e33ea9401c8cff242830e1c/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/6cbd125f3635d7ec9ead78e3efbf8076/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/6cbd125f3635d7ec9ead78e3efbf8076/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/76c7a0f2f358aa3c51169cf569efc41e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/76c7a0f2f358aa3c51169cf569efc41e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/18ee10a9c6b2092168e11e0813bfe109/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/18ee10a9c6b2092168e11e0813bfe109/AndroidManifest.xml:25:5-20
+	android:supportsRtl
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:136-162
+	android:label
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:81-113
+	android:hardwareAccelerated
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:18-52
+	android:icon
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:53-80
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:7:114-135
+activity#io.cordova.hellocordova.MainActivity
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:9-19:20
+	android:label
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:97-134
+	android:launchMode
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:135-165
+	android:windowSoftInputMode
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:257-299
+	android:configChanges
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:19-96
+	android:theme
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:194-256
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:8:166-193
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:9:13-12:29
+	android:label
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:9:28-65
+action#android.intent.action.MAIN
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:10:17-69
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:10:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:11:17-77
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:11:27-74
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:13:13-18:29
+data
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:14:17-64
+	android:scheme
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:14:23-61
+action#android.intent.action.VIEW
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:15:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:16:17-76
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:16:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:17:17-78
+	android:name
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:17:27-75
+uses-sdk
+ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:21:5-74
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:21:5-23:60
+MERGED from [:CordovaLib] /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/9eb79b656e33ea9401c8cff242830e1c/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/9eb79b656e33ea9401c8cff242830e1c/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/6cbd125f3635d7ec9ead78e3efbf8076/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/6cbd125f3635d7ec9ead78e3efbf8076/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/76c7a0f2f358aa3c51169cf569efc41e/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/76c7a0f2f358aa3c51169cf569efc41e/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/18ee10a9c6b2092168e11e0813bfe109/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/18ee10a9c6b2092168e11e0813bfe109/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-fragment:24.2.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/1a274c5aa0dac079e70c214f7d150e57/AndroidManifest.xml:23:9-57
+	android:targetSdkVersion
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:21:42-71
+	android:minSdkVersion
+		ADDED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:21:15-41
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:6:5-75
+	android:name
+		ADDED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:6:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:7:5-75
+IMPLIED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12 reason: com.growingio.android.sdk has a targetSdkVersion < 4
+	android:name
+		ADDED from [com.growingio.android:vds-android-agent:track-2.7.0] /Users/liz/.gradle/caches/transforms-1/files-1.1/vds-android-agent-track-2.7.0.aar/032703c04cddd2f0e6bd49b03ef7554f/AndroidManifest.xml:7:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12 reason: com.growingio.android.sdk has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/AndroidManifest.xml:2:1-22:12 reason: com.growingio.android.sdk requested WRITE_EXTERNAL_STORAGE

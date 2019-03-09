@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "164,55,105",
+                        "endColumns": "63,49,58",
+                        "endOffsets": "223,100,159"
+                    },
+                    "to": {
+                        "startLines": "2,3,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,330",
+                        "endColumns": "63,49,58",
+                        "endOffsets": "114,164,384"
+                    }
+                },
+                {
+                    "source": "/Users/liz/FrontEnd/Cordova/androidDemo/platforms/android/app/build/generated/res/resValues/debug/values/generated.xml",
+                    "from": {
+                        "startLines": "6,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "155,232",
+                        "endColumns": "76,83",
+                        "endOffsets": "227,311"
+                    },
+                    "to": {
+                        "startLines": "4,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "169,246",
+                        "endColumns": "76,83",
+                        "endOffsets": "241,325"
+                    }
+                }
+            ]
+        }
+    ]
+}
