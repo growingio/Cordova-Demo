@@ -28,7 +28,7 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
         SETUSERID("setUserId"),
         CLEARUSERID("clearUserId"),
         TRACK("track"),
-	SETVISITOR("setVisitor"),
+	    SETVISITOR("setVisitor"),
         SETEVAR("setEvar"),
         SETPEOPLEVARIABLE("setPeopleVariable");
 
@@ -68,21 +68,44 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
         }
         switch (act) {
             case SETUSERID:
-                return setUserId(args, callbackContext);
+                if(setUserId(args, callbackContext)){
+                    callbackContext.success("Success set user id");
+                    return true;
+                }
+                return false;
             case CLEARUSERID:
-                return cleanUserId(args, callbackContext);
+                if(cleanUserId(args, callbackContext)){
+                    callbackContext.success("Success clear user id");
+                    return true;
+                }
+                return false;
             case TRACK:
-                return track(args, callbackContext);
+                if(track(args, callbackContext)){
+                    callbackContext.success("Success set cstm events");
+                    return true;
+                }
+                return false;
             case SETEVAR:
-                return setEvar(args, callbackContext);
+                if(setEvar(args, callbackContext)){
+                    callbackContext.success("Success set evar events");
+                    return true;
+                }
+                return false;
             case SETPEOPLEVARIABLE:
-                return setPeopleVariable(args, callbackContext);
-	    case SETVISITOR:
-		return setVisitor(args, callbackContext);
+                if(setPeopleVariable(args, callbackContext)){
+                    callbackContext.success("Success set people variable events");
+                    return true;
+                }
+                return false;
+            case SETVISITOR:
+                if(setVisitor(args, callbackContext)){
+                    callbackContext.success("Success set visitor events");
+                    return true;
+                }
+                return false;
         }
         return false;
     }
-
 
 
     private boolean setPeopleVariable(JSONArray jsonArray, CallbackContext callbackContext) {

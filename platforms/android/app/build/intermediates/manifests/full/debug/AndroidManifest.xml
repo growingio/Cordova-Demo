@@ -46,7 +46,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <data android:scheme="growing.您的 URL scheme" />
+                <data android:scheme="growing.growing.856a6ce98c31281d" />
 
                 <action android:name="android.intent.action.VIEW" />
 

@@ -69,7 +69,7 @@ var app = {
 
         document.getElementById("track1").addEventListener("click", function() {
            
-            gio.track("yukk", onSucc, onFail);
+            gio.track("HelloCordova", onSucc, onFail);
               
         });
 

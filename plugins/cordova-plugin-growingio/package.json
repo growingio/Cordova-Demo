@@ -1,28 +1,28 @@
 {
-  "_from": "cordova-growingio-plugin",
-  "_id": "cordova-growingio-plugin@2.7.0",
+  "_from": "cordova-growingio-plugin@^2.7.0",
+  "_id": "cordova-growingio-plugin@2.7.1",
   "_inBundle": false,
-  "_integrity": "sha1-bVNjePZqE4F/fB62y91675r99Zc=",
+  "_integrity": "sha1-iudRA5weJXz3ZRNgBpeLQy7x7hI=",
   "_location": "/cordova-growingio-plugin",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "cordova-growingio-plugin",
+    "raw": "cordova-growingio-plugin@^2.7.0",
     "name": "cordova-growingio-plugin",
     "escapedName": "cordova-growingio-plugin",
-    "rawSpec": "",
+    "rawSpec": "^2.7.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^2.7.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "http://registry.npm.taobao.org/cordova-growingio-plugin/download/cordova-growingio-plugin-2.7.0.tgz",
-  "_shasum": "6d536378f66a13817f7c1eb6cbdd7aef9afdf597",
-  "_spec": "cordova-growingio-plugin",
-  "_where": "/Users/liz/FrontEnd/Cordova/androidDemo",
+  "_resolved": "http://registry.npm.taobao.org/cordova-growingio-plugin/download/cordova-growingio-plugin-2.7.1.tgz",
+  "_shasum": "8ae751039c1e257cf765136006978b432ef1ee12",
+  "_spec": "cordova-growingio-plugin@^2.7.0",
+  "_where": "/Users/liz/FrontEnd/Cordova-Demo",
   "author": {
     "name": "denghuaxin"
   },
@@ -50,5 +50,5 @@
   ],
   "license": "ISC",
   "name": "cordova-growingio-plugin",
-  "version": "2.7.0"
+  "version": "2.7.1"
 }
