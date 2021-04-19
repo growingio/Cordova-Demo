@@ -2,8 +2,10 @@ package com.growingio.android;
 
 import android.text.TextUtils;
 
-import com.growingio.android.sdk.collection.GrowingIO;
-import com.growingio.android.sdk.utils.LogUtil;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.growingio.android.sdk.track.GrowingTracker;
+import com.growingio.android.sdk.track.log.Logger;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -20,17 +22,22 @@ import java.util.Map;
  * Created by denghuaxin@growing.io on 2017/6/22.
  */
 
-public class GrowingIOCordovaPlugin extends CordovaPlugin{
+public class GrowingIOCordovaPlugin extends CordovaPlugin {
     private final static String TAG = "GIO.CordovaPlugin";
     private String trackPageName = null;
 
     private enum Action {
-        SETUSERID("setUserId"),
-        CLEARUSERID("clearUserId"),
-        TRACK("track"),
-	    SETVISITOR("setVisitor"),
-        SETEVAR("setEvar"),
-        SETPEOPLEVARIABLE("setPeopleVariable");
+        TRACKCUSTOMEVENT("trackCustomEvent"),
+        SETLOGINUSERATTRIBUTES("setLoginUserAttributes"),
+        SETVISITORATTRIBUTES("setVisitorAttributes"),
+        SETCONVERSIONVARIABLES("setConversionVariables"),
+        SETLOGINUSERID("setLoginUserId"),
+        CLEANLOGINUSERID("cleanLoginUserId"),
+        SETLOCATION("setLocation"),
+        CLEANLOCATION("cleanLocation"),
+        SETDATACOLLECTIONENABLED("setDataCollectionEnabled"),
+        GETDEVICEID("getDeviceId"),
+        ONACTIVITYNEWINTENT("onActivityNewIntent");
 
         private final String name;
         private static final Map<String, Action> lookup = new HashMap<String, Action>();
@@ -63,124 +70,221 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
             return false;
         }
         if (args == null || callbackContext == null) {
-            callbackContext.error("Argment error, JSONArray or CallbackContext can not be null!");
+            callbackContext.error("argument error, JSONArray or CallbackContext can not be null!");
             return false;
         }
         switch (act) {
-            case SETUSERID:
-                if(setUserId(args, callbackContext)){
-                    callbackContext.success("Success set user id");
+            case TRACKCUSTOMEVENT:
+                if (trackCustomEvent(args, callbackContext)) {
+                    callbackContext.success("Success track custom event");
                     return true;
                 }
                 return false;
-            case CLEARUSERID:
-                if(cleanUserId(args, callbackContext)){
-                    callbackContext.success("Success clear user id");
+            case SETLOGINUSERATTRIBUTES:
+                if (setLoginUserAttributes(args, callbackContext)) {
+                    callbackContext.success("Success set login user attributes");
                     return true;
                 }
                 return false;
-            case TRACK:
-                if(track(args, callbackContext)){
-                    callbackContext.success("Success set cstm events");
+            case SETLOGINUSERID:
+                if (setLoginUserId(args, callbackContext)) {
+                    callbackContext.success("Success set login user id");
                     return true;
                 }
                 return false;
-            case SETEVAR:
-                if(setEvar(args, callbackContext)){
-                    callbackContext.success("Success set evar events");
+            case CLEANLOGINUSERID:
+                if (cleanLoginUserId(args, callbackContext)) {
+                    callbackContext.success("Success clean login user id");
                     return true;
                 }
                 return false;
-            case SETPEOPLEVARIABLE:
-                if(setPeopleVariable(args, callbackContext)){
-                    callbackContext.success("Success set people variable events");
+            case SETLOCATION:
+                if (setLocation(args, callbackContext)) {
+                    callbackContext.success("Success set location");
                     return true;
                 }
                 return false;
-            case SETVISITOR:
-                if(setVisitor(args, callbackContext)){
-                    callbackContext.success("Success set visitor events");
+            case CLEANLOCATION:
+                if (cleanLocation(args, callbackContext)) {
+                    callbackContext.success("Success clean location");
                     return true;
                 }
                 return false;
+            case SETDATACOLLECTIONENABLED:
+                if (setDataCollectionEnabled(args, callbackContext)) {
+                    callbackContext.success("Success set data collection enabled");
+                    return true;
+                }
+                return false;
+            case GETDEVICEID:
+                if (getDeviceId(args, callbackContext)) {
+                    callbackContext.success("Success get device id");
+                    return true;
+                }
+                return false;
+//            case ONACTIVITYNEWINTENT:
+//                if(onActivityNewIntent(args, callbackContext)){
+//                    callbackContext.success("Success on activity new intent");
+//                    return true;
+//                }
+            // TODO: 2021/4/15
+//                return false;
+
         }
         return false;
     }
 
-
-    private boolean setPeopleVariable(JSONArray jsonArray, CallbackContext callbackContext) {
-        if (jsonArray.length() == 0) {
-            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-            return false;
-        }
+    /**
+     * track(String eventName)
+     * track(String eventName, Map<String, String> attributes)
+     * track(String eventName, Map<String,String itemKey, String itemId)
+     * track(String eventName, Map<String, String> attributes, String itemKey, String itemId)
+     */
+    private boolean trackCustomEvent(JSONArray jsonArray, CallbackContext callbackContext) {
         try {
-            if (jsonArray.get(0) != null && jsonArray.get(0) instanceof JSONObject) {
-                GrowingIO.getInstance().setPeopleVariable((JSONObject) jsonArray.get(0));
-            } else {
-                callbackContext.error("The argment must be JSONObject!");
+
+            // eventName 不允许为空
+            if (jsonArray.opt(0) == null) {
+                callbackContext.error("argument error, The argument can not be empty.");
                 return false;
             }
-        } catch (JSONException e) {
-            callbackContext.error(e.getMessage());
-            e.printStackTrace();
-        }
-        return true;
-    }
 
-	private boolean setVisitor(JSONArray jsonArray, CallbackContext callbackContext) {
-		        if (jsonArray.length() == 0) {
-            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-            return false;
-        }
-        try {
-            if (jsonArray.get(0) != null && jsonArray.get(0) instanceof JSONObject) {
-                GrowingIO.getInstance().setVisitor((JSONObject) jsonArray.get(0));
+            String eventName;
+            HashMap<String, String> userAttributes = null;
+            String itemKey = null;
+            String itemId = null;
+
+            // eventName 必须为 String 类型
+            if (jsonArray.opt(0) instanceof String) {
+                eventName = jsonArray.optString(0);
+
+                if (jsonArray.opt(1) instanceof JSONObject) {
+                    userAttributes = new Gson().fromJson(jsonArray.opt(1).toString(),
+                            new TypeToken<HashMap<String, String>>() {
+                            }.getType());
+                }
+
+                if (jsonArray.opt(2) instanceof String && jsonArray.opt(3) instanceof String) {
+                    itemKey = jsonArray.optString(2);
+                    itemId = jsonArray.optString(3);
+                }
+
+                if (userAttributes != null && !TextUtils.isEmpty(itemKey) && !TextUtils.isEmpty(itemId)) {
+                    GrowingTracker.get().trackCustomEvent(eventName, userAttributes, itemKey, itemId);
+                } else if (userAttributes != null) {
+                    GrowingTracker.get().trackCustomEvent(eventName, userAttributes);
+                } else if (!TextUtils.isEmpty(itemKey) && !TextUtils.isEmpty(itemId)) {
+                    GrowingTracker.get().trackCustomEvent(eventName, itemKey, itemId);
+                } else {
+                    GrowingTracker.get().trackCustomEvent(eventName);
+                }
+
+                return true;
             } else {
-                callbackContext.error("The argment must be JSONObject!");
+                callbackContext.error("argument error, The argument is illegal type.");
                 return false;
             }
-        } catch (JSONException e) {
-            callbackContext.error(e.getMessage());
-            e.printStackTrace();
-        }
-        return true;
-	}
 
-    private boolean setEvar(JSONArray jsonArray, CallbackContext callbackContext) {
-        if (jsonArray.length() == 0) {
-            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-            return false;
-        }
-        try {
-            if (jsonArray.get(0) != null && jsonArray.get(0) instanceof JSONObject) {
-                GrowingIO.getInstance().setEvar((JSONObject) jsonArray.get(0));
-            } else {
-                callbackContext.error("The argment must be JSONObject!");
-                return false;
-            }
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
             e.printStackTrace();
         }
-        return true;
+        return false;
     }
 
-    private boolean setUserId(JSONArray jsonArray, CallbackContext callbackContext) {
+    private boolean setLoginUserAttributes(JSONArray jsonArray, CallbackContext callbackContext) {
         try {
             if (jsonArray.opt(0) == null) {
-                callbackContext.error("Argment error, The argment can not be empty.");
+                callbackContext.error("argument error, The argument can not be empty.");
                 return false;
             }
-            String useid = null;
-            if (jsonArray.opt(0) instanceof Number) {
-                useid = String.valueOf(jsonArray.opt(0));
-            } else if (jsonArray.opt(0) instanceof String) {
-                useid = jsonArray.optString(0);
+
+            if (jsonArray.opt(0) instanceof JSONObject) {
+                Map<String, String> userAttributes = new Gson().fromJson(jsonArray.opt(0).toString(), new TypeToken<HashMap<String, String>>() {
+                }.getType());
+                GrowingTracker.get().setLoginUserAttributes(userAttributes);
+
+                return true;
             } else {
-                callbackContext.error("Argment error, The argment is illegal type.");
+                callbackContext.error("argument error, The argument is illegal type.");
                 return false;
             }
-            GrowingIO.getInstance().setUserId(useid);
+
+        } catch (Exception e) {
+            callbackContext.error(e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+//    private boolean setVisitorAttributes(JSONArray jsonArray, CallbackContext callbackContext) {
+//        try {
+//            if (jsonArray.opt(0) == null) {
+//                callbackContext.error("argument error, The argument can not be empty.");
+//                return false;
+//            }
+//
+//            if(jsonArray.opt(0) instanceof JSONObject){
+//                Map<String, String> visitorAttributes = (Map<String,String>) JSON.parseObject(jsonArray.opt(0).toString(),
+//                        new TypeReference<HashMap<String,String>>(){});
+//
+//                GrowingTracker.get().setVisitorAttributes(visitorAttributes);
+//
+//                return true;
+//            } else {
+//                callbackContext.error("argument error, The argument is illegal type.");
+//                return false;
+//            }
+//
+//        } catch (Exception e) {
+//            callbackContext.error(e.getMessage());
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
+
+//    private boolean setConversionVariables(JSONArray jsonArray, CallbackContext callbackContext) {
+//        try {
+//            if (jsonArray.opt(0) == null) {
+//                callbackContext.error("argument error, The argument can not be empty.");
+//                return false;
+//            }
+//
+//            if(jsonArray.opt(0) instanceof JSONObject){
+//                Map<String, String> conversionVariables = (Map<String,String>) JSON.parseObject(jsonArray.opt(0).toString(),
+//                        new TypeReference<HashMap<String,String>>(){});
+//
+//                GrowingTracker.get().(conversionVariables);
+//
+//                return true;
+//            } else {
+//                callbackContext.error("argument error, The argument is illegal type.");
+//                return false;
+//            }
+//
+//        } catch (Exception e) {
+//            callbackContext.error(e.getMessage());
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
+
+    private boolean setLoginUserId(JSONArray jsonArray, CallbackContext callbackContext) {
+        try {
+            if (jsonArray.opt(0) == null) {
+                callbackContext.error("Argument error, The argument can not be empty.");
+                return false;
+            }
+            String userId;
+            if (jsonArray.opt(0) instanceof Number) {
+                userId = String.valueOf(jsonArray.opt(0));
+            } else if (jsonArray.opt(0) instanceof String) {
+                userId = jsonArray.optString(0);
+            } else {
+                callbackContext.error("Argument error, The argument is illegal type.");
+                return false;
+            }
+            GrowingTracker.get().setLoginUserId(userId);
             return true;
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
@@ -189,41 +293,72 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
         return false;
     }
 
-    private boolean cleanUserId(JSONArray jsonArray, CallbackContext callbackContext) {
-        GrowingIO.getInstance().clearUserId();
+    private boolean cleanLoginUserId(JSONArray jsonArray, CallbackContext callbackContext) {
+        GrowingTracker.get().cleanLoginUserId();
         return true;
     }
 
-    private boolean track(JSONArray jsonArray, CallbackContext callbackContext) {
+    private boolean setLocation(JSONArray jsonArray, CallbackContext callbackContext) {
         try {
             if (jsonArray.length() == 0) {
-                callbackContext.error("Argment error, The length of JSONArray can not be 0!");
+                callbackContext.error("argument error, The length of JSONArray can not be 0!");
                 return false;
             }
-			Object first = jsonArray.opt(0);
-			Object second = jsonArray.opt(1);
-			Object third = jsonArray.opt(2);
-			if (first instanceof String){
-				if (second instanceof Number){
-					if (third instanceof JSONObject){
-						GrowingIO.getInstance().track((String)first, (Number)second, (JSONObject) third);
-					}else{
-						GrowingIO.getInstance().track((String)first, (Number)second);
-					}
-				}else if (second instanceof JSONObject){
-					GrowingIO.getInstance().track((String)first, (JSONObject)second);
-				}else{
-					GrowingIO.getInstance().track((String)first);
-				}		
-				return true;
-			}
-            callbackContext.error("Argment error, The length of JSONArray can not be 0!");
-            return false;
+
+            Object args0 = jsonArray.opt(0);
+            Object args1 = jsonArray.opt(1);
+
+            double latitude;
+            double longitude;
+
+            if (args0 instanceof Double && args1 instanceof Double) {
+                latitude = (Double) args0;
+                longitude = (Double) args1;
+            } else if (args0 instanceof String && args1 instanceof String) {
+                latitude = Double.parseDouble(String.valueOf(args0));
+                longitude = Double.parseDouble(String.valueOf(args1));
+            } else {
+                callbackContext.error("argument error, The argument is illegal type.");
+                return false;
+            }
+            GrowingTracker.get().setLocation(latitude, longitude);
+            return true;
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
             e.printStackTrace();
         }
         return false;
+    }
+
+    private boolean cleanLocation(JSONArray jsonArray, CallbackContext callbackContext) {
+        GrowingTracker.get().cleanLocation();
+        return true;
+    }
+
+    private boolean setDataCollectionEnabled(JSONArray jsonArray, CallbackContext callbackContext) {
+        try {
+            if (jsonArray.length() == 0) {
+                callbackContext.error("argument error, The length of JSONArray can not be 0!");
+                return false;
+            }
+
+            if (jsonArray.opt(0) instanceof Boolean) {
+                GrowingTracker.get().setDataCollectionEnabled((Boolean) jsonArray.opt(0));
+            } else {
+                callbackContext.error("argument error, The argument is illegal type.");
+                return false;
+            }
+
+        } catch (Exception e) {
+            callbackContext.error(e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private boolean getDeviceId(JSONArray jsonArray, CallbackContext callbackContext) {
+        GrowingTracker.get().getDeviceId();
+        return true;
     }
 
     @Override
@@ -237,7 +372,7 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin{
     }
 
     private void error(CallbackContext callbackContext, String message) {
-        LogUtil.e(TAG, message);
+        Logger.e(TAG, message);
         callbackContext.error(message);
     }
 }

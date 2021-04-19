@@ -1,10 +1,8 @@
 package io.cordova.hellocordova;
 
 import android.app.Application;
-import android.util.Log;
-
-import com.growingio.android.sdk.collection.Configuration;
-import com.growingio.android.sdk.collection.GrowingIO;
+import com.growingio.android.sdk.track.CdpTrackConfiguration;
+import com.growingio.android.sdk.track.GrowingTracker;
 
 /**
  * author WangYing
@@ -16,9 +14,11 @@ public class Myapp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        GrowingIO.startWithConfiguration(this, new Configuration()
-                .setChannel("XXX应用商店")
-                .setDebugMode(true)
-                .setTestMode(true));
+        GrowingTracker.startWithConfiguration(this,
+                new CdpTrackConfiguration("exampleProjectId", "exampleUrlScheme")
+                        .setDataCollectionServerHost("http://myhost.com/")
+                        .setDataSourceId("exampleSourceId")
+                        .setChannel("XXX应用商店")
+                        .setDebugEnabled(BuildConfig.DEBUG));
     }
 }

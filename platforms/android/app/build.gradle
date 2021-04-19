@@ -18,18 +18,23 @@
 */
 
 apply plugin: 'com.android.application'
+//添加 GrowingIO 插件
+//apply plugin: 'com.growingio.android.tracker'
 
 buildscript {
     repositories {
-        mavenCentral()
+    //    mavenCentral()
         jcenter()
         maven {
             url "https://maven.google.com"
         }
+        maven { url 'http://developer.huawei.com/repo/' }
+
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
 
@@ -140,7 +145,7 @@ cdvBuildRelease.dependsOn {
     return computeBuildTargetName(false)
 }
 
-task cdvPrintProps << {
+task cdvPrintProps {
     println('cdvCompileSdkVersion=' + cdvCompileSdkVersion)
     println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
     println('cdvVersionCode=' + cdvVersionCode)
@@ -162,9 +167,13 @@ android {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
 
-        if (cdvMinSdkVersion != null) {
-            minSdkVersion cdvMinSdkVersion
-        }
+//        if (cdvMinSdkVersion != null) {
+//            minSdkVersion cdvMinSdkVersion
+//        }    defaultConfig {
+        minSdkVersion 17
+//        targetSdkVersion 22
+
+
         
         //GrowingIO 配置， 请切换成您的账号下的 项目id 和 url scheme 哦， 别忘记还要配置 Manifest 中的 URLscheme。
         resValue("string", "growingio_project_id", "0a1b4118dd954ec3bcc69da5138bdb96")
@@ -270,8 +279,17 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     // SUB-PROJECT DEPENDENCIES END
 
-    compile 'com.growingio.android:vds-android-agent:track-2.7.0@aar'
-    compile 'com.android.support:support-fragment:24.2.0'
+//    implementation 'com.growingio.android:vds-android-agent:tracker-3.1.0-SNAPSHOT@aar'
+//    implementation 'com.growingio.android:autotracker-gradle-plugin:3.1.0-SNAPSHOT@aar'
+
+    //GrowingIO 无埋点 SDK
+    implementation 'com.growingio.android:tracker-cdp:3.1.0-SNAPSHOT'
+
+    implementation 'com.android.support:support-fragment:24.2.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //如果不是AndroidX项目，请添加下面依赖
+  //  compileOnly 'androidx.appcompat:appcompat:1.2.0'
 
 }
 

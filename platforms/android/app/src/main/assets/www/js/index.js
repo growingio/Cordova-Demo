@@ -68,60 +68,58 @@ var app = {
         };
 
         document.getElementById("track1").addEventListener("click", function() {
-           
-            gio.track("HelloCordova", onSucc, onFail);
+            gio.trackCustomEvent("HelloCordova", onSucc, onFail);
               
         });
 
         document.getElementById("track2").addEventListener("click", function() {
 
-            gio.track("track2", 234234.123123, onSucc, onFail);
+            gio.trackCustomEvent("HelloCordova", {'prodId1':'pid111', 'prodId2':'pid222'}, onSucc, onFail);
         });
 
         document.getElementById("track3").addEventListener("click", function() {
 
-            gio.track('track3', {'prodId':'pid121212'}, onSucc, onFail);
+            gio.trackCustomEvent("HelloCordova", null,"itemKey", "itemId", onSucc, onFail);
         });
 
         document.getElementById("track4").addEventListener("click", function() {
 
-            gio.track("track4", 234234344.22, { item: '123' }, onSucc, onFail);
+            gio.trackCustomEvent("HelloCordova", {'prodId1':'pid111', 'prodId2':'pid222'}, "itemKey", "itemId", onSucc, onFail);
         });
 
-        document.getElementById("trackWithNumber").addEventListener("click", function() {
+        document.getElementById("setLoginUserAttributes").addEventListener("click", function() {
 
-            gio.track("trackWithNumber", { item: 123 }, onSucc, onFail);
+            gio.setLoginUserAttributes( {'item1':'pid111', 'item2':'pid222'}, onSucc, onFail);
         });
 
-        document.getElementById("setEvar").addEventListener("click", function() {
+        document.getElementById("setLoginUserId").addEventListener("click", function() {
 
-            gio.setEvar({'campaignId':'setEvar', 'campaignOwner':'李四'}, onSucc, onFail);
-
+            gio.setLoginUserId('中文中文', onSucc, onFail);
         });
 
-        document.getElementById("page").addEventListener("click", function() {
+        document.getElementById("cleanLoginUserId").addEventListener("click", function() {
 
-            gio.page('pageeeeeee',onSucc,onFail);
+            gio.cleanLoginUserId(onSucc, onFail);
         });
 
-        document.getElementById("setPeopleVariable").addEventListener("click", function() {
+        document.getElementById("setLocation").addEventListener("click", function() {
 
-            gio.setPeopleVariable({'这是中文中文':'setPeopleVariable', 'gender':'male'}, onSucc, onFail);
+            gio.setLocation('22.22','33.33', onSucc, onFail);
         });
 
-        document.getElementById("setPageVariable").addEventListener("click", function() {
+        document.getElementById("cleanLocation").addEventListener("click", function() {
 
-            gio.setPageVariable('中文中文',{'setPageVariable': 'Home Page', 'author': 'Zhang San'}, onSucc, onFail)
+            gio.cleanLocation(onSucc, onFail);
         });
 
-        document.getElementById("setUserId").addEventListener("click", function() {
+        document.getElementById("setDataCollectionEnabled").addEventListener("click", function() {
 
-            gio.setUserId('中文中文', onSucc, onFail);
+            gio.setDataCollectionEnabled(true, onSucc, onFail);
         });
 
-        document.getElementById("clearUserId").addEventListener("click", function() {
+        document.getElementById("getDeviceId").addEventListener("click", function() {
 
-            gio.clearUserId(onSucc, onFail);
+            gio.getDeviceId(onSucc, onFail);
         });
 
       } catch(err) {
@@ -131,58 +129,5 @@ var app = {
 
 
 };
-
-
-
-// var MOCKED_MOVIES_DATA = [
-//   {title: '标题', year: '2015'},
-// ];
-
-// var trackObject = {title: '标题1', year: '201523'};
-// const track = () => {
-//     Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.track("ggl", trackObject)
-// };
-
-// const trackWithNumber = () => {
-//     Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.trackWithNumber("trackWithNumber",12.12,trackObject)
-// };
-
-
-// const page = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.page("GGLPage")
-// };
-
-// const setPageVariable = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.setPageVariable("GGLPage",trackObject)
-// };
-
-// const setEvar = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.setEvar(trackObject)
-// };
-
-// const setPeopleVariable = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.setPeopleVariable(trackObject)
-// };
-
-// const setUserId = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.setUserId("ggl")
-// };
-
-// const clearUserId = () => {
-//     // Alert.alert('Button has been pressed!');
-//     NativeModules.GrowingIO.clearUserId()
-// };
-
-
-
-
-
 
 app.initialize();
