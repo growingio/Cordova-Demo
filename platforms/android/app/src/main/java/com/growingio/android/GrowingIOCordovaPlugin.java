@@ -29,15 +29,12 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin {
     private enum Action {
         TRACKCUSTOMEVENT("trackCustomEvent"),
         SETLOGINUSERATTRIBUTES("setLoginUserAttributes"),
-        SETVISITORATTRIBUTES("setVisitorAttributes"),
-        SETCONVERSIONVARIABLES("setConversionVariables"),
         SETLOGINUSERID("setLoginUserId"),
         CLEANLOGINUSERID("cleanLoginUserId"),
         SETLOCATION("setLocation"),
         CLEANLOCATION("cleanLocation"),
         SETDATACOLLECTIONENABLED("setDataCollectionEnabled"),
-        GETDEVICEID("getDeviceId"),
-        ONACTIVITYNEWINTENT("onActivityNewIntent");
+        GETDEVICEID("getDeviceId");
 
         private final String name;
         private static final Map<String, Action> lookup = new HashMap<String, Action>();
@@ -216,58 +213,6 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin {
         }
         return false;
     }
-
-//    private boolean setVisitorAttributes(JSONArray jsonArray, CallbackContext callbackContext) {
-//        try {
-//            if (jsonArray.opt(0) == null) {
-//                callbackContext.error("argument error, The argument can not be empty.");
-//                return false;
-//            }
-//
-//            if(jsonArray.opt(0) instanceof JSONObject){
-//                Map<String, String> visitorAttributes = (Map<String,String>) JSON.parseObject(jsonArray.opt(0).toString(),
-//                        new TypeReference<HashMap<String,String>>(){});
-//
-//                GrowingTracker.get().setVisitorAttributes(visitorAttributes);
-//
-//                return true;
-//            } else {
-//                callbackContext.error("argument error, The argument is illegal type.");
-//                return false;
-//            }
-//
-//        } catch (Exception e) {
-//            callbackContext.error(e.getMessage());
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
-
-//    private boolean setConversionVariables(JSONArray jsonArray, CallbackContext callbackContext) {
-//        try {
-//            if (jsonArray.opt(0) == null) {
-//                callbackContext.error("argument error, The argument can not be empty.");
-//                return false;
-//            }
-//
-//            if(jsonArray.opt(0) instanceof JSONObject){
-//                Map<String, String> conversionVariables = (Map<String,String>) JSON.parseObject(jsonArray.opt(0).toString(),
-//                        new TypeReference<HashMap<String,String>>(){});
-//
-//                GrowingTracker.get().(conversionVariables);
-//
-//                return true;
-//            } else {
-//                callbackContext.error("argument error, The argument is illegal type.");
-//                return false;
-//            }
-//
-//        } catch (Exception e) {
-//            callbackContext.error(e.getMessage());
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
 
     private boolean setLoginUserId(JSONArray jsonArray, CallbackContext callbackContext) {
         try {
