@@ -7,290 +7,1094 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FDF9D024FB1BA3209E30EF8569DA9AC /* Pods-HelloCordova-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C11762970E8663E83E8272B64E1255E4 /* Pods-HelloCordova-dummy.m */; };
-		F861103DCB365D709808A1112A73E338 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		005EA005ADB72E5B0758250B02F99F3C /* GrowingFMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B510AC6B5E57289C665BD430AB19EBF /* GrowingFMResultSet.m */; };
+		00A4738DEF6A6D4EA1E8BD59CBC0B54D /* GrowingNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F4DFD8A42CE20FA9A111A7FD5C9A7A /* GrowingNetworkManager.m */; };
+		018C5C375F19D5ED8C19BE4820EF32CD /* GrowingFMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A452C762E8517B33E1E78B8F69D8B /* GrowingFMDatabaseAdditions.m */; };
+		0207E0832BE2C688725756413E8EB823 /* GrowingFMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2682DA2A47DCDBFC988B1B4DD5A3FA /* GrowingFMDatabasePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		021094A5154DF9396F8B6AE375A4ED6D /* GrowingFMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = AE04875E9AD8F7B8BEC7BAD5E85E99E2 /* GrowingFMDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		02F181F5E27E5D134FD8F3897944FA69 /* GrowingSceneDelegateAutotracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A306591303E02993C8EAEDEEEEDAD4 /* GrowingSceneDelegateAutotracker.m */; };
+		02F8135CF395769789D2BCD3186FC554 /* UIImage+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C07043A4AF75A59D3642941A5F0931B3 /* UIImage+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0317EBDF5B8DC5381DA00091D8A7D8BF /* GrowingApplicationEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F35327510083E3F41123328F638558 /* GrowingApplicationEventManager.m */; };
+		03EEA3C68E2BA08863F91FB63B6B99F1 /* UIApplication+GrowingNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C110097F1910DFFB878F40E88FFB534 /* UIApplication+GrowingNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		044294D64BC6744F30D80AF2EE20EB94 /* GrowingEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CC39462D368C8D93C854D5A6437DF1 /* GrowingEventChannel.m */; };
+		053BD0D0F46658AD774C71DA4C245386 /* NSURLSession+GrowingURLSessionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6A8FFC2CB467C75E8C4CAEE98FB0DA /* NSURLSession+GrowingURLSessionHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		059E5FD0CBC7E1E703236DC6426A0F0A /* UIWindow+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BB24E37736234FD72F11D4CC06EAC /* UIWindow+GrowingHelper.m */; };
+		05C8903A471E1744D47C38C1018D71D8 /* GrowingAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB8EC440732D2B1AA02EA604138594 /* GrowingAlert.m */; };
+		067C67EB2AD51C9DA2F6D634B9BF4296 /* GrowingTimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F1BFF9FCA34E5127FB0D0D0B70B325 /* GrowingTimeUtil.m */; };
+		07AB7C5673B0C8BBB5EC309C4327AEC8 /* GrowingCocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 341E7C6E7C827AFD2F306AA25992BD22 /* GrowingCocoaLumberjack.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AEE598025BED216A94B882BD3C7E32D /* GrowingMobileDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 57217EDFB8701F1F8A9141C991FEE468 /* GrowingMobileDebugger.m */; };
+		0BC3669DEF6A0B4534273485F8277710 /* GrowingWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8AC21F2FFE62CAAD23C7FAC0E24EA5 /* GrowingWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E0B1D58C046554B2515E9DD75503396 /* GrowingTrackConfiguration+CdpTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C27BC7D7F902D4949DD8C29D8E79ED /* GrowingTrackConfiguration+CdpTracker.m */; };
+		15D82E4870AB37813B16E2798BFCF35F /* GrowingEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5824659A3B537AC5E074451CAFB12AEA /* GrowingEventManager.m */; };
+		185CA14C3BEC8DE638341B40EE00FCC0 /* GrowingEventDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967CD54D079E091B81B61BF1961001A /* GrowingEventDataBase.m */; };
+		18BFBB3447C91B05D3C7769F82AD9C8E /* GrowingThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E8029B0EC29F00EC00D4301245028E /* GrowingThread.m */; };
+		1A7F4265A092DEA2FC6247917C346253 /* GrowingLoginUserAttributesEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BBE98A98EE3D298CEE974FA3508E22 /* GrowingLoginUserAttributesEvent.m */; };
+		1BE69EEF0AAFB047105A7EBBADECF03F /* GrowingBaseEvent+SendPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 23CA5C0D0F2743D6ED1C8EA5F29DC706 /* GrowingBaseEvent+SendPolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1DE555F0A2413D4F17700F4BD6368780 /* GrowingBaseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = D7E8C6A6B9931F38889E34B20046EA6D /* GrowingBaseEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E4EC2E2350C69E0EB98CA9469272D1C /* GrowingLoginUserAttributesEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B807873F813A513E45E63FC1324D8AD8 /* GrowingLoginUserAttributesEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		20B7BC13C05FF14A9935E6751EE601F7 /* GrowingTrackEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C16506CAE590FC3D1E5DA0522CC07E /* GrowingTrackEventType.m */; };
+		20B90E7F69AD79ECFCBF656669C496A4 /* GrowingRequestAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD60EDF7E25D0238D7867764F04E63D3 /* GrowingRequestAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21E29763D3878EBD56326F88690F0894 /* GrowingWebWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC2BD3EB190E6122C9A07C72A74F072 /* GrowingWebWatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		233B674FE18AA6EB43EF90EC15095E7E /* GrowingFileStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A3790CA0B05814DA9D52F13729C4B7 /* GrowingFileStorage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2423C5BD8AA3EF953D345BE493A06810 /* NSURL+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F3F78A387F1E8F7A5E87637AC66E7D /* NSURL+GrowingHelper.m */; };
+		2674F0B76FA9008D1E067F77F759DC89 /* GrowingLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 65AAE330FEA798D7B0F04F81E89C5FBA /* GrowingLog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		268E4284BD4C07BAFB25B681141D93DC /* GrowingSession.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D26AA35BF252D7981687D8F7FE41B4 /* GrowingSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27435213704BBB7F34B1B2668C4B0154 /* GrowingWSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B353A45A6E5D6B1F9258296AD6F557DA /* GrowingWSLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27C1740A542E5CC0D1D8426F5034AD59 /* GrowingSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1555CE3B23B582723A6A43AC000CD4 /* GrowingSwizzle.m */; };
+		296AA6E2286B477079ACCA8D507D2FDF /* GrowingCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB45D459633A6AEBCD7D3A88330992 /* GrowingCustomEvent.m */; };
+		29BF8DE327618ADE70ED3C3E6CE032D2 /* GrowingAppLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD01596B8B3B082DD4B75181BA61CA8 /* GrowingAppLifecycle.m */; };
+		2A8959957E4E88AE0A9ED7ECE8160174 /* GrowingAppCloseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C8267FEC03024AE257FFB70AFA9D04C0 /* GrowingAppCloseEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E3F86BBD7C62C083044FABDFE4562D8 /* GrowingAppLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C9780686FBC18293F29F6437096C69 /* GrowingAppLifecycle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F4FCBB056C043FC1908D7CA8B12E46D /* GrowingAnalytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7238E5C9F9229B0FDA8303FA1C56BB93 /* GrowingAnalytics-dummy.m */; };
+		316129392A51339548F3ABD4F68B3F04 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE882406C2947F77593D7E1F2424380 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m */; };
+		39151DEF0ED36F6258F1590EA9786B91 /* GrowingSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D1494F3AD7AF1199DA31299C4C5B84 /* GrowingSwizzler.m */; };
+		3BED34D98BD8E12E1CB35516FA8B9D07 /* GrowingArgumentChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8522DF505F0B344984E236BE74A14B3D /* GrowingArgumentChecker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3C8ED6AE036A1F01602274A402BFE228 /* GrowingTrackConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E53880EB5557C4AE0F8D4CABF5FD77 /* GrowingTrackConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3EBE750650B936635AA4AA8818815363 /* GrowingSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = A0BC6B0A0C89542621641744FE1AE102 /* GrowingSwizzler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F96DBC7B5F7320FBC377683D1BBAE7B /* GrowingEventRequestAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 36124FA48DA27C06A16B8431A6D86986 /* GrowingEventRequestAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		42D0E63C3E932F1072856B14B33BF608 /* UIImage+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DC9327B1F56BDEFB1C4E49EAC1319 /* UIImage+GrowingHelper.m */; };
+		46E5BED716B6A99537FAD030B7E8382C /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC63C51C5E8D999E990F2940EF41A12 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4C3AA4C34265587C73A38B0F642AE4AF /* GrowingResourceCustomEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B40C532D30ADE1B7204AE96D642C3D5 /* GrowingResourceCustomEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4D7C2FEBA17920722C63FBA240BE8660 /* GrowingLZ4.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB4440206FF9F180B69D93FDED2826D /* GrowingLZ4.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		503026D388FC9121B43513D7A061B914 /* GrowingFMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD7F575ECB52B22462E2ECD2C518029 /* GrowingFMDatabaseQueue.m */; };
+		5188D6EA31AA59C538048E19908C4192 /* GrowingRealTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E476F919D359EF64D530F52A73A528C6 /* GrowingRealTracker.m */; };
+		51E9DE57BB2BF2ECAE425EE0B540B505 /* GrowingRequestAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D72AF6ACF40200D7AA27A40F33CB792 /* GrowingRequestAdapter.m */; };
+		520D54D1AE160914190610EDECE08FBB /* GrowingEventPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 75208184B87C66FBEC8D436F858C61C6 /* GrowingEventPersistence.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52E057DD827C7A39621DBF29FA261101 /* GrowingCustomEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 724D6B293468385A6C74A4829D2056FC /* GrowingCustomEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		545069BEE294CC6A9C23608F02C705CD /* GrowingAppCloseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA56B57FA3DA77240671DC1AACF7A86 /* GrowingAppCloseEvent.m */; };
+		5525D2BFCB089DBC34DAE1376A29B695 /* NSObject+GrowingIvarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206B32915908832A1A7F2ABAD027675 /* NSObject+GrowingIvarHelper.m */; };
+		63AA58C8C81BE7F86B66E65506BE8524 /* GrowingConversionVariableEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8921B898C969C451899B512EDC7F9E /* GrowingConversionVariableEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6713346806DB0A49C625F6896D4652B3 /* GrowingDataTraffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA2DEC27E1135572185E2EF7DCB219 /* GrowingDataTraffic.m */; };
+		69E97B7AC1B3F773EE91271BE5E9D238 /* GrowingEventRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AF122B5327C0250BEF9A0451AE4DA078 /* GrowingEventRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6A25B214FCEE2C0B60425C2E47EC262B /* GrowingEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A15DA16B155FDC248584D1856A5B72 /* GrowingEventManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6AC75C116A9D0E1F4B24EE27459D9316 /* GrowingStatusBarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B20B503FC86481ED7F9DEAB79430AC33 /* GrowingStatusBarEventManager.m */; };
+		6B7424DD6A5F7F367AD2F87B24A60071 /* GrowingEventPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5BC86D091ED00DA13F0E466DB9A6D9 /* GrowingEventPersistence.m */; };
+		6CBAF35FA80DC01DB802FD1123EC6041 /* GrowingRealTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D7FBADD93049C342C9AF234F33918D /* GrowingRealTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E918FBB11AA5F94C7DA6D70FD46AB40 /* GrowingVisitorAttributesEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A97216FC9564213FD22050D608058CE /* GrowingVisitorAttributesEvent.m */; };
+		7047FE6BABDE3988AAF9E85346AB2198 /* Pods-HelloCordova-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BD946F2786E0561CB5107A26A88F3 /* Pods-HelloCordova-dummy.m */; };
+		711F512C5290E718BCA49284A2D771F4 /* GrowingConversionVariableEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4970A499BCD516700E35FE5F99AABF6E /* GrowingConversionVariableEvent.m */; };
+		720F3C7C3B61EB6510441712EEA40849 /* GrowingReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C87088DFD7CC1C12E12503D8B73ACE34 /* GrowingReachability.m */; };
+		73385EE43C2971A5B60500B1A5126637 /* GrowingPersistenceDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A33ACC83F8ED12EDBDF67F66E479871B /* GrowingPersistenceDataProvider.m */; };
+		75A6634D8179684685AA3AB63E14548B /* GrowingTrackConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A71299306675CA1125BF881933F5C9B1 /* GrowingTrackConfiguration.m */; };
+		7625B97887307F8ACAA8E97F7E3A704E /* GrowingLoggerNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE5C64E8ACFC495A1FDF22447BE4E5 /* GrowingLoggerNames.m */; };
+		78993B6BEB34931419462F87E82E90C3 /* GrowingEventGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 044616086A21759C22ECAAA66FBF6D8D /* GrowingEventGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AB5D4709EA5A980EEEE0ECE3B3F3A0D /* NSArray+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 953C7D2519A42C7AA8ACE06D4DB5477B /* NSArray+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B54A16B7F484960F6FB7C80869CEFC1 /* NSArray+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77658ACCE47E2D2CC2CAEEE0FF82C564 /* NSArray+GrowingHelper.m */; };
+		7BC4B1B61956F2AF3895FE05F36E898C /* GrowingUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 1058DB278C750C3F3BFAECB2B16AEED7 /* GrowingUserDefaults.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7C95A4A3246E4EE6606222A223D6CEEC /* UIView+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1525A70E6D5102EDFE0A14B03A1528 /* UIView+GrowingHelper.m */; };
+		7F5CF088A91C4E6B15D48475DC7D8690 /* GrowingASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E57EA599534CA4124984152037BD5FB /* GrowingASLLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		80663EBBEF9D0B4358717205258F74D0 /* GrowingDebuggerEventQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 002D1F0077FFC8354CA8F03C5C4FDAA5 /* GrowingDebuggerEventQueue.m */; };
+		8165DDD47C54393BE930B8D047D486B8 /* NSDictionary+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AC47D15A5D053FF31C6C9ED06E49DF4E /* NSDictionary+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		838F0B9124A7A82947B1B8DE2164A660 /* GrowingSRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BEC149030187520DB7F8611FD5BB3C /* GrowingSRWebSocket.m */; };
+		84D9F495377337344AE8EE5CA94E5C6A /* GrowingDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FF3136C7B75B8E400A36E333DC3CFD /* GrowingDispatchManager.m */; };
+		85425A35CBBAF84A6349D25FCF6524FE /* GrowingASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419E5E54D76CF09C8FA25D5BE2E89DF /* GrowingASLLogger.m */; };
+		87511B9098596DBCD4A7136C67683844 /* GrowingWSLoggerFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = A87357338786774DA09552B321AB8AB2 /* GrowingWSLoggerFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		87A38C23DB142F8BF2635D8BE79EEA7E /* GrowingFMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A52281D2470B84060EE29A6A968A717 /* GrowingFMResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		880CAC99F6B25B29982BB35605BA629E /* GrowingTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 96099A33F74FFF010129903FAE357259 /* GrowingTracker.m */; };
+		88905C487FFA8B3732C5D2D5E566E98A /* GrowingNetworkConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1AE8C665A0E21D6506742926EC4704 /* GrowingNetworkConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88E418E064F74B0FC32AA991BC3CF3B0 /* GrowingURLSessionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0572B11E756A20934E7EFF7C8990F372 /* GrowingURLSessionProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B5DE49C9F99B2577FD47867A41880B8 /* UIView+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7BE69AAD34D51E5B5663F92E902DDEA /* UIView+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B8A1D043F648B110155156055DD55A7 /* UIApplication+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A45C57345066E81D796A7A0D4EADE4 /* UIApplication+GrowingHelper.m */; };
+		8BDA3F1AA98E723BB54949581A89F86F /* NSString+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB66CCC2383FBDECC03DDE3A14B7F41 /* NSString+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CB5F0D2B77233A4F954353BC5E2854F /* GrowingAttributesConst.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC762B8B8818E51772C8C7BF492F29E /* GrowingAttributesConst.m */; };
+		8CFFCEC8A08616237EE596746E99680E /* UIApplication+GrowingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE72CE2CD7D645D1A5E6FEC385CFE6 /* UIApplication+GrowingNode.m */; };
+		8D0F579ACB32E2E01BD4E7507AFAD265 /* GrowingAppDelegateAutotracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCE30683E248016A1995CF137270DC8 /* GrowingAppDelegateAutotracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8E1C8F1BDA2FE0C25AF65309D2BD3CC3 /* GrowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 175C8338E16E30C63D34D02C1A5CF8E3 /* GrowingWindow.m */; };
+		8F75C42FC1CC6EBFF7ADB8875EDD9696 /* GrowingCdpEventInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F59F97F38164A03C406A9CFAD4CAFEA /* GrowingCdpEventInterceptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		914716F96970DDADF1709F0AE185F31D /* GrowingUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 95998E0C8135D172C63E7F5A6B07273B /* GrowingUserDefaults.m */; };
+		93B2A4E62986624C2C4B6A786F1B7EFC /* GrowingResourceCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FFB25D466E3D0819E6D7860DF56DB /* GrowingResourceCustomEvent.m */; };
+		945494E2E3F845DB1FFF2D91517FB897 /* GrowingVisitEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0626407492FEBFFCBDDBF134EDD73E /* GrowingVisitEvent.m */; };
+		95E2077CC09A2C7E1A6CA1949DF893F6 /* UIControl+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0025F41FEECC13A83741199DF74BC577 /* UIControl+GrowingHelper.m */; };
+		9A3836F490CCDBEB6A5DE0EFE8B2503C /* GrowingStatusBarEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CBFCB5AF66BE6B0B6BE9BB17FD3A1786 /* GrowingStatusBarEventManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F2D08116825F4484BA4E8288D13C3A2 /* GrowingWSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 785238F9B8AB98786CB0EC3BB5B9A918 /* GrowingWSLogger.m */; };
+		A4E7C8B42F4C52ABAF578AE46EC4FB8F /* GrowingTrackEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = F23FC382517AC75DE6367F4AC26F0960 /* GrowingTrackEventType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A780E55EE04B0C1F049C6106DF0EC2F5 /* GrowingTrackConfiguration+CdpTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2125BD82119D1CF1210AE26DA0C40095 /* GrowingTrackConfiguration+CdpTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A839D9B025ED69BF45D9134FF80CCE06 /* GrowingAttributesConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEFAFA776963A6181E55EE470B3C858 /* GrowingAttributesConst.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8CA421BF0389FAF4030E50F8CB28A9D /* GrowingVisitorAttributesEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E9C22D5331F58B75E8AD5BB5A1B5F8 /* GrowingVisitorAttributesEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A91CB724AF3AE378FAF22C43E5D20DF3 /* GrowingSceneDelegateAutotracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 553AC89186E2A949BAD524CD0DE561C9 /* GrowingSceneDelegateAutotracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA5C6A3A75D91D19E487293666718CD1 /* GrowingBaseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 035344FDE295895E593D8D23E42B9C5F /* GrowingBaseEvent.m */; };
+		AA6280EF390EC2B6E32CF83029EF578F /* GrowingEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B969FF7A75941D0DF9C3A22D64B81 /* GrowingEventRequest.m */; };
+		AE13E509D1CC64520EF2D9BD317E6CC9 /* NSDictionary+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CC3B29CEDB6045CA3C6D2292A0A218 /* NSDictionary+GrowingHelper.m */; };
+		B08F19CD2C5B202658E0F06FD25AA0BC /* GrowingPersistenceDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6E7A23F18767F2C63859F95800C1CA /* GrowingPersistenceDataProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B309821CE9201FFC88C643A4639692CC /* GrowingRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A75F91A7B98AE5A578761007F503B8F /* GrowingRequestProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3A705CF6A86B98395272D01BB234013 /* GrowingStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2862C1BC068B86BCDE999790D0FC6805 /* GrowingStatusBar.m */; };
+		B45874B37E72302A1B0C1797DD82808A /* GrowingASLLoggerFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 046AA22C3F82A5DF4FF1E226AD57D160 /* GrowingASLLoggerFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4A8F95A30AF55CB0FCE0D6F79463511 /* GrowingDynamicProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B385E7FD8F66D6B13863CB9A573356D7 /* GrowingDynamicProxy.m */; };
+		B5742B33328D3277428DA080A517A1DE /* GrowingThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C0AE77125B5876C330D231F31AEA259 /* GrowingThread.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B88CD72B451C69D21FBCE65F9CC2AE55 /* GrowingLoggerNames.h in Headers */ = {isa = PBXBuildFile; fileRef = BB66E62E523BB82F4ECC0C7430B154FF /* GrowingLoggerNames.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA1F1D4961C0769C122F4D305A3F7A80 /* GrowingHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DFD0F57934EE48F0FE977472113C89 /* GrowingHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA6D4EAF5277714E9FAB4AC11AE38B42 /* GrowingTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 401D63554737A7C8CA05975631978B6D /* GrowingTTYLogger.m */; };
+		BA93D40A7895FF915FD2446315E73F2A /* GrowingNetworkInterfaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DBFC504288C85B8663464027C83EF91 /* GrowingNetworkInterfaceManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA952E9B500D76D0B25256A11C6EF1BC /* GrowingDebuggerEventQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B667E6660E758C8FD5696B6CAB09EE01 /* GrowingDebuggerEventQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BAF209F94B7B959DADAA3996F628A537 /* GrowingTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B9141235580F983CA980D8D67B6F6D /* GrowingTTYLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB0809FC3691BF82FC820093B656BF1F /* GrowingEventRequestAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF35212F8985E8F82203B50D55E649 /* GrowingEventRequestAdapter.m */; };
+		BCCFE7D75FB7607BA04BA939D15DE303 /* NSString+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2EF2CF71760049C30CB56A07DF160 /* NSString+GrowingHelper.m */; };
+		BD33202DF797B6A11D00AF7AFB72448A /* GrowingDynamicProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB27E90E2A0A714D54457496A6C1197 /* GrowingDynamicProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD92D53F4D3EA6401B1F65B753B380AC /* GrowingEventDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D291DB50D2271E870A4D9FB1079914DF /* GrowingEventDataBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BDC38480F13779992F4F2E5207B2A57D /* GrowingDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1E9407977964CF5E2211C7E3402188 /* GrowingDeviceInfo.m */; };
+		BE05B9E55BAAFB888E5592D9DD82AB75 /* GrowingArgumentChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 390DC8888B8C1AB1D90B125B099C741C /* GrowingArgumentChecker.m */; };
+		BF6B39A79D993B88911641B06949FBC4 /* GrowingCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E8CDB8F8CFC1D59EB74C278AD277C4 /* GrowingCrypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C0B13E73C32D89A4B23CD34A4DE2BEC0 /* GrowingTimeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7CEA06A4AD0D55BD5D652583B691F6 /* GrowingTimeUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C214BEA06E79ED3B09803EE603B26233 /* GrowingAnalytics-cdp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A43D9B0762457229613DC1978BC3686 /* GrowingAnalytics-cdp-dummy.m */; };
+		C36D6CF7726A73D44F97DD61E68145C8 /* GrowingDeepLinkHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = D4B837812B22A8E00B398F5BAE1FE50E /* GrowingDeepLinkHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4B53BF3D110FD0943792AB8CEC7A48D /* GrowingFMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9D4DC803C62EFBACC299E2A2106FEF /* GrowingFMDatabasePool.m */; };
+		C586BBDE9849124A6189D0A931819952 /* NSURLSession+GrowingURLSessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE87D39204AB8CC736DA65A01A2B2E0 /* NSURLSession+GrowingURLSessionHelper.m */; };
+		C588D4C81B8934D868C671B60B4B9AB4 /* GrowingMobileDebugger.h in Headers */ = {isa = PBXBuildFile; fileRef = 232655275B3E781A8402EFE7DC21E3AE /* GrowingMobileDebugger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C5D2DAFD61CD58EFDEFC2B5DC67A8BE0 /* NSData+GrowingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8D997E044FEA4664E0EE2F43E90C9E /* NSData+GrowingHelper.m */; };
+		C83BB713CA5C40CE3BE612D44B211158 /* GrowingDataTraffic.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3131974104038611C8D1B068C6DC61 /* GrowingDataTraffic.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C852AAC0FFD75BD88FE0BC5528C31F3F /* GrowingConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DE37ED3A560685350E9179A152BBB6 /* GrowingConfigurationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C9BE729E643CDCD660A1BB7C5D15F6B3 /* GrowingFMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AB34409ED8D341CDBA0EECC4478F8B /* GrowingFMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB244B6CC76CD080FA798B65A2B627ED /* NSObject+GrowingIvarHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CB20AAB19CE0BAFB19F2BDF927BE8B3E /* NSObject+GrowingIvarHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB422BD8C8547AA981F20542EAE95C3A /* GrowingASLLoggerFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F9B415874A748CFC1F055563479613 /* GrowingASLLoggerFormat.m */; };
+		CBB9F1311E9BAA1CA105F1F5D695E0FC /* GrowingAppDelegateAutotracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 24169CB010B24D3B28E84614E32E9DAE /* GrowingAppDelegateAutotracker.m */; };
+		CBEECECDA5A58015CDEB202147924FBB /* GrowingFileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 49418D280E19AE3EF38747CE603441C5 /* GrowingFileStorage.m */; };
+		CDA89A0712857763256425DC6F8779D3 /* GrowingDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75FCDBEE83FE344F0AAC1BAF69475C63 /* GrowingDispatchManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE17AB333F7EAECAE89FEDA94C763E42 /* GrowingNetworkInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4CA82EC14D4A623569A02CCE436C42 /* GrowingNetworkInterfaceManager.m */; };
+		CE84D4A80A075F1AB8C0AB830062A2F8 /* GrowingStatusBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C6944F3B490123FCB67C201899C9B1F9 /* GrowingStatusBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CF82C5AB0CFD4E870A1DB117B9FF660F /* GrowingSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F3679F33FDF7E8CEA122C8EB3477B7 /* GrowingSwizzle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFE2E9FB81A37BE06A5870F4C67D429D /* GrowingSRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF38F2453537CD2FDCEBE8E0F333A7F /* GrowingSRWebSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D0D30ECC7A52C835F1BBA5C2780CA06D /* GrowingLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7764570680CB14EF5634918D34AAB427 /* GrowingLogMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D15A40216B46D01096C99C0827DE7CBC /* GrowingAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = B763B4117F9FE2E0A1F6E6992E29FE82 /* GrowingAlert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2B6CDBE5E13A658806BA9513501D441 /* GrowingConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F8702BD146A3B153008416DE15146B /* GrowingConfigurationManager.m */; };
+		D57097391E966C8DD706303CB90A8310 /* GrowingBaseAttributesEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = BA359B9A98568AF00EC759B42A54B9DF /* GrowingBaseAttributesEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D66123E893F69C2EDE18BD64A6C2B51D /* GrowingEventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DC1866C40329B6DCAD16C2900B2D9 /* GrowingEventGenerator.m */; };
+		D6FD188D2A9396720296B54E025DB983 /* GrowingEventChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7CBBACE90441733BC3F0F94395817E /* GrowingEventChannel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7101190EB6816E9E06B90DDDF7B291C /* UIControl+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DC841A1B75D572D5E05DFEE5C46D8A /* UIControl+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D947AC770090B663A63E34AD9E69E7A6 /* UIWindow+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4791F5CB35D8A97AD32B51B6C3624399 /* UIWindow+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D97D3A57F65EC5AF17F0819D3B24C906 /* GrowingLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0738FE40D8FD256BD27E8CC870DF26E /* GrowingLoginRequest.m */; };
+		DBE862D29D0944969EADEBF7250718C0 /* GrowingURLSessionDataTaskProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B2AD7A3EFECDB412B891058B4EFEE0D /* GrowingURLSessionDataTaskProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DCF7EA1726DEFF99AD231712A991F5A9 /* GrowingDeepLinkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 650E40503ADAB85583C410B8BF8CB1C2 /* GrowingDeepLinkHandler.m */; };
+		DF25271DF0F0EBC68F21DDF3558A6328 /* GrowingFMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C054675D992A3851B8482BDE94E1478 /* GrowingFMDatabase.m */; };
+		DF9B557802A62DC06C122D254E87EF5E /* NSData+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D35A40089EDBE0F08511A4B1A24299D4 /* NSData+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E3213F85CCF8E280189A68C469D8F91B /* GrowingNodeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E8594CBC25C1DD0BFECEBECD080F1278 /* GrowingNodeProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E348892F1695943E871FA67F01C0D933 /* GrowingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 470E445DFB1C780B04839C90F608E07C /* GrowingSession.m */; };
+		E61D56102039C5F3160DC9E83F4A5961 /* GrowingApplicationEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D887DF7E18AB5184C237E0F8786CA08 /* GrowingApplicationEventManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9DE636C10644C160667C393B68F9833 /* GrowingBaseAttributesEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = ED080FA827F28CCAEF74B3889D75E0E5 /* GrowingBaseAttributesEvent.m */; };
+		EB89094A79FCA61EB3D210EC5EA2CE61 /* GrowingDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8493178FE4F93A8AB0EE7CDE21E6619D /* GrowingDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED0282A9EAE8EF4D8CE5984EE6DBD927 /* GrowingTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFC85A65C0C7A479DA9361E99EA0909 /* GrowingTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EEA8A30408041909A72A641A30962B0D /* GrowingCdpEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A007EA10B4A8403B48453FC2D01185C0 /* GrowingCdpEventInterceptor.m */; };
+		F436EE903A05856BC86F9DCE60AC2B0D /* GrowingNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBA4788D387B7F9FF199E85013F23E9 /* GrowingNetworkManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F74D383492436AA93F4B851AACBABE9A /* GrowingWebWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 08454660B49725BA96A6661B337BEE2D /* GrowingWebWatcher.m */; };
+		F7A6D0E4D3F464AE06AC57C37F319BA1 /* GrowingFMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = C42F306CD4BE73F03EBC456A4B9610D5 /* GrowingFMDatabaseQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F8976524B688373BC3CD8950A9C1E52A /* GrowingBaseEvent+SendPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E167A56A2032AC9EFA869709B9C251D /* GrowingBaseEvent+SendPolicy.m */; };
+		F8E402AF0150A95EC1EAB95F87CA7D76 /* GrowingWSLoggerFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 52504531E941749AE97D96EB90E6173A /* GrowingWSLoggerFormat.m */; };
+		F9233EE3F9E640E18E462AECAB900967 /* GrowingNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3110AA5F3A39FD9806224E5CD6CE19AE /* GrowingNetworkConfig.m */; };
+		FB041CF3B28B43E1D07750804318E31C /* GrowingLoginRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 30688ABE90378266E7F27530ADEDE1D2 /* GrowingLoginRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB0CCA949D73D26B1D525944ACCFBF0C /* GrowingVisitEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F378EFF4EFB9D90F3F71A215AD0069C6 /* GrowingVisitEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBBC63C23093084094407F9DE3805371 /* GrowingReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D81FC72346CAFD2C79933EC16F359E /* GrowingReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FD69BC1445C92BB5EF37CCC51F1CD91B /* NSURL+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 155A1ED96ECB7DDA90A8FFD3D1F7D4A3 /* NSURL+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE34285687B7E07E7D865517A0D72F10 /* GrowingLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2531ECE8AEAA9588C6AC95D754C4A97 /* GrowingLog.m */; };
+		FE8750C7C661ADFB212D697E0876F81E /* GrowingFMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5945DEFF9C85CDA1E9DED7F28AA14E /* GrowingFMDB.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FEF835565308C4D7C8EB7B28A22D96B7 /* UIApplication+GrowingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB5D3573F4FD6FB974DAC2A1891B7F9 /* UIApplication+GrowingHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		51C27BEAE6D894849B84EF6808B72C0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1BD429524C325D5CD8C3F2E2B430F2;
+			remoteInfo = GrowingAnalytics;
+		};
+		8629C3DE5DC2360A87167943A9AE2506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECD9B9D1AAB13F4E546F90B77C1538D9;
+			remoteInfo = "GrowingAnalytics-cdp";
+		};
+		A5EB8F1A4369F67312E3A5F68E03EA25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1BD429524C325D5CD8C3F2E2B430F2;
+			remoteInfo = GrowingAnalytics;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		588AF1A42BF9AF0C8C145ED52175904E /* GrowingCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowingCoreKit.framework; path = GrowingCoreKit/GrowingCoreKit.framework; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7F3217B9BF6004EEDA25CDBB2F389539 /* Pods-HelloCordova-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HelloCordova-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EC87CC0FD86A169EB0600755B9C7A7C /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HelloCordova.a"; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A613CB0F79A9F38BF933244BF7819D27 /* Growing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Growing.h; path = PublicHeader/Growing.h; sourceTree = "<group>"; };
-		B3CC54CC4CA3C27E438986C02677B9D2 /* Pods-HelloCordova-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HelloCordova-frameworks.sh"; sourceTree = "<group>"; };
-		BE4055063B44379921328530D4DAEFD7 /* Pods-HelloCordova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloCordova.release.xcconfig"; sourceTree = "<group>"; };
-		C11762970E8663E83E8272B64E1255E4 /* Pods-HelloCordova-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HelloCordova-dummy.m"; sourceTree = "<group>"; };
-		D246463F63CD4E07C68160E03973EAAC /* Pods-HelloCordova-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HelloCordova-resources.sh"; sourceTree = "<group>"; };
-		EAE2DB139F304DDB046CEB9F49170628 /* Pods-HelloCordova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloCordova.debug.xcconfig"; sourceTree = "<group>"; };
-		EBB3F633BC7011D988363EEE57C67C50 /* Pods-HelloCordova-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HelloCordova-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0025F41FEECC13A83741199DF74BC577 /* UIControl+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.m"; sourceTree = "<group>"; };
+		002D1F0077FFC8354CA8F03C5C4FDAA5 /* GrowingDebuggerEventQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDebuggerEventQueue.m; path = GrowingTrackerCore/DeepLink/MobileDebugger/GrowingDebuggerEventQueue.m; sourceTree = "<group>"; };
+		01D81FC72346CAFD2C79933EC16F359E /* GrowingReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingReachability.h; path = GrowingTrackerCore/Thirdparty/Reachability/GrowingReachability.h; sourceTree = "<group>"; };
+		02C9780686FBC18293F29F6437096C69 /* GrowingAppLifecycle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingAppLifecycle.h; path = GrowingTrackerCore/Hook/GrowingAppLifecycle.h; sourceTree = "<group>"; };
+		035344FDE295895E593D8D23E42B9C5F /* GrowingBaseEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingBaseEvent.m; path = GrowingTrackerCore/Event/Base/GrowingBaseEvent.m; sourceTree = "<group>"; };
+		044616086A21759C22ECAAA66FBF6D8D /* GrowingEventGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventGenerator.h; path = GrowingTrackerCore/Event/GrowingEventGenerator.h; sourceTree = "<group>"; };
+		046AA22C3F82A5DF4FF1E226AD57D160 /* GrowingASLLoggerFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingASLLoggerFormat.h; path = GrowingTrackerCore/LogFormat/GrowingASLLoggerFormat.h; sourceTree = "<group>"; };
+		0572B11E756A20934E7EFF7C8990F372 /* GrowingURLSessionProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingURLSessionProtocol.h; path = GrowingTrackerCore/NetWork/Request/GrowingURLSessionProtocol.h; sourceTree = "<group>"; };
+		08454660B49725BA96A6661B337BEE2D /* GrowingWebWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingWebWatcher.m; path = GrowingTrackerCore/DeepLink/GrowingWebWatcher.m; sourceTree = "<group>"; };
+		0967CD54D079E091B81B61BF1961001A /* GrowingEventDataBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventDataBase.m; path = GrowingTrackerCore/Event/GrowingEventDataBase.m; sourceTree = "<group>"; };
+		0A0BB24E37736234FD72F11D4CC06EAC /* UIWindow+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/UIWindow+GrowingHelper.m"; sourceTree = "<group>"; };
+		0A2682DA2A47DCDBFC988B1B4DD5A3FA /* GrowingFMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMDatabasePool.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabasePool.h; sourceTree = "<group>"; };
+		0A43D9B0762457229613DC1978BC3686 /* GrowingAnalytics-cdp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GrowingAnalytics-cdp-dummy.m"; sourceTree = "<group>"; };
+		0A97216FC9564213FD22050D608058CE /* GrowingVisitorAttributesEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingVisitorAttributesEvent.m; path = GrowingTrackerCore/Event/GrowingVisitorAttributesEvent.m; sourceTree = "<group>"; };
+		0C1E9407977964CF5E2211C7E3402188 /* GrowingDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDeviceInfo.m; path = GrowingTrackerCore/Utils/GrowingDeviceInfo.m; sourceTree = "<group>"; };
+		0FB66CCC2383FBDECC03DDE3A14B7F41 /* NSString+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/NSString+GrowingHelper.h"; sourceTree = "<group>"; };
+		1058DB278C750C3F3BFAECB2B16AEED7 /* GrowingUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingUserDefaults.h; path = GrowingTrackerCore/FileStorage/GrowingUserDefaults.h; sourceTree = "<group>"; };
+		122B969FF7A75941D0DF9C3A22D64B81 /* GrowingEventRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventRequest.m; path = GrowingTrackerCore/NetWork/Request/GrowingEventRequest.m; sourceTree = "<group>"; };
+		12D7FBADD93049C342C9AF234F33918D /* GrowingRealTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingRealTracker.h; path = GrowingTrackerCore/GrowingRealTracker.h; sourceTree = "<group>"; };
+		12F4DFD8A42CE20FA9A111A7FD5C9A7A /* GrowingNetworkManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingNetworkManager.m; path = GrowingTrackerCore/NetWork/NetworkManager/GrowingNetworkManager.m; sourceTree = "<group>"; };
+		155A1ED96ECB7DDA90A8FFD3D1F7D4A3 /* NSURL+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/NSURL+GrowingHelper.h"; sourceTree = "<group>"; };
+		15AB34409ED8D341CDBA0EECC4478F8B /* GrowingFMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMDatabaseAdditions.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabaseAdditions.h; sourceTree = "<group>"; };
+		15EF35212F8985E8F82203B50D55E649 /* GrowingEventRequestAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventRequestAdapter.m; path = GrowingTrackerCore/NetWork/Request/Adapter/GrowingEventRequestAdapter.m; sourceTree = "<group>"; };
+		16E53880EB5557C4AE0F8D4CABF5FD77 /* GrowingTrackConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingTrackConfiguration.h; path = GrowingTrackerCore/GrowingTrackConfiguration.h; sourceTree = "<group>"; };
+		175C8338E16E30C63D34D02C1A5CF8E3 /* GrowingWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingWindow.m; path = GrowingTrackerCore/GrowingWindow.m; sourceTree = "<group>"; };
+		179A452C762E8517B33E1E78B8F69D8B /* GrowingFMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFMDatabaseAdditions.m; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabaseAdditions.m; sourceTree = "<group>"; };
+		19CC39462D368C8D93C854D5A6437DF1 /* GrowingEventChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventChannel.m; path = GrowingTrackerCore/Event/GrowingEventChannel.m; sourceTree = "<group>"; };
+		1AEA2DEC27E1135572185E2EF7DCB219 /* GrowingDataTraffic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDataTraffic.m; path = GrowingTrackerCore/Event/GrowingDataTraffic.m; sourceTree = "<group>"; };
+		1BAB8EC440732D2B1AA02EA604138594 /* GrowingAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingAlert.m; path = GrowingTrackerCore/Menu/GrowingAlert.m; sourceTree = "<group>"; };
+		1C6A8FFC2CB467C75E8C4CAEE98FB0DA /* NSURLSession+GrowingURLSessionHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+GrowingURLSessionHelper.h"; path = "GrowingTrackerCore/NetWork/NetworkManager/NSURLSession+GrowingURLSessionHelper.h"; sourceTree = "<group>"; };
+		1F4DC9327B1F56BDEFB1C4E49EAC1319 /* UIImage+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/UIImage+GrowingHelper.m"; sourceTree = "<group>"; };
+		1F59F97F38164A03C406A9CFAD4CAFEA /* GrowingCdpEventInterceptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingCdpEventInterceptor.h; path = GrowingTrackerCore/CDP/GrowingCdpEventInterceptor.h; sourceTree = "<group>"; };
+		2125BD82119D1CF1210AE26DA0C40095 /* GrowingTrackConfiguration+CdpTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GrowingTrackConfiguration+CdpTracker.h"; path = "GrowingTrackerCore/GrowingTrackConfiguration+CdpTracker.h"; sourceTree = "<group>"; };
+		232655275B3E781A8402EFE7DC21E3AE /* GrowingMobileDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingMobileDebugger.h; path = GrowingTrackerCore/DeepLink/MobileDebugger/GrowingMobileDebugger.h; sourceTree = "<group>"; };
+		23CA5C0D0F2743D6ED1C8EA5F29DC706 /* GrowingBaseEvent+SendPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GrowingBaseEvent+SendPolicy.h"; path = "GrowingTrackerCore/Event/Base/GrowingBaseEvent+SendPolicy.h"; sourceTree = "<group>"; };
+		24169CB010B24D3B28E84614E32E9DAE /* GrowingAppDelegateAutotracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingAppDelegateAutotracker.m; path = GrowingTrackerCore/DeepLink/GrowingAppDelegateAutotracker.m; sourceTree = "<group>"; };
+		2688D3D915BF41A5784934A888CFC783 /* Pods-HelloCordova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloCordova.debug.xcconfig"; sourceTree = "<group>"; };
+		27DC841A1B75D572D5E05DFEE5C46D8A /* UIControl+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.h"; sourceTree = "<group>"; };
+		2862C1BC068B86BCDE999790D0FC6805 /* GrowingStatusBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingStatusBar.m; path = GrowingTrackerCore/Menu/GrowingStatusBar.m; sourceTree = "<group>"; };
+		2CCE30683E248016A1995CF137270DC8 /* GrowingAppDelegateAutotracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingAppDelegateAutotracker.h; path = GrowingTrackerCore/DeepLink/GrowingAppDelegateAutotracker.h; sourceTree = "<group>"; };
+		2E167A56A2032AC9EFA869709B9C251D /* GrowingBaseEvent+SendPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GrowingBaseEvent+SendPolicy.m"; path = "GrowingTrackerCore/Event/Base/GrowingBaseEvent+SendPolicy.m"; sourceTree = "<group>"; };
+		2F8921B898C969C451899B512EDC7F9E /* GrowingConversionVariableEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingConversionVariableEvent.h; path = GrowingTrackerCore/Event/GrowingConversionVariableEvent.h; sourceTree = "<group>"; };
+		30688ABE90378266E7F27530ADEDE1D2 /* GrowingLoginRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLoginRequest.h; path = GrowingTrackerCore/NetWork/Request/GrowingLoginRequest.h; sourceTree = "<group>"; };
+		30BEC149030187520DB7F8611FD5BB3C /* GrowingSRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingSRWebSocket.m; path = GrowingTrackerCore/NetWork/SocketRocket/GrowingSRWebSocket.m; sourceTree = "<group>"; };
+		3110AA5F3A39FD9806224E5CD6CE19AE /* GrowingNetworkConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingNetworkConfig.m; path = GrowingTrackerCore/NetWork/Request/GrowingNetworkConfig.m; sourceTree = "<group>"; };
+		341E7C6E7C827AFD2F306AA25992BD22 /* GrowingCocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingCocoaLumberjack.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingCocoaLumberjack.h; sourceTree = "<group>"; };
+		36124FA48DA27C06A16B8431A6D86986 /* GrowingEventRequestAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventRequestAdapter.h; path = GrowingTrackerCore/NetWork/Request/Adapter/GrowingEventRequestAdapter.h; sourceTree = "<group>"; };
+		38A306591303E02993C8EAEDEEEEDAD4 /* GrowingSceneDelegateAutotracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingSceneDelegateAutotracker.m; path = GrowingTrackerCore/DeepLink/GrowingSceneDelegateAutotracker.m; sourceTree = "<group>"; };
+		390DC8888B8C1AB1D90B125B099C741C /* GrowingArgumentChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingArgumentChecker.m; path = GrowingTrackerCore/Utils/GrowingArgumentChecker.m; sourceTree = "<group>"; };
+		39DFD0F57934EE48F0FE977472113C89 /* GrowingHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingHelpers.h; path = GrowingTrackerCore/Helpers/GrowingHelpers.h; sourceTree = "<group>"; };
+		3C054675D992A3851B8482BDE94E1478 /* GrowingFMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFMDatabase.m; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabase.m; sourceTree = "<group>"; };
+		3C0AE77125B5876C330D231F31AEA259 /* GrowingThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingThread.h; path = GrowingTrackerCore/Thread/GrowingThread.h; sourceTree = "<group>"; };
+		3D5945DEFF9C85CDA1E9DED7F28AA14E /* GrowingFMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMDB.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDB.h; sourceTree = "<group>"; };
+		401D63554737A7C8CA05975631978B6D /* GrowingTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingTTYLogger.m; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingTTYLogger.m; sourceTree = "<group>"; };
+		4206B32915908832A1A7F2ABAD027675 /* NSObject+GrowingIvarHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+GrowingIvarHelper.m"; path = "GrowingTrackerCore/Helpers/NSObject+GrowingIvarHelper.m"; sourceTree = "<group>"; };
+		46CFF6B9EAF4E6A78912381381711646 /* GrowingAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GrowingAnalytics.debug.xcconfig; sourceTree = "<group>"; };
+		470E445DFB1C780B04839C90F608E07C /* GrowingSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingSession.m; path = GrowingTrackerCore/Manager/GrowingSession.m; sourceTree = "<group>"; };
+		4791F5CB35D8A97AD32B51B6C3624399 /* UIWindow+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/UIWindow+GrowingHelper.h"; sourceTree = "<group>"; };
+		49418D280E19AE3EF38747CE603441C5 /* GrowingFileStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFileStorage.m; path = GrowingTrackerCore/FileStorage/GrowingFileStorage.m; sourceTree = "<group>"; };
+		4970A499BCD516700E35FE5F99AABF6E /* GrowingConversionVariableEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingConversionVariableEvent.m; path = GrowingTrackerCore/Event/GrowingConversionVariableEvent.m; sourceTree = "<group>"; };
+		4A1AE8C665A0E21D6506742926EC4704 /* GrowingNetworkConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingNetworkConfig.h; path = GrowingTrackerCore/NetWork/Request/GrowingNetworkConfig.h; sourceTree = "<group>"; };
+		4B510AC6B5E57289C665BD430AB19EBF /* GrowingFMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFMResultSet.m; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMResultSet.m; sourceTree = "<group>"; };
+		52504531E941749AE97D96EB90E6173A /* GrowingWSLoggerFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingWSLoggerFormat.m; path = GrowingTrackerCore/LogFormat/GrowingWSLoggerFormat.m; sourceTree = "<group>"; };
+		52F3F78A387F1E8F7A5E87637AC66E7D /* NSURL+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/NSURL+GrowingHelper.m"; sourceTree = "<group>"; };
+		5331DF47B9E6C24344BC54B5C28F6E4F /* GrowingAnalytics-cdp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GrowingAnalytics-cdp.debug.xcconfig"; sourceTree = "<group>"; };
+		53A15DA16B155FDC248584D1856A5B72 /* GrowingEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventManager.h; path = GrowingTrackerCore/Event/GrowingEventManager.h; sourceTree = "<group>"; };
+		553AC89186E2A949BAD524CD0DE561C9 /* GrowingSceneDelegateAutotracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingSceneDelegateAutotracker.h; path = GrowingTrackerCore/DeepLink/GrowingSceneDelegateAutotracker.h; sourceTree = "<group>"; };
+		57217EDFB8701F1F8A9141C991FEE468 /* GrowingMobileDebugger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingMobileDebugger.m; path = GrowingTrackerCore/DeepLink/MobileDebugger/GrowingMobileDebugger.m; sourceTree = "<group>"; };
+		57F8702BD146A3B153008416DE15146B /* GrowingConfigurationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingConfigurationManager.m; path = GrowingTrackerCore/Manager/GrowingConfigurationManager.m; sourceTree = "<group>"; };
+		5824659A3B537AC5E074451CAFB12AEA /* GrowingEventManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventManager.m; path = GrowingTrackerCore/Event/GrowingEventManager.m; sourceTree = "<group>"; };
+		5A6BD946F2786E0561CB5107A26A88F3 /* Pods-HelloCordova-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HelloCordova-dummy.m"; sourceTree = "<group>"; };
+		5A75F91A7B98AE5A578761007F503B8F /* GrowingRequestProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingRequestProtocol.h; path = GrowingTrackerCore/NetWork/Request/GrowingRequestProtocol.h; sourceTree = "<group>"; };
+		5AE882406C2947F77593D7E1F2424380 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m"; path = "GrowingTrackerCore/NetWork/NetworkManager/NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m"; sourceTree = "<group>"; };
+		5C110097F1910DFFB878F40E88FFB534 /* UIApplication+GrowingNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+GrowingNode.h"; path = "GrowingTrackerCore/Hook/UIApplication+GrowingNode.h"; sourceTree = "<group>"; };
+		5DBFC504288C85B8663464027C83EF91 /* GrowingNetworkInterfaceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingNetworkInterfaceManager.h; path = GrowingTrackerCore/NetWork/GrowingNetworkInterfaceManager.h; sourceTree = "<group>"; };
+		5EBB45D459633A6AEBCD7D3A88330992 /* GrowingCustomEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingCustomEvent.m; path = GrowingTrackerCore/Event/GrowingCustomEvent.m; sourceTree = "<group>"; };
+		5F1FFB25D466E3D0819E6D7860DF56DB /* GrowingResourceCustomEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingResourceCustomEvent.m; path = GrowingTrackerCore/CDP/GrowingResourceCustomEvent.m; sourceTree = "<group>"; };
+		5F5DC1866C40329B6DCAD16C2900B2D9 /* GrowingEventGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventGenerator.m; path = GrowingTrackerCore/Event/GrowingEventGenerator.m; sourceTree = "<group>"; };
+		6419E5E54D76CF09C8FA25D5BE2E89DF /* GrowingASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingASLLogger.m; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingASLLogger.m; sourceTree = "<group>"; };
+		650E40503ADAB85583C410B8BF8CB1C2 /* GrowingDeepLinkHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDeepLinkHandler.m; path = GrowingTrackerCore/DeepLink/GrowingDeepLinkHandler.m; sourceTree = "<group>"; };
+		65AAE330FEA798D7B0F04F81E89C5FBA /* GrowingLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLog.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingLog.h; sourceTree = "<group>"; };
+		68D1494F3AD7AF1199DA31299C4C5B84 /* GrowingSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingSwizzler.m; path = GrowingTrackerCore/GrowingSwizzle/GrowingSwizzler.m; sourceTree = "<group>"; };
+		6A85677BDBD173F5E8C7838538E8C8D3 /* Pods-HelloCordova-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HelloCordova-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6BAE72CE2CD7D645D1A5E6FEC385CFE6 /* UIApplication+GrowingNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+GrowingNode.m"; path = "GrowingTrackerCore/Hook/UIApplication+GrowingNode.m"; sourceTree = "<group>"; };
+		6D72AF6ACF40200D7AA27A40F33CB792 /* GrowingRequestAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingRequestAdapter.m; path = GrowingTrackerCore/NetWork/Request/Adapter/GrowingRequestAdapter.m; sourceTree = "<group>"; };
+		6D887DF7E18AB5184C237E0F8786CA08 /* GrowingApplicationEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingApplicationEventManager.h; path = GrowingTrackerCore/Manager/GrowingApplicationEventManager.h; sourceTree = "<group>"; };
+		6EFC85A65C0C7A479DA9361E99EA0909 /* GrowingTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingTracker.h; path = GrowingTracker/GrowingTracker.h; sourceTree = "<group>"; };
+		7238E5C9F9229B0FDA8303FA1C56BB93 /* GrowingAnalytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GrowingAnalytics-dummy.m"; sourceTree = "<group>"; };
+		724D6B293468385A6C74A4829D2056FC /* GrowingCustomEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingCustomEvent.h; path = GrowingTrackerCore/Event/GrowingCustomEvent.h; sourceTree = "<group>"; };
+		75208184B87C66FBEC8D436F858C61C6 /* GrowingEventPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventPersistence.h; path = GrowingTrackerCore/Event/Tools/GrowingEventPersistence.h; sourceTree = "<group>"; };
+		75FCDBEE83FE344F0AAC1BAF69475C63 /* GrowingDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDispatchManager.h; path = GrowingTrackerCore/Thread/GrowingDispatchManager.h; sourceTree = "<group>"; };
+		7764570680CB14EF5634918D34AAB427 /* GrowingLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLogMacros.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingLogMacros.h; sourceTree = "<group>"; };
+		77658ACCE47E2D2CC2CAEEE0FF82C564 /* NSArray+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/NSArray+GrowingHelper.m"; sourceTree = "<group>"; };
+		77BBE98A98EE3D298CEE974FA3508E22 /* GrowingLoginUserAttributesEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingLoginUserAttributesEvent.m; path = GrowingTrackerCore/Event/GrowingLoginUserAttributesEvent.m; sourceTree = "<group>"; };
+		785238F9B8AB98786CB0EC3BB5B9A918 /* GrowingWSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingWSLogger.m; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingWSLogger.m; sourceTree = "<group>"; };
+		78A8C23F7A1F0E98765C33FE95BB0227 /* Pods-HelloCordova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloCordova.release.xcconfig"; sourceTree = "<group>"; };
+		78DE37ED3A560685350E9179A152BBB6 /* GrowingConfigurationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingConfigurationManager.h; path = GrowingTrackerCore/Manager/GrowingConfigurationManager.h; sourceTree = "<group>"; };
+		79B9141235580F983CA980D8D67B6F6D /* GrowingTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingTTYLogger.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingTTYLogger.h; sourceTree = "<group>"; };
+		7A52281D2470B84060EE29A6A968A717 /* GrowingFMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMResultSet.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMResultSet.h; sourceTree = "<group>"; };
+		7D6E7A23F18767F2C63859F95800C1CA /* GrowingPersistenceDataProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingPersistenceDataProvider.h; path = GrowingTrackerCore/Event/Tools/GrowingPersistenceDataProvider.h; sourceTree = "<group>"; };
+		81F1BFF9FCA34E5127FB0D0D0B70B325 /* GrowingTimeUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingTimeUtil.m; path = GrowingTrackerCore/Utils/GrowingTimeUtil.m; sourceTree = "<group>"; };
+		81F3679F33FDF7E8CEA122C8EB3477B7 /* GrowingSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingSwizzle.h; path = GrowingTrackerCore/GrowingSwizzle/GrowingSwizzle.h; sourceTree = "<group>"; };
+		82A45C57345066E81D796A7A0D4EADE4 /* UIApplication+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/UIApplication+GrowingHelper.m"; sourceTree = "<group>"; };
+		8493178FE4F93A8AB0EE7CDE21E6619D /* GrowingDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDeviceInfo.h; path = GrowingTrackerCore/Utils/GrowingDeviceInfo.h; sourceTree = "<group>"; };
+		8522DF505F0B344984E236BE74A14B3D /* GrowingArgumentChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingArgumentChecker.h; path = GrowingTrackerCore/Utils/GrowingArgumentChecker.h; sourceTree = "<group>"; };
+		8AE87D39204AB8CC736DA65A01A2B2E0 /* NSURLSession+GrowingURLSessionHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GrowingURLSessionHelper.m"; path = "GrowingTrackerCore/NetWork/NetworkManager/NSURLSession+GrowingURLSessionHelper.m"; sourceTree = "<group>"; };
+		8BC63C51C5E8D999E990F2940EF41A12 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h"; path = "GrowingTrackerCore/NetWork/NetworkManager/NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h"; sourceTree = "<group>"; };
+		8BD01596B8B3B082DD4B75181BA61CA8 /* GrowingAppLifecycle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingAppLifecycle.m; path = GrowingTrackerCore/Hook/GrowingAppLifecycle.m; sourceTree = "<group>"; };
+		8DEFAFA776963A6181E55EE470B3C858 /* GrowingAttributesConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingAttributesConst.h; path = GrowingTrackerCore/GrowingAttributesConst.h; sourceTree = "<group>"; };
+		8EC2BD3EB190E6122C9A07C72A74F072 /* GrowingWebWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingWebWatcher.h; path = GrowingTrackerCore/DeepLink/GrowingWebWatcher.h; sourceTree = "<group>"; };
+		8F352112CE15A60F1D604FED891E3937 /* Pods-HelloCordova-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HelloCordova-acknowledgements.plist"; sourceTree = "<group>"; };
+		90C16506CAE590FC3D1E5DA0522CC07E /* GrowingTrackEventType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingTrackEventType.m; path = GrowingTrackerCore/Event/GrowingTrackEventType.m; sourceTree = "<group>"; };
+		953C7D2519A42C7AA8ACE06D4DB5477B /* NSArray+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/NSArray+GrowingHelper.h"; sourceTree = "<group>"; };
+		95998E0C8135D172C63E7F5A6B07273B /* GrowingUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingUserDefaults.m; path = GrowingTrackerCore/FileStorage/GrowingUserDefaults.m; sourceTree = "<group>"; };
+		96099A33F74FFF010129903FAE357259 /* GrowingTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingTracker.m; path = GrowingTracker/GrowingTracker.m; sourceTree = "<group>"; };
+		9B2AD7A3EFECDB412B891058B4EFEE0D /* GrowingURLSessionDataTaskProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingURLSessionDataTaskProtocol.h; path = GrowingTrackerCore/NetWork/Request/GrowingURLSessionDataTaskProtocol.h; sourceTree = "<group>"; };
+		9B40C532D30ADE1B7204AE96D642C3D5 /* GrowingResourceCustomEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingResourceCustomEvent.h; path = GrowingTrackerCore/CDP/GrowingResourceCustomEvent.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E1555CE3B23B582723A6A43AC000CD4 /* GrowingSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingSwizzle.m; path = GrowingTrackerCore/GrowingSwizzle/GrowingSwizzle.m; sourceTree = "<group>"; };
+		9E57EA599534CA4124984152037BD5FB /* GrowingASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingASLLogger.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingASLLogger.h; sourceTree = "<group>"; };
+		A007EA10B4A8403B48453FC2D01185C0 /* GrowingCdpEventInterceptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingCdpEventInterceptor.m; path = GrowingTrackerCore/CDP/GrowingCdpEventInterceptor.m; sourceTree = "<group>"; };
+		A0BC6B0A0C89542621641744FE1AE102 /* GrowingSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingSwizzler.h; path = GrowingTrackerCore/GrowingSwizzle/GrowingSwizzler.h; sourceTree = "<group>"; };
+		A0D26AA35BF252D7981687D8F7FE41B4 /* GrowingSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingSession.h; path = GrowingTrackerCore/Manager/GrowingSession.h; sourceTree = "<group>"; };
+		A0E8CDB8F8CFC1D59EB74C278AD277C4 /* GrowingCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingCrypto.h; path = GrowingTrackerCore/FileStorage/GrowingCrypto.h; sourceTree = "<group>"; };
+		A2B8DE6894006565E2EEF5A8E7FFD003 /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HelloCordova.a"; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33ACC83F8ED12EDBDF67F66E479871B /* GrowingPersistenceDataProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingPersistenceDataProvider.m; path = GrowingTrackerCore/Event/Tools/GrowingPersistenceDataProvider.m; sourceTree = "<group>"; };
+		A71299306675CA1125BF881933F5C9B1 /* GrowingTrackConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingTrackConfiguration.m; path = GrowingTrackerCore/GrowingTrackConfiguration.m; sourceTree = "<group>"; };
+		A7BE69AAD34D51E5B5663F92E902DDEA /* UIView+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/UIView+GrowingHelper.h"; sourceTree = "<group>"; };
+		A87357338786774DA09552B321AB8AB2 /* GrowingWSLoggerFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingWSLoggerFormat.h; path = GrowingTrackerCore/LogFormat/GrowingWSLoggerFormat.h; sourceTree = "<group>"; };
+		A9C27BC7D7F902D4949DD8C29D8E79ED /* GrowingTrackConfiguration+CdpTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GrowingTrackConfiguration+CdpTracker.m"; path = "GrowingTrackerCore/GrowingTrackConfiguration+CdpTracker.m"; sourceTree = "<group>"; };
+		AA6F0DD78C5ED4669E563BE41FB8FE7F /* GrowingAnalytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingAnalytics-prefix.pch"; sourceTree = "<group>"; };
+		AB3131974104038611C8D1B068C6DC61 /* GrowingDataTraffic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDataTraffic.h; path = GrowingTrackerCore/Event/GrowingDataTraffic.h; sourceTree = "<group>"; };
+		AB7CBBACE90441733BC3F0F94395817E /* GrowingEventChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventChannel.h; path = GrowingTrackerCore/Event/GrowingEventChannel.h; sourceTree = "<group>"; };
+		AC47D15A5D053FF31C6C9ED06E49DF4E /* NSDictionary+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/NSDictionary+GrowingHelper.h"; sourceTree = "<group>"; };
+		ADC762B8B8818E51772C8C7BF492F29E /* GrowingAttributesConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingAttributesConst.m; path = GrowingTrackerCore/GrowingAttributesConst.m; sourceTree = "<group>"; };
+		AE04875E9AD8F7B8BEC7BAD5E85E99E2 /* GrowingFMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMDatabase.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabase.h; sourceTree = "<group>"; };
+		AF122B5327C0250BEF9A0451AE4DA078 /* GrowingEventRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventRequest.h; path = GrowingTrackerCore/NetWork/Request/GrowingEventRequest.h; sourceTree = "<group>"; };
+		B1F35327510083E3F41123328F638558 /* GrowingApplicationEventManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingApplicationEventManager.m; path = GrowingTrackerCore/Manager/GrowingApplicationEventManager.m; sourceTree = "<group>"; };
+		B20B503FC86481ED7F9DEAB79430AC33 /* GrowingStatusBarEventManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingStatusBarEventManager.m; path = GrowingTrackerCore/Manager/GrowingStatusBarEventManager.m; sourceTree = "<group>"; };
+		B353A45A6E5D6B1F9258296AD6F557DA /* GrowingWSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingWSLogger.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingWSLogger.h; sourceTree = "<group>"; };
+		B385E7FD8F66D6B13863CB9A573356D7 /* GrowingDynamicProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDynamicProxy.m; path = GrowingTrackerCore/Utils/GrowingDynamicProxy.m; sourceTree = "<group>"; };
+		B4A3790CA0B05814DA9D52F13729C4B7 /* GrowingFileStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFileStorage.h; path = GrowingTrackerCore/FileStorage/GrowingFileStorage.h; sourceTree = "<group>"; };
+		B667E6660E758C8FD5696B6CAB09EE01 /* GrowingDebuggerEventQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDebuggerEventQueue.h; path = GrowingTrackerCore/DeepLink/MobileDebugger/GrowingDebuggerEventQueue.h; sourceTree = "<group>"; };
+		B763B4117F9FE2E0A1F6E6992E29FE82 /* GrowingAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingAlert.h; path = GrowingTrackerCore/Menu/GrowingAlert.h; sourceTree = "<group>"; };
+		B7F9B415874A748CFC1F055563479613 /* GrowingASLLoggerFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingASLLoggerFormat.m; path = GrowingTrackerCore/LogFormat/GrowingASLLoggerFormat.m; sourceTree = "<group>"; };
+		B807873F813A513E45E63FC1324D8AD8 /* GrowingLoginUserAttributesEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLoginUserAttributesEvent.h; path = GrowingTrackerCore/Event/GrowingLoginUserAttributesEvent.h; sourceTree = "<group>"; };
+		B9D2EF2CF71760049C30CB56A07DF160 /* NSString+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/NSString+GrowingHelper.m"; sourceTree = "<group>"; };
+		BA359B9A98568AF00EC759B42A54B9DF /* GrowingBaseAttributesEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingBaseAttributesEvent.h; path = GrowingTrackerCore/Event/Base/GrowingBaseAttributesEvent.h; sourceTree = "<group>"; };
+		BAB27E90E2A0A714D54457496A6C1197 /* GrowingDynamicProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDynamicProxy.h; path = GrowingTrackerCore/Utils/GrowingDynamicProxy.h; sourceTree = "<group>"; };
+		BB66E62E523BB82F4ECC0C7430B154FF /* GrowingLoggerNames.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLoggerNames.h; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingLoggerNames.h; sourceTree = "<group>"; };
+		BE1525A70E6D5102EDFE0A14B03A1528 /* UIView+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/UIView+GrowingHelper.m"; sourceTree = "<group>"; };
+		BF8AC21F2FFE62CAAD23C7FAC0E24EA5 /* GrowingWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingWindow.h; path = GrowingTrackerCore/GrowingWindow.h; sourceTree = "<group>"; };
+		BF8D997E044FEA4664E0EE2F43E90C9E /* NSData+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/NSData+GrowingHelper.m"; sourceTree = "<group>"; };
+		C07043A4AF75A59D3642941A5F0931B3 /* UIImage+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/UIImage+GrowingHelper.h"; sourceTree = "<group>"; };
+		C2531ECE8AEAA9588C6AC95D754C4A97 /* GrowingLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingLog.m; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingLog.m; sourceTree = "<group>"; };
+		C42F306CD4BE73F03EBC456A4B9610D5 /* GrowingFMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingFMDatabaseQueue.h; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabaseQueue.h; sourceTree = "<group>"; };
+		C6944F3B490123FCB67C201899C9B1F9 /* GrowingStatusBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingStatusBar.h; path = GrowingTrackerCore/Menu/GrowingStatusBar.h; sourceTree = "<group>"; };
+		C8267FEC03024AE257FFB70AFA9D04C0 /* GrowingAppCloseEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingAppCloseEvent.h; path = GrowingTrackerCore/Event/GrowingAppCloseEvent.h; sourceTree = "<group>"; };
+		C87088DFD7CC1C12E12503D8B73ACE34 /* GrowingReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingReachability.m; path = GrowingTrackerCore/Thirdparty/Reachability/GrowingReachability.m; sourceTree = "<group>"; };
+		CA16DCA0F1A0C4981666B6DDF98DEACC /* GrowingAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GrowingAnalytics.release.xcconfig; sourceTree = "<group>"; };
+		CAA56B57FA3DA77240671DC1AACF7A86 /* GrowingAppCloseEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingAppCloseEvent.m; path = GrowingTrackerCore/Event/GrowingAppCloseEvent.m; sourceTree = "<group>"; };
+		CB20AAB19CE0BAFB19F2BDF927BE8B3E /* NSObject+GrowingIvarHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+GrowingIvarHelper.h"; path = "GrowingTrackerCore/Helpers/NSObject+GrowingIvarHelper.h"; sourceTree = "<group>"; };
+		CB9D4DC803C62EFBACC299E2A2106FEF /* GrowingFMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFMDatabasePool.m; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabasePool.m; sourceTree = "<group>"; };
+		CBFCB5AF66BE6B0B6BE9BB17FD3A1786 /* GrowingStatusBarEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingStatusBarEventManager.h; path = GrowingTrackerCore/Manager/GrowingStatusBarEventManager.h; sourceTree = "<group>"; };
+		CC7CEA06A4AD0D55BD5D652583B691F6 /* GrowingTimeUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingTimeUtil.h; path = GrowingTrackerCore/Utils/GrowingTimeUtil.h; sourceTree = "<group>"; };
+		CCD7F575ECB52B22462E2ECD2C518029 /* GrowingFMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingFMDatabaseQueue.m; path = GrowingTrackerCore/Thirdparty/fmdb/GrowingFMDatabaseQueue.m; sourceTree = "<group>"; };
+		CD60EDF7E25D0238D7867764F04E63D3 /* GrowingRequestAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingRequestAdapter.h; path = GrowingTrackerCore/NetWork/Request/Adapter/GrowingRequestAdapter.h; sourceTree = "<group>"; };
+		CEBA4788D387B7F9FF199E85013F23E9 /* GrowingNetworkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingNetworkManager.h; path = GrowingTrackerCore/NetWork/NetworkManager/GrowingNetworkManager.h; sourceTree = "<group>"; };
+		D0738FE40D8FD256BD27E8CC870DF26E /* GrowingLoginRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingLoginRequest.m; path = GrowingTrackerCore/NetWork/Request/GrowingLoginRequest.m; sourceTree = "<group>"; };
+		D291DB50D2271E870A4D9FB1079914DF /* GrowingEventDataBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingEventDataBase.h; path = GrowingTrackerCore/Event/GrowingEventDataBase.h; sourceTree = "<group>"; };
+		D35A40089EDBE0F08511A4B1A24299D4 /* NSData+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/NSData+GrowingHelper.h"; sourceTree = "<group>"; };
+		D4B837812B22A8E00B398F5BAE1FE50E /* GrowingDeepLinkHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingDeepLinkHandler.h; path = GrowingTrackerCore/DeepLink/GrowingDeepLinkHandler.h; sourceTree = "<group>"; };
+		D7E8C6A6B9931F38889E34B20046EA6D /* GrowingBaseEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingBaseEvent.h; path = GrowingTrackerCore/Event/Base/GrowingBaseEvent.h; sourceTree = "<group>"; };
+		D8CC3B29CEDB6045CA3C6D2292A0A218 /* NSDictionary+GrowingHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+GrowingHelper.m"; path = "GrowingTrackerCore/Helpers/NSDictionary+GrowingHelper.m"; sourceTree = "<group>"; };
+		DBF38F2453537CD2FDCEBE8E0F333A7F /* GrowingSRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingSRWebSocket.h; path = GrowingTrackerCore/NetWork/SocketRocket/GrowingSRWebSocket.h; sourceTree = "<group>"; };
+		DCFD3227C6150BAA8F4D21F570F2073C /* GrowingAnalytics-cdp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingAnalytics-cdp-prefix.pch"; sourceTree = "<group>"; };
+		DF0626407492FEBFFCBDDBF134EDD73E /* GrowingVisitEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingVisitEvent.m; path = GrowingTrackerCore/Event/GrowingVisitEvent.m; sourceTree = "<group>"; };
+		E0FF3136C7B75B8E400A36E333DC3CFD /* GrowingDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingDispatchManager.m; path = GrowingTrackerCore/Thread/GrowingDispatchManager.m; sourceTree = "<group>"; };
+		E476F919D359EF64D530F52A73A528C6 /* GrowingRealTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingRealTracker.m; path = GrowingTrackerCore/GrowingRealTracker.m; sourceTree = "<group>"; };
+		E6E9C22D5331F58B75E8AD5BB5A1B5F8 /* GrowingVisitorAttributesEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingVisitorAttributesEvent.h; path = GrowingTrackerCore/Event/GrowingVisitorAttributesEvent.h; sourceTree = "<group>"; };
+		E8594CBC25C1DD0BFECEBECD080F1278 /* GrowingNodeProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingNodeProtocol.h; path = GrowingTrackerCore/Event/GrowingNodeProtocol.h; sourceTree = "<group>"; };
+		EAB5D3573F4FD6FB974DAC2A1891B7F9 /* UIApplication+GrowingHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+GrowingHelper.h"; path = "GrowingTrackerCore/Helpers/UIApplication+GrowingHelper.h"; sourceTree = "<group>"; };
+		EB17AA3E91A8DEED15BBF7A5D281F33D /* libGrowingAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGrowingAnalytics.a; path = libGrowingAnalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED080FA827F28CCAEF74B3889D75E0E5 /* GrowingBaseAttributesEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingBaseAttributesEvent.m; path = GrowingTrackerCore/Event/Base/GrowingBaseAttributesEvent.m; sourceTree = "<group>"; };
+		ED2E4661638A6BABA0270AB47EE6A0EA /* GrowingAnalytics-cdp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GrowingAnalytics-cdp.release.xcconfig"; sourceTree = "<group>"; };
+		EE2C0DEF127BA48C9127EF077D0427FB /* libGrowingAnalytics-cdp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libGrowingAnalytics-cdp.a"; path = "libGrowingAnalytics-cdp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB4440206FF9F180B69D93FDED2826D /* GrowingLZ4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingLZ4.h; path = GrowingTrackerCore/NetWork/LZ4/GrowingLZ4.h; sourceTree = "<group>"; };
+		F0EE5C64E8ACFC495A1FDF22447BE4E5 /* GrowingLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingLoggerNames.m; path = GrowingTrackerCore/Thirdparty/GrowingLogger/GrowingLoggerNames.m; sourceTree = "<group>"; };
+		F23FC382517AC75DE6367F4AC26F0960 /* GrowingTrackEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingTrackEventType.h; path = GrowingTrackerCore/Event/GrowingTrackEventType.h; sourceTree = "<group>"; };
+		F378EFF4EFB9D90F3F71A215AD0069C6 /* GrowingVisitEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GrowingVisitEvent.h; path = GrowingTrackerCore/Event/GrowingVisitEvent.h; sourceTree = "<group>"; };
+		F6E8029B0EC29F00EC00D4301245028E /* GrowingThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingThread.m; path = GrowingTrackerCore/Thread/GrowingThread.m; sourceTree = "<group>"; };
+		FA4CA82EC14D4A623569A02CCE436C42 /* GrowingNetworkInterfaceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingNetworkInterfaceManager.m; path = GrowingTrackerCore/NetWork/GrowingNetworkInterfaceManager.m; sourceTree = "<group>"; };
+		FF5BC86D091ED00DA13F0E466DB9A6D9 /* GrowingEventPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowingEventPersistence.m; path = GrowingTrackerCore/Event/Tools/GrowingEventPersistence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		80EA12C0AF57ED3E82751E68555686EB /* Frameworks */ = {
+		29949A7A3FE9404597B0FCC82B0E437C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F861103DCB365D709808A1112A73E338 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5191C1BC18186406C1D18313AF332291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9875F395DE702A0B65B07B3056C83CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FD9AA24BAC0F1B9332A1F94ECDA60B7 /* Pods */ = {
+		13DD488FFC906E8D906411EA507C9E79 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4E1DD5BEF82221F9192CF046838D529 /* Growing */,
-				849D739A7D47A3B8347B8A1EC3782DAE /* GrowingCoreKit */,
+				7238E5C9F9229B0FDA8303FA1C56BB93 /* GrowingAnalytics-dummy.m */,
+				AA6F0DD78C5ED4669E563BE41FB8FE7F /* GrowingAnalytics-prefix.pch */,
+				46CFF6B9EAF4E6A78912381381711646 /* GrowingAnalytics.debug.xcconfig */,
+				CA16DCA0F1A0C4981666B6DDF98DEACC /* GrowingAnalytics.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/GrowingAnalytics";
 			sourceTree = "<group>";
 		};
-		51F5C2A3EDEC874ADFD71A277A761C69 /* Targets Support Files */ = {
+		37769E798E1FF759AE6C3C3E8D4B9A16 /* Pods-HelloCordova */ = {
 			isa = PBXGroup;
 			children = (
-				AA2182B89435096F81E44FF7F5ECAF0C /* Pods-HelloCordova */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1FD9AA24BAC0F1B9332A1F94ECDA60B7 /* Pods */,
-				F39E5E5EFB267488C8B9178927CD705B /* Products */,
-				51F5C2A3EDEC874ADFD71A277A761C69 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8022A3852AED93E491A827E3FCF5091A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				588AF1A42BF9AF0C8C145ED52175904E /* GrowingCoreKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		849D739A7D47A3B8347B8A1EC3782DAE /* GrowingCoreKit */ = {
-			isa = PBXGroup;
-			children = (
-				8022A3852AED93E491A827E3FCF5091A /* Frameworks */,
-			);
-			name = GrowingCoreKit;
-			path = GrowingCoreKit;
-			sourceTree = "<group>";
-		};
-		AA2182B89435096F81E44FF7F5ECAF0C /* Pods-HelloCordova */ = {
-			isa = PBXGroup;
-			children = (
-				EBB3F633BC7011D988363EEE57C67C50 /* Pods-HelloCordova-acknowledgements.markdown */,
-				7F3217B9BF6004EEDA25CDBB2F389539 /* Pods-HelloCordova-acknowledgements.plist */,
-				C11762970E8663E83E8272B64E1255E4 /* Pods-HelloCordova-dummy.m */,
-				B3CC54CC4CA3C27E438986C02677B9D2 /* Pods-HelloCordova-frameworks.sh */,
-				D246463F63CD4E07C68160E03973EAAC /* Pods-HelloCordova-resources.sh */,
-				EAE2DB139F304DDB046CEB9F49170628 /* Pods-HelloCordova.debug.xcconfig */,
-				BE4055063B44379921328530D4DAEFD7 /* Pods-HelloCordova.release.xcconfig */,
+				6A85677BDBD173F5E8C7838538E8C8D3 /* Pods-HelloCordova-acknowledgements.markdown */,
+				8F352112CE15A60F1D604FED891E3937 /* Pods-HelloCordova-acknowledgements.plist */,
+				5A6BD946F2786E0561CB5107A26A88F3 /* Pods-HelloCordova-dummy.m */,
+				2688D3D915BF41A5784934A888CFC783 /* Pods-HelloCordova.debug.xcconfig */,
+				78A8C23F7A1F0E98765C33FE95BB0227 /* Pods-HelloCordova.release.xcconfig */,
 			);
 			name = "Pods-HelloCordova";
 			path = "Target Support Files/Pods-HelloCordova";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		3CFE77F126DECF3949FE52D3F649E124 /* GrowingAnalytics-cdp */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				73E8A036D390B2F32DEE1C50C4A27D7D /* Support Files */,
+				BF91ABC9001F0CBA2CF353324DA31750 /* Tracker */,
+				C54D362D221354D58FE46FC6FB8CFF15 /* TrackerCore */,
+			);
+			name = "GrowingAnalytics-cdp";
+			path = "GrowingAnalytics-cdp";
+			sourceTree = "<group>";
+		};
+		55D2189402C2292BF67C5BB35634792A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37769E798E1FF759AE6C3C3E8D4B9A16 /* Pods-HelloCordova */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		58E700559173F01A87BA065E74520CD0 /* TrackerCore */ = {
+			isa = PBXGroup;
+			children = (
+				B763B4117F9FE2E0A1F6E6992E29FE82 /* GrowingAlert.h */,
+				1BAB8EC440732D2B1AA02EA604138594 /* GrowingAlert.m */,
+				C8267FEC03024AE257FFB70AFA9D04C0 /* GrowingAppCloseEvent.h */,
+				CAA56B57FA3DA77240671DC1AACF7A86 /* GrowingAppCloseEvent.m */,
+				2CCE30683E248016A1995CF137270DC8 /* GrowingAppDelegateAutotracker.h */,
+				24169CB010B24D3B28E84614E32E9DAE /* GrowingAppDelegateAutotracker.m */,
+				6D887DF7E18AB5184C237E0F8786CA08 /* GrowingApplicationEventManager.h */,
+				B1F35327510083E3F41123328F638558 /* GrowingApplicationEventManager.m */,
+				02C9780686FBC18293F29F6437096C69 /* GrowingAppLifecycle.h */,
+				8BD01596B8B3B082DD4B75181BA61CA8 /* GrowingAppLifecycle.m */,
+				8522DF505F0B344984E236BE74A14B3D /* GrowingArgumentChecker.h */,
+				390DC8888B8C1AB1D90B125B099C741C /* GrowingArgumentChecker.m */,
+				9E57EA599534CA4124984152037BD5FB /* GrowingASLLogger.h */,
+				6419E5E54D76CF09C8FA25D5BE2E89DF /* GrowingASLLogger.m */,
+				046AA22C3F82A5DF4FF1E226AD57D160 /* GrowingASLLoggerFormat.h */,
+				B7F9B415874A748CFC1F055563479613 /* GrowingASLLoggerFormat.m */,
+				8DEFAFA776963A6181E55EE470B3C858 /* GrowingAttributesConst.h */,
+				ADC762B8B8818E51772C8C7BF492F29E /* GrowingAttributesConst.m */,
+				BA359B9A98568AF00EC759B42A54B9DF /* GrowingBaseAttributesEvent.h */,
+				ED080FA827F28CCAEF74B3889D75E0E5 /* GrowingBaseAttributesEvent.m */,
+				D7E8C6A6B9931F38889E34B20046EA6D /* GrowingBaseEvent.h */,
+				035344FDE295895E593D8D23E42B9C5F /* GrowingBaseEvent.m */,
+				23CA5C0D0F2743D6ED1C8EA5F29DC706 /* GrowingBaseEvent+SendPolicy.h */,
+				2E167A56A2032AC9EFA869709B9C251D /* GrowingBaseEvent+SendPolicy.m */,
+				341E7C6E7C827AFD2F306AA25992BD22 /* GrowingCocoaLumberjack.h */,
+				78DE37ED3A560685350E9179A152BBB6 /* GrowingConfigurationManager.h */,
+				57F8702BD146A3B153008416DE15146B /* GrowingConfigurationManager.m */,
+				2F8921B898C969C451899B512EDC7F9E /* GrowingConversionVariableEvent.h */,
+				4970A499BCD516700E35FE5F99AABF6E /* GrowingConversionVariableEvent.m */,
+				A0E8CDB8F8CFC1D59EB74C278AD277C4 /* GrowingCrypto.h */,
+				724D6B293468385A6C74A4829D2056FC /* GrowingCustomEvent.h */,
+				5EBB45D459633A6AEBCD7D3A88330992 /* GrowingCustomEvent.m */,
+				AB3131974104038611C8D1B068C6DC61 /* GrowingDataTraffic.h */,
+				1AEA2DEC27E1135572185E2EF7DCB219 /* GrowingDataTraffic.m */,
+				B667E6660E758C8FD5696B6CAB09EE01 /* GrowingDebuggerEventQueue.h */,
+				002D1F0077FFC8354CA8F03C5C4FDAA5 /* GrowingDebuggerEventQueue.m */,
+				D4B837812B22A8E00B398F5BAE1FE50E /* GrowingDeepLinkHandler.h */,
+				650E40503ADAB85583C410B8BF8CB1C2 /* GrowingDeepLinkHandler.m */,
+				8493178FE4F93A8AB0EE7CDE21E6619D /* GrowingDeviceInfo.h */,
+				0C1E9407977964CF5E2211C7E3402188 /* GrowingDeviceInfo.m */,
+				75FCDBEE83FE344F0AAC1BAF69475C63 /* GrowingDispatchManager.h */,
+				E0FF3136C7B75B8E400A36E333DC3CFD /* GrowingDispatchManager.m */,
+				BAB27E90E2A0A714D54457496A6C1197 /* GrowingDynamicProxy.h */,
+				B385E7FD8F66D6B13863CB9A573356D7 /* GrowingDynamicProxy.m */,
+				AB7CBBACE90441733BC3F0F94395817E /* GrowingEventChannel.h */,
+				19CC39462D368C8D93C854D5A6437DF1 /* GrowingEventChannel.m */,
+				D291DB50D2271E870A4D9FB1079914DF /* GrowingEventDataBase.h */,
+				0967CD54D079E091B81B61BF1961001A /* GrowingEventDataBase.m */,
+				044616086A21759C22ECAAA66FBF6D8D /* GrowingEventGenerator.h */,
+				5F5DC1866C40329B6DCAD16C2900B2D9 /* GrowingEventGenerator.m */,
+				53A15DA16B155FDC248584D1856A5B72 /* GrowingEventManager.h */,
+				5824659A3B537AC5E074451CAFB12AEA /* GrowingEventManager.m */,
+				75208184B87C66FBEC8D436F858C61C6 /* GrowingEventPersistence.h */,
+				FF5BC86D091ED00DA13F0E466DB9A6D9 /* GrowingEventPersistence.m */,
+				AF122B5327C0250BEF9A0451AE4DA078 /* GrowingEventRequest.h */,
+				122B969FF7A75941D0DF9C3A22D64B81 /* GrowingEventRequest.m */,
+				36124FA48DA27C06A16B8431A6D86986 /* GrowingEventRequestAdapter.h */,
+				15EF35212F8985E8F82203B50D55E649 /* GrowingEventRequestAdapter.m */,
+				B4A3790CA0B05814DA9D52F13729C4B7 /* GrowingFileStorage.h */,
+				49418D280E19AE3EF38747CE603441C5 /* GrowingFileStorage.m */,
+				AE04875E9AD8F7B8BEC7BAD5E85E99E2 /* GrowingFMDatabase.h */,
+				3C054675D992A3851B8482BDE94E1478 /* GrowingFMDatabase.m */,
+				15AB34409ED8D341CDBA0EECC4478F8B /* GrowingFMDatabaseAdditions.h */,
+				179A452C762E8517B33E1E78B8F69D8B /* GrowingFMDatabaseAdditions.m */,
+				0A2682DA2A47DCDBFC988B1B4DD5A3FA /* GrowingFMDatabasePool.h */,
+				CB9D4DC803C62EFBACC299E2A2106FEF /* GrowingFMDatabasePool.m */,
+				C42F306CD4BE73F03EBC456A4B9610D5 /* GrowingFMDatabaseQueue.h */,
+				CCD7F575ECB52B22462E2ECD2C518029 /* GrowingFMDatabaseQueue.m */,
+				3D5945DEFF9C85CDA1E9DED7F28AA14E /* GrowingFMDB.h */,
+				7A52281D2470B84060EE29A6A968A717 /* GrowingFMResultSet.h */,
+				4B510AC6B5E57289C665BD430AB19EBF /* GrowingFMResultSet.m */,
+				39DFD0F57934EE48F0FE977472113C89 /* GrowingHelpers.h */,
+				65AAE330FEA798D7B0F04F81E89C5FBA /* GrowingLog.h */,
+				C2531ECE8AEAA9588C6AC95D754C4A97 /* GrowingLog.m */,
+				BB66E62E523BB82F4ECC0C7430B154FF /* GrowingLoggerNames.h */,
+				F0EE5C64E8ACFC495A1FDF22447BE4E5 /* GrowingLoggerNames.m */,
+				30688ABE90378266E7F27530ADEDE1D2 /* GrowingLoginRequest.h */,
+				D0738FE40D8FD256BD27E8CC870DF26E /* GrowingLoginRequest.m */,
+				B807873F813A513E45E63FC1324D8AD8 /* GrowingLoginUserAttributesEvent.h */,
+				77BBE98A98EE3D298CEE974FA3508E22 /* GrowingLoginUserAttributesEvent.m */,
+				7764570680CB14EF5634918D34AAB427 /* GrowingLogMacros.h */,
+				EEB4440206FF9F180B69D93FDED2826D /* GrowingLZ4.h */,
+				232655275B3E781A8402EFE7DC21E3AE /* GrowingMobileDebugger.h */,
+				57217EDFB8701F1F8A9141C991FEE468 /* GrowingMobileDebugger.m */,
+				4A1AE8C665A0E21D6506742926EC4704 /* GrowingNetworkConfig.h */,
+				3110AA5F3A39FD9806224E5CD6CE19AE /* GrowingNetworkConfig.m */,
+				5DBFC504288C85B8663464027C83EF91 /* GrowingNetworkInterfaceManager.h */,
+				FA4CA82EC14D4A623569A02CCE436C42 /* GrowingNetworkInterfaceManager.m */,
+				CEBA4788D387B7F9FF199E85013F23E9 /* GrowingNetworkManager.h */,
+				12F4DFD8A42CE20FA9A111A7FD5C9A7A /* GrowingNetworkManager.m */,
+				E8594CBC25C1DD0BFECEBECD080F1278 /* GrowingNodeProtocol.h */,
+				7D6E7A23F18767F2C63859F95800C1CA /* GrowingPersistenceDataProvider.h */,
+				A33ACC83F8ED12EDBDF67F66E479871B /* GrowingPersistenceDataProvider.m */,
+				01D81FC72346CAFD2C79933EC16F359E /* GrowingReachability.h */,
+				C87088DFD7CC1C12E12503D8B73ACE34 /* GrowingReachability.m */,
+				12D7FBADD93049C342C9AF234F33918D /* GrowingRealTracker.h */,
+				E476F919D359EF64D530F52A73A528C6 /* GrowingRealTracker.m */,
+				CD60EDF7E25D0238D7867764F04E63D3 /* GrowingRequestAdapter.h */,
+				6D72AF6ACF40200D7AA27A40F33CB792 /* GrowingRequestAdapter.m */,
+				5A75F91A7B98AE5A578761007F503B8F /* GrowingRequestProtocol.h */,
+				553AC89186E2A949BAD524CD0DE561C9 /* GrowingSceneDelegateAutotracker.h */,
+				38A306591303E02993C8EAEDEEEEDAD4 /* GrowingSceneDelegateAutotracker.m */,
+				A0D26AA35BF252D7981687D8F7FE41B4 /* GrowingSession.h */,
+				470E445DFB1C780B04839C90F608E07C /* GrowingSession.m */,
+				DBF38F2453537CD2FDCEBE8E0F333A7F /* GrowingSRWebSocket.h */,
+				30BEC149030187520DB7F8611FD5BB3C /* GrowingSRWebSocket.m */,
+				C6944F3B490123FCB67C201899C9B1F9 /* GrowingStatusBar.h */,
+				2862C1BC068B86BCDE999790D0FC6805 /* GrowingStatusBar.m */,
+				CBFCB5AF66BE6B0B6BE9BB17FD3A1786 /* GrowingStatusBarEventManager.h */,
+				B20B503FC86481ED7F9DEAB79430AC33 /* GrowingStatusBarEventManager.m */,
+				81F3679F33FDF7E8CEA122C8EB3477B7 /* GrowingSwizzle.h */,
+				9E1555CE3B23B582723A6A43AC000CD4 /* GrowingSwizzle.m */,
+				A0BC6B0A0C89542621641744FE1AE102 /* GrowingSwizzler.h */,
+				68D1494F3AD7AF1199DA31299C4C5B84 /* GrowingSwizzler.m */,
+				3C0AE77125B5876C330D231F31AEA259 /* GrowingThread.h */,
+				F6E8029B0EC29F00EC00D4301245028E /* GrowingThread.m */,
+				CC7CEA06A4AD0D55BD5D652583B691F6 /* GrowingTimeUtil.h */,
+				81F1BFF9FCA34E5127FB0D0D0B70B325 /* GrowingTimeUtil.m */,
+				16E53880EB5557C4AE0F8D4CABF5FD77 /* GrowingTrackConfiguration.h */,
+				A71299306675CA1125BF881933F5C9B1 /* GrowingTrackConfiguration.m */,
+				F23FC382517AC75DE6367F4AC26F0960 /* GrowingTrackEventType.h */,
+				90C16506CAE590FC3D1E5DA0522CC07E /* GrowingTrackEventType.m */,
+				79B9141235580F983CA980D8D67B6F6D /* GrowingTTYLogger.h */,
+				401D63554737A7C8CA05975631978B6D /* GrowingTTYLogger.m */,
+				9B2AD7A3EFECDB412B891058B4EFEE0D /* GrowingURLSessionDataTaskProtocol.h */,
+				0572B11E756A20934E7EFF7C8990F372 /* GrowingURLSessionProtocol.h */,
+				1058DB278C750C3F3BFAECB2B16AEED7 /* GrowingUserDefaults.h */,
+				95998E0C8135D172C63E7F5A6B07273B /* GrowingUserDefaults.m */,
+				F378EFF4EFB9D90F3F71A215AD0069C6 /* GrowingVisitEvent.h */,
+				DF0626407492FEBFFCBDDBF134EDD73E /* GrowingVisitEvent.m */,
+				E6E9C22D5331F58B75E8AD5BB5A1B5F8 /* GrowingVisitorAttributesEvent.h */,
+				0A97216FC9564213FD22050D608058CE /* GrowingVisitorAttributesEvent.m */,
+				8EC2BD3EB190E6122C9A07C72A74F072 /* GrowingWebWatcher.h */,
+				08454660B49725BA96A6661B337BEE2D /* GrowingWebWatcher.m */,
+				BF8AC21F2FFE62CAAD23C7FAC0E24EA5 /* GrowingWindow.h */,
+				175C8338E16E30C63D34D02C1A5CF8E3 /* GrowingWindow.m */,
+				B353A45A6E5D6B1F9258296AD6F557DA /* GrowingWSLogger.h */,
+				785238F9B8AB98786CB0EC3BB5B9A918 /* GrowingWSLogger.m */,
+				A87357338786774DA09552B321AB8AB2 /* GrowingWSLoggerFormat.h */,
+				52504531E941749AE97D96EB90E6173A /* GrowingWSLoggerFormat.m */,
+				953C7D2519A42C7AA8ACE06D4DB5477B /* NSArray+GrowingHelper.h */,
+				77658ACCE47E2D2CC2CAEEE0FF82C564 /* NSArray+GrowingHelper.m */,
+				D35A40089EDBE0F08511A4B1A24299D4 /* NSData+GrowingHelper.h */,
+				BF8D997E044FEA4664E0EE2F43E90C9E /* NSData+GrowingHelper.m */,
+				AC47D15A5D053FF31C6C9ED06E49DF4E /* NSDictionary+GrowingHelper.h */,
+				D8CC3B29CEDB6045CA3C6D2292A0A218 /* NSDictionary+GrowingHelper.m */,
+				CB20AAB19CE0BAFB19F2BDF927BE8B3E /* NSObject+GrowingIvarHelper.h */,
+				4206B32915908832A1A7F2ABAD027675 /* NSObject+GrowingIvarHelper.m */,
+				0FB66CCC2383FBDECC03DDE3A14B7F41 /* NSString+GrowingHelper.h */,
+				B9D2EF2CF71760049C30CB56A07DF160 /* NSString+GrowingHelper.m */,
+				155A1ED96ECB7DDA90A8FFD3D1F7D4A3 /* NSURL+GrowingHelper.h */,
+				52F3F78A387F1E8F7A5E87637AC66E7D /* NSURL+GrowingHelper.m */,
+				1C6A8FFC2CB467C75E8C4CAEE98FB0DA /* NSURLSession+GrowingURLSessionHelper.h */,
+				8AE87D39204AB8CC736DA65A01A2B2E0 /* NSURLSession+GrowingURLSessionHelper.m */,
+				8BC63C51C5E8D999E990F2940EF41A12 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h */,
+				5AE882406C2947F77593D7E1F2424380 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m */,
+				EAB5D3573F4FD6FB974DAC2A1891B7F9 /* UIApplication+GrowingHelper.h */,
+				82A45C57345066E81D796A7A0D4EADE4 /* UIApplication+GrowingHelper.m */,
+				5C110097F1910DFFB878F40E88FFB534 /* UIApplication+GrowingNode.h */,
+				6BAE72CE2CD7D645D1A5E6FEC385CFE6 /* UIApplication+GrowingNode.m */,
+				27DC841A1B75D572D5E05DFEE5C46D8A /* UIControl+GrowingHelper.h */,
+				0025F41FEECC13A83741199DF74BC577 /* UIControl+GrowingHelper.m */,
+				C07043A4AF75A59D3642941A5F0931B3 /* UIImage+GrowingHelper.h */,
+				1F4DC9327B1F56BDEFB1C4E49EAC1319 /* UIImage+GrowingHelper.m */,
+				A7BE69AAD34D51E5B5663F92E902DDEA /* UIView+GrowingHelper.h */,
+				BE1525A70E6D5102EDFE0A14B03A1528 /* UIView+GrowingHelper.m */,
+				4791F5CB35D8A97AD32B51B6C3624399 /* UIWindow+GrowingHelper.h */,
+				0A0BB24E37736234FD72F11D4CC06EAC /* UIWindow+GrowingHelper.m */,
+			);
+			name = TrackerCore;
+			sourceTree = "<group>";
+		};
+		73E8A036D390B2F32DEE1C50C4A27D7D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A43D9B0762457229613DC1978BC3686 /* GrowingAnalytics-cdp-dummy.m */,
+				DCFD3227C6150BAA8F4D21F570F2073C /* GrowingAnalytics-cdp-prefix.pch */,
+				5331DF47B9E6C24344BC54B5C28F6E4F /* GrowingAnalytics-cdp.debug.xcconfig */,
+				ED2E4661638A6BABA0270AB47EE6A0EA /* GrowingAnalytics-cdp.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GrowingAnalytics-cdp";
+			sourceTree = "<group>";
+		};
+		A059558CF6330180968308535B36E5CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC30FDCB38056FDDAB298BBDD78A3C99 /* GrowingAnalytics */,
+				3CFE77F126DECF3949FE52D3F649E124 /* GrowingAnalytics-cdp */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF91ABC9001F0CBA2CF353324DA31750 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				6EFC85A65C0C7A479DA9361E99EA0909 /* GrowingTracker.h */,
+				96099A33F74FFF010129903FAE357259 /* GrowingTracker.m */,
+			);
+			name = Tracker;
+			sourceTree = "<group>";
+		};
+		C54D362D221354D58FE46FC6FB8CFF15 /* TrackerCore */ = {
+			isa = PBXGroup;
+			children = (
+				1F59F97F38164A03C406A9CFAD4CAFEA /* GrowingCdpEventInterceptor.h */,
+				A007EA10B4A8403B48453FC2D01185C0 /* GrowingCdpEventInterceptor.m */,
+				9B40C532D30ADE1B7204AE96D642C3D5 /* GrowingResourceCustomEvent.h */,
+				5F1FFB25D466E3D0819E6D7860DF56DB /* GrowingResourceCustomEvent.m */,
+				2125BD82119D1CF1210AE26DA0C40095 /* GrowingTrackConfiguration+CdpTracker.h */,
+				A9C27BC7D7F902D4949DD8C29D8E79ED /* GrowingTrackConfiguration+CdpTracker.m */,
+			);
+			name = TrackerCore;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				A059558CF6330180968308535B36E5CD /* Pods */,
+				DFB26235407DAA3490F5EC2EA6C0F108 /* Products */,
+				55D2189402C2292BF67C5BB35634792A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		DC30FDCB38056FDDAB298BBDD78A3C99 /* GrowingAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				13DD488FFC906E8D906411EA507C9E79 /* Support Files */,
+				58E700559173F01A87BA065E74520CD0 /* TrackerCore */,
 			);
-			name = iOS;
+			name = GrowingAnalytics;
+			path = GrowingAnalytics;
 			sourceTree = "<group>";
 		};
-		D4E1DD5BEF82221F9192CF046838D529 /* Growing */ = {
+		DFB26235407DAA3490F5EC2EA6C0F108 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A613CB0F79A9F38BF933244BF7819D27 /* Growing.h */,
-			);
-			name = Growing;
-			path = Growing;
-			sourceTree = "<group>";
-		};
-		F39E5E5EFB267488C8B9178927CD705B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9EC87CC0FD86A169EB0600755B9C7A7C /* libPods-HelloCordova.a */,
+				EB17AA3E91A8DEED15BBF7A5D281F33D /* libGrowingAnalytics.a */,
+				EE2C0DEF127BA48C9127EF077D0427FB /* libGrowingAnalytics-cdp.a */,
+				A2B8DE6894006565E2EEF5A8E7FFD003 /* libPods-HelloCordova.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		18F82AB9DBBBBEA665DE238F44932D48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D15A40216B46D01096C99C0827DE7CBC /* GrowingAlert.h in Headers */,
+				2A8959957E4E88AE0A9ED7ECE8160174 /* GrowingAppCloseEvent.h in Headers */,
+				8D0F579ACB32E2E01BD4E7507AFAD265 /* GrowingAppDelegateAutotracker.h in Headers */,
+				E61D56102039C5F3160DC9E83F4A5961 /* GrowingApplicationEventManager.h in Headers */,
+				2E3F86BBD7C62C083044FABDFE4562D8 /* GrowingAppLifecycle.h in Headers */,
+				3BED34D98BD8E12E1CB35516FA8B9D07 /* GrowingArgumentChecker.h in Headers */,
+				7F5CF088A91C4E6B15D48475DC7D8690 /* GrowingASLLogger.h in Headers */,
+				B45874B37E72302A1B0C1797DD82808A /* GrowingASLLoggerFormat.h in Headers */,
+				A839D9B025ED69BF45D9134FF80CCE06 /* GrowingAttributesConst.h in Headers */,
+				D57097391E966C8DD706303CB90A8310 /* GrowingBaseAttributesEvent.h in Headers */,
+				1BE69EEF0AAFB047105A7EBBADECF03F /* GrowingBaseEvent+SendPolicy.h in Headers */,
+				1DE555F0A2413D4F17700F4BD6368780 /* GrowingBaseEvent.h in Headers */,
+				07AB7C5673B0C8BBB5EC309C4327AEC8 /* GrowingCocoaLumberjack.h in Headers */,
+				C852AAC0FFD75BD88FE0BC5528C31F3F /* GrowingConfigurationManager.h in Headers */,
+				63AA58C8C81BE7F86B66E65506BE8524 /* GrowingConversionVariableEvent.h in Headers */,
+				BF6B39A79D993B88911641B06949FBC4 /* GrowingCrypto.h in Headers */,
+				52E057DD827C7A39621DBF29FA261101 /* GrowingCustomEvent.h in Headers */,
+				C83BB713CA5C40CE3BE612D44B211158 /* GrowingDataTraffic.h in Headers */,
+				BA952E9B500D76D0B25256A11C6EF1BC /* GrowingDebuggerEventQueue.h in Headers */,
+				C36D6CF7726A73D44F97DD61E68145C8 /* GrowingDeepLinkHandler.h in Headers */,
+				EB89094A79FCA61EB3D210EC5EA2CE61 /* GrowingDeviceInfo.h in Headers */,
+				CDA89A0712857763256425DC6F8779D3 /* GrowingDispatchManager.h in Headers */,
+				BD33202DF797B6A11D00AF7AFB72448A /* GrowingDynamicProxy.h in Headers */,
+				D6FD188D2A9396720296B54E025DB983 /* GrowingEventChannel.h in Headers */,
+				BD92D53F4D3EA6401B1F65B753B380AC /* GrowingEventDataBase.h in Headers */,
+				78993B6BEB34931419462F87E82E90C3 /* GrowingEventGenerator.h in Headers */,
+				6A25B214FCEE2C0B60425C2E47EC262B /* GrowingEventManager.h in Headers */,
+				520D54D1AE160914190610EDECE08FBB /* GrowingEventPersistence.h in Headers */,
+				69E97B7AC1B3F773EE91271BE5E9D238 /* GrowingEventRequest.h in Headers */,
+				3F96DBC7B5F7320FBC377683D1BBAE7B /* GrowingEventRequestAdapter.h in Headers */,
+				233B674FE18AA6EB43EF90EC15095E7E /* GrowingFileStorage.h in Headers */,
+				021094A5154DF9396F8B6AE375A4ED6D /* GrowingFMDatabase.h in Headers */,
+				C9BE729E643CDCD660A1BB7C5D15F6B3 /* GrowingFMDatabaseAdditions.h in Headers */,
+				0207E0832BE2C688725756413E8EB823 /* GrowingFMDatabasePool.h in Headers */,
+				F7A6D0E4D3F464AE06AC57C37F319BA1 /* GrowingFMDatabaseQueue.h in Headers */,
+				FE8750C7C661ADFB212D697E0876F81E /* GrowingFMDB.h in Headers */,
+				87A38C23DB142F8BF2635D8BE79EEA7E /* GrowingFMResultSet.h in Headers */,
+				BA1F1D4961C0769C122F4D305A3F7A80 /* GrowingHelpers.h in Headers */,
+				2674F0B76FA9008D1E067F77F759DC89 /* GrowingLog.h in Headers */,
+				B88CD72B451C69D21FBCE65F9CC2AE55 /* GrowingLoggerNames.h in Headers */,
+				FB041CF3B28B43E1D07750804318E31C /* GrowingLoginRequest.h in Headers */,
+				1E4EC2E2350C69E0EB98CA9469272D1C /* GrowingLoginUserAttributesEvent.h in Headers */,
+				D0D30ECC7A52C835F1BBA5C2780CA06D /* GrowingLogMacros.h in Headers */,
+				4D7C2FEBA17920722C63FBA240BE8660 /* GrowingLZ4.h in Headers */,
+				C588D4C81B8934D868C671B60B4B9AB4 /* GrowingMobileDebugger.h in Headers */,
+				88905C487FFA8B3732C5D2D5E566E98A /* GrowingNetworkConfig.h in Headers */,
+				BA93D40A7895FF915FD2446315E73F2A /* GrowingNetworkInterfaceManager.h in Headers */,
+				F436EE903A05856BC86F9DCE60AC2B0D /* GrowingNetworkManager.h in Headers */,
+				E3213F85CCF8E280189A68C469D8F91B /* GrowingNodeProtocol.h in Headers */,
+				B08F19CD2C5B202658E0F06FD25AA0BC /* GrowingPersistenceDataProvider.h in Headers */,
+				FBBC63C23093084094407F9DE3805371 /* GrowingReachability.h in Headers */,
+				6CBAF35FA80DC01DB802FD1123EC6041 /* GrowingRealTracker.h in Headers */,
+				20B90E7F69AD79ECFCBF656669C496A4 /* GrowingRequestAdapter.h in Headers */,
+				B309821CE9201FFC88C643A4639692CC /* GrowingRequestProtocol.h in Headers */,
+				A91CB724AF3AE378FAF22C43E5D20DF3 /* GrowingSceneDelegateAutotracker.h in Headers */,
+				268E4284BD4C07BAFB25B681141D93DC /* GrowingSession.h in Headers */,
+				CFE2E9FB81A37BE06A5870F4C67D429D /* GrowingSRWebSocket.h in Headers */,
+				CE84D4A80A075F1AB8C0AB830062A2F8 /* GrowingStatusBar.h in Headers */,
+				9A3836F490CCDBEB6A5DE0EFE8B2503C /* GrowingStatusBarEventManager.h in Headers */,
+				CF82C5AB0CFD4E870A1DB117B9FF660F /* GrowingSwizzle.h in Headers */,
+				3EBE750650B936635AA4AA8818815363 /* GrowingSwizzler.h in Headers */,
+				B5742B33328D3277428DA080A517A1DE /* GrowingThread.h in Headers */,
+				C0B13E73C32D89A4B23CD34A4DE2BEC0 /* GrowingTimeUtil.h in Headers */,
+				3C8ED6AE036A1F01602274A402BFE228 /* GrowingTrackConfiguration.h in Headers */,
+				A4E7C8B42F4C52ABAF578AE46EC4FB8F /* GrowingTrackEventType.h in Headers */,
+				BAF209F94B7B959DADAA3996F628A537 /* GrowingTTYLogger.h in Headers */,
+				DBE862D29D0944969EADEBF7250718C0 /* GrowingURLSessionDataTaskProtocol.h in Headers */,
+				88E418E064F74B0FC32AA991BC3CF3B0 /* GrowingURLSessionProtocol.h in Headers */,
+				7BC4B1B61956F2AF3895FE05F36E898C /* GrowingUserDefaults.h in Headers */,
+				FB0CCA949D73D26B1D525944ACCFBF0C /* GrowingVisitEvent.h in Headers */,
+				A8CA421BF0389FAF4030E50F8CB28A9D /* GrowingVisitorAttributesEvent.h in Headers */,
+				21E29763D3878EBD56326F88690F0894 /* GrowingWebWatcher.h in Headers */,
+				0BC3669DEF6A0B4534273485F8277710 /* GrowingWindow.h in Headers */,
+				27435213704BBB7F34B1B2668C4B0154 /* GrowingWSLogger.h in Headers */,
+				87511B9098596DBCD4A7136C67683844 /* GrowingWSLoggerFormat.h in Headers */,
+				7AB5D4709EA5A980EEEE0ECE3B3F3A0D /* NSArray+GrowingHelper.h in Headers */,
+				DF9B557802A62DC06C122D254E87EF5E /* NSData+GrowingHelper.h in Headers */,
+				8165DDD47C54393BE930B8D047D486B8 /* NSDictionary+GrowingHelper.h in Headers */,
+				CB244B6CC76CD080FA798B65A2B627ED /* NSObject+GrowingIvarHelper.h in Headers */,
+				8BDA3F1AA98E723BB54949581A89F86F /* NSString+GrowingHelper.h in Headers */,
+				FD69BC1445C92BB5EF37CCC51F1CD91B /* NSURL+GrowingHelper.h in Headers */,
+				053BD0D0F46658AD774C71DA4C245386 /* NSURLSession+GrowingURLSessionHelper.h in Headers */,
+				46E5BED716B6A99537FAD030B7E8382C /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.h in Headers */,
+				FEF835565308C4D7C8EB7B28A22D96B7 /* UIApplication+GrowingHelper.h in Headers */,
+				03EEA3C68E2BA08863F91FB63B6B99F1 /* UIApplication+GrowingNode.h in Headers */,
+				D7101190EB6816E9E06B90DDDF7B291C /* UIControl+GrowingHelper.h in Headers */,
+				02F8135CF395769789D2BCD3186FC554 /* UIImage+GrowingHelper.h in Headers */,
+				8B5DE49C9F99B2577FD47867A41880B8 /* UIView+GrowingHelper.h in Headers */,
+				D947AC770090B663A63E34AD9E69E7A6 /* UIWindow+GrowingHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6CE2F0735132E1125156703858DA1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F75C42FC1CC6EBFF7ADB8875EDD9696 /* GrowingCdpEventInterceptor.h in Headers */,
+				4C3AA4C34265587C73A38B0F642AE4AF /* GrowingResourceCustomEvent.h in Headers */,
+				A780E55EE04B0C1F049C6106DF0EC2F5 /* GrowingTrackConfiguration+CdpTracker.h in Headers */,
+				ED0282A9EAE8EF4D8CE5984EE6DBD927 /* GrowingTracker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E72F1CCD3966C330F211F33934D0CE0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		42F35A0BD5A14D746F9CC85CFBF412F1 /* Pods-HelloCordova */ = {
+		ECD9B9D1AAB13F4E546F90B77C1538D9 /* GrowingAnalytics-cdp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3D8801DFF5DE895ED3A447B9F99DA84 /* Build configuration list for PBXNativeTarget "Pods-HelloCordova" */;
+			buildConfigurationList = C75D95015869E2F4901615EBC9727E6B /* Build configuration list for PBXNativeTarget "GrowingAnalytics-cdp" */;
 			buildPhases = (
-				CB6CD2A5E99ABA31EA67E5DE2F9C3A1E /* Sources */,
-				80EA12C0AF57ED3E82751E68555686EB /* Frameworks */,
+				5F6CE2F0735132E1125156703858DA1E /* Headers */,
+				F7EAC255E31E65B38C34A5ACD36B264C /* Sources */,
+				5191C1BC18186406C1D18313AF332291 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E55560E688D5B30D53C58C7E98AB0A2 /* PBXTargetDependency */,
+			);
+			name = "GrowingAnalytics-cdp";
+			productName = "GrowingAnalytics-cdp";
+			productReference = EE2C0DEF127BA48C9127EF077D0427FB /* libGrowingAnalytics-cdp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EE1BD429524C325D5CD8C3F2E2B430F2 /* GrowingAnalytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B8C6511754BCB25F2DE7447A7D79866 /* Build configuration list for PBXNativeTarget "GrowingAnalytics" */;
+			buildPhases = (
+				18F82AB9DBBBBEA665DE238F44932D48 /* Headers */,
+				8748E05D2D0826601CAA94FAF5A82BDE /* Sources */,
+				29949A7A3FE9404597B0FCC82B0E437C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = GrowingAnalytics;
+			productName = GrowingAnalytics;
+			productReference = EB17AA3E91A8DEED15BBF7A5D281F33D /* libGrowingAnalytics.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCB7CD82493F638B2FB7EAD53127E9C5 /* Pods-HelloCordova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F32018AF013C5B35F1FC02116C1B8EF /* Build configuration list for PBXNativeTarget "Pods-HelloCordova" */;
+			buildPhases = (
+				E72F1CCD3966C330F211F33934D0CE0B /* Headers */,
+				0B75D8F76655FCFF6CADD744C8E7169C /* Sources */,
+				9875F395DE702A0B65B07B3056C83CB6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17656797B6D599AA0D46B5309EB12EEF /* PBXTargetDependency */,
+				6CD7D987420CCF27C203D718D50978CF /* PBXTargetDependency */,
+			);
 			name = "Pods-HelloCordova";
 			productName = "Pods-HelloCordova";
-			productReference = 9EC87CC0FD86A169EB0600755B9C7A7C /* libPods-HelloCordova.a */;
+			productReference = A2B8DE6894006565E2EEF5A8E7FFD003 /* libPods-HelloCordova.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F39E5E5EFB267488C8B9178927CD705B /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DFB26235407DAA3490F5EC2EA6C0F108 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42F35A0BD5A14D746F9CC85CFBF412F1 /* Pods-HelloCordova */,
+				EE1BD429524C325D5CD8C3F2E2B430F2 /* GrowingAnalytics */,
+				ECD9B9D1AAB13F4E546F90B77C1538D9 /* GrowingAnalytics-cdp */,
+				FCB7CD82493F638B2FB7EAD53127E9C5 /* Pods-HelloCordova */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB6CD2A5E99ABA31EA67E5DE2F9C3A1E /* Sources */ = {
+		0B75D8F76655FCFF6CADD744C8E7169C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDF9D024FB1BA3209E30EF8569DA9AC /* Pods-HelloCordova-dummy.m in Sources */,
+				7047FE6BABDE3988AAF9E85346AB2198 /* Pods-HelloCordova-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8748E05D2D0826601CAA94FAF5A82BDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C8903A471E1744D47C38C1018D71D8 /* GrowingAlert.m in Sources */,
+				2F4FCBB056C043FC1908D7CA8B12E46D /* GrowingAnalytics-dummy.m in Sources */,
+				545069BEE294CC6A9C23608F02C705CD /* GrowingAppCloseEvent.m in Sources */,
+				CBB9F1311E9BAA1CA105F1F5D695E0FC /* GrowingAppDelegateAutotracker.m in Sources */,
+				0317EBDF5B8DC5381DA00091D8A7D8BF /* GrowingApplicationEventManager.m in Sources */,
+				29BF8DE327618ADE70ED3C3E6CE032D2 /* GrowingAppLifecycle.m in Sources */,
+				BE05B9E55BAAFB888E5592D9DD82AB75 /* GrowingArgumentChecker.m in Sources */,
+				85425A35CBBAF84A6349D25FCF6524FE /* GrowingASLLogger.m in Sources */,
+				CB422BD8C8547AA981F20542EAE95C3A /* GrowingASLLoggerFormat.m in Sources */,
+				8CB5F0D2B77233A4F954353BC5E2854F /* GrowingAttributesConst.m in Sources */,
+				E9DE636C10644C160667C393B68F9833 /* GrowingBaseAttributesEvent.m in Sources */,
+				F8976524B688373BC3CD8950A9C1E52A /* GrowingBaseEvent+SendPolicy.m in Sources */,
+				AA5C6A3A75D91D19E487293666718CD1 /* GrowingBaseEvent.m in Sources */,
+				D2B6CDBE5E13A658806BA9513501D441 /* GrowingConfigurationManager.m in Sources */,
+				711F512C5290E718BCA49284A2D771F4 /* GrowingConversionVariableEvent.m in Sources */,
+				296AA6E2286B477079ACCA8D507D2FDF /* GrowingCustomEvent.m in Sources */,
+				6713346806DB0A49C625F6896D4652B3 /* GrowingDataTraffic.m in Sources */,
+				80663EBBEF9D0B4358717205258F74D0 /* GrowingDebuggerEventQueue.m in Sources */,
+				DCF7EA1726DEFF99AD231712A991F5A9 /* GrowingDeepLinkHandler.m in Sources */,
+				BDC38480F13779992F4F2E5207B2A57D /* GrowingDeviceInfo.m in Sources */,
+				84D9F495377337344AE8EE5CA94E5C6A /* GrowingDispatchManager.m in Sources */,
+				B4A8F95A30AF55CB0FCE0D6F79463511 /* GrowingDynamicProxy.m in Sources */,
+				044294D64BC6744F30D80AF2EE20EB94 /* GrowingEventChannel.m in Sources */,
+				185CA14C3BEC8DE638341B40EE00FCC0 /* GrowingEventDataBase.m in Sources */,
+				D66123E893F69C2EDE18BD64A6C2B51D /* GrowingEventGenerator.m in Sources */,
+				15D82E4870AB37813B16E2798BFCF35F /* GrowingEventManager.m in Sources */,
+				6B7424DD6A5F7F367AD2F87B24A60071 /* GrowingEventPersistence.m in Sources */,
+				AA6280EF390EC2B6E32CF83029EF578F /* GrowingEventRequest.m in Sources */,
+				BB0809FC3691BF82FC820093B656BF1F /* GrowingEventRequestAdapter.m in Sources */,
+				CBEECECDA5A58015CDEB202147924FBB /* GrowingFileStorage.m in Sources */,
+				DF25271DF0F0EBC68F21DDF3558A6328 /* GrowingFMDatabase.m in Sources */,
+				018C5C375F19D5ED8C19BE4820EF32CD /* GrowingFMDatabaseAdditions.m in Sources */,
+				C4B53BF3D110FD0943792AB8CEC7A48D /* GrowingFMDatabasePool.m in Sources */,
+				503026D388FC9121B43513D7A061B914 /* GrowingFMDatabaseQueue.m in Sources */,
+				005EA005ADB72E5B0758250B02F99F3C /* GrowingFMResultSet.m in Sources */,
+				FE34285687B7E07E7D865517A0D72F10 /* GrowingLog.m in Sources */,
+				7625B97887307F8ACAA8E97F7E3A704E /* GrowingLoggerNames.m in Sources */,
+				D97D3A57F65EC5AF17F0819D3B24C906 /* GrowingLoginRequest.m in Sources */,
+				1A7F4265A092DEA2FC6247917C346253 /* GrowingLoginUserAttributesEvent.m in Sources */,
+				0AEE598025BED216A94B882BD3C7E32D /* GrowingMobileDebugger.m in Sources */,
+				F9233EE3F9E640E18E462AECAB900967 /* GrowingNetworkConfig.m in Sources */,
+				CE17AB333F7EAECAE89FEDA94C763E42 /* GrowingNetworkInterfaceManager.m in Sources */,
+				00A4738DEF6A6D4EA1E8BD59CBC0B54D /* GrowingNetworkManager.m in Sources */,
+				73385EE43C2971A5B60500B1A5126637 /* GrowingPersistenceDataProvider.m in Sources */,
+				720F3C7C3B61EB6510441712EEA40849 /* GrowingReachability.m in Sources */,
+				5188D6EA31AA59C538048E19908C4192 /* GrowingRealTracker.m in Sources */,
+				51E9DE57BB2BF2ECAE425EE0B540B505 /* GrowingRequestAdapter.m in Sources */,
+				02F181F5E27E5D134FD8F3897944FA69 /* GrowingSceneDelegateAutotracker.m in Sources */,
+				E348892F1695943E871FA67F01C0D933 /* GrowingSession.m in Sources */,
+				838F0B9124A7A82947B1B8DE2164A660 /* GrowingSRWebSocket.m in Sources */,
+				B3A705CF6A86B98395272D01BB234013 /* GrowingStatusBar.m in Sources */,
+				6AC75C116A9D0E1F4B24EE27459D9316 /* GrowingStatusBarEventManager.m in Sources */,
+				27C1740A542E5CC0D1D8426F5034AD59 /* GrowingSwizzle.m in Sources */,
+				39151DEF0ED36F6258F1590EA9786B91 /* GrowingSwizzler.m in Sources */,
+				18BFBB3447C91B05D3C7769F82AD9C8E /* GrowingThread.m in Sources */,
+				067C67EB2AD51C9DA2F6D634B9BF4296 /* GrowingTimeUtil.m in Sources */,
+				75A6634D8179684685AA3AB63E14548B /* GrowingTrackConfiguration.m in Sources */,
+				20B7BC13C05FF14A9935E6751EE601F7 /* GrowingTrackEventType.m in Sources */,
+				BA6D4EAF5277714E9FAB4AC11AE38B42 /* GrowingTTYLogger.m in Sources */,
+				914716F96970DDADF1709F0AE185F31D /* GrowingUserDefaults.m in Sources */,
+				945494E2E3F845DB1FFF2D91517FB897 /* GrowingVisitEvent.m in Sources */,
+				6E918FBB11AA5F94C7DA6D70FD46AB40 /* GrowingVisitorAttributesEvent.m in Sources */,
+				F74D383492436AA93F4B851AACBABE9A /* GrowingWebWatcher.m in Sources */,
+				8E1C8F1BDA2FE0C25AF65309D2BD3CC3 /* GrowingWindow.m in Sources */,
+				9F2D08116825F4484BA4E8288D13C3A2 /* GrowingWSLogger.m in Sources */,
+				F8E402AF0150A95EC1EAB95F87CA7D76 /* GrowingWSLoggerFormat.m in Sources */,
+				7B54A16B7F484960F6FB7C80869CEFC1 /* NSArray+GrowingHelper.m in Sources */,
+				C5D2DAFD61CD58EFDEFC2B5DC67A8BE0 /* NSData+GrowingHelper.m in Sources */,
+				AE13E509D1CC64520EF2D9BD317E6CC9 /* NSDictionary+GrowingHelper.m in Sources */,
+				5525D2BFCB089DBC34DAE1376A29B695 /* NSObject+GrowingIvarHelper.m in Sources */,
+				BCCFE7D75FB7607BA04BA939D15DE303 /* NSString+GrowingHelper.m in Sources */,
+				2423C5BD8AA3EF953D345BE493A06810 /* NSURL+GrowingHelper.m in Sources */,
+				C586BBDE9849124A6189D0A931819952 /* NSURLSession+GrowingURLSessionHelper.m in Sources */,
+				316129392A51339548F3ABD4F68B3F04 /* NSURLSessionDataTask+GrowingURLSessionDataTaskHelper.m in Sources */,
+				8B8A1D043F648B110155156055DD55A7 /* UIApplication+GrowingHelper.m in Sources */,
+				8CFFCEC8A08616237EE596746E99680E /* UIApplication+GrowingNode.m in Sources */,
+				95E2077CC09A2C7E1A6CA1949DF893F6 /* UIControl+GrowingHelper.m in Sources */,
+				42D0E63C3E932F1072856B14B33BF608 /* UIImage+GrowingHelper.m in Sources */,
+				7C95A4A3246E4EE6606222A223D6CEEC /* UIView+GrowingHelper.m in Sources */,
+				059E5FD0CBC7E1E703236DC6426A0F0A /* UIWindow+GrowingHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7EAC255E31E65B38C34A5ACD36B264C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C214BEA06E79ED3B09803EE603B26233 /* GrowingAnalytics-cdp-dummy.m in Sources */,
+				EEA8A30408041909A72A641A30962B0D /* GrowingCdpEventInterceptor.m in Sources */,
+				93B2A4E62986624C2C4B6A786F1B7EFC /* GrowingResourceCustomEvent.m in Sources */,
+				0E0B1D58C046554B2515E9DD75503396 /* GrowingTrackConfiguration+CdpTracker.m in Sources */,
+				880CAC99F6B25B29982BB35605BA629E /* GrowingTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		26F954BA177A9A46FFFD4E23ED11D67A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
+/* Begin PBXTargetDependency section */
+		0E55560E688D5B30D53C58C7E98AB0A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GrowingAnalytics;
+			target = EE1BD429524C325D5CD8C3F2E2B430F2 /* GrowingAnalytics */;
+			targetProxy = 51C27BEAE6D894849B84EF6808B72C0F /* PBXContainerItemProxy */;
 		};
-		9EC1871CBA9A320EC79C6238DF0991EF /* Debug */ = {
+		17656797B6D599AA0D46B5309EB12EEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GrowingAnalytics;
+			target = EE1BD429524C325D5CD8C3F2E2B430F2 /* GrowingAnalytics */;
+			targetProxy = A5EB8F1A4369F67312E3A5F68E03EA25 /* PBXContainerItemProxy */;
+		};
+		6CD7D987420CCF27C203D718D50978CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GrowingAnalytics-cdp";
+			target = ECD9B9D1AAB13F4E546F90B77C1538D9 /* GrowingAnalytics-cdp */;
+			targetProxy = 8629C3DE5DC2360A87167943A9AE2506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B95BDF2DC3B08836FD31D7C123CCDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAE2DB139F304DDB046CEB9F49170628 /* Pods-HelloCordova.debug.xcconfig */;
+			baseConfigurationReference = 46CFF6B9EAF4E6A78912381381711646 /* GrowingAnalytics.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingAnalytics/GrowingAnalytics-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GrowingAnalytics;
+				PRODUCT_NAME = GrowingAnalytics;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DE7024DD03A474EE628A0A324B4244AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE4055063B44379921328530D4DAEFD7 /* Pods-HelloCordova.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */ = {
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -313,13 +1117,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -340,38 +1144,229 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
+		298A656C458C65760C86AFB8542EFBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2688D3D915BF41A5784934A888CFC783 /* Pods-HelloCordova.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A965C59740CF315BC171F7901E78FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA16DCA0F1A0C4981666B6DDF98DEACC /* GrowingAnalytics.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingAnalytics/GrowingAnalytics-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GrowingAnalytics;
+				PRODUCT_NAME = GrowingAnalytics;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		447C0EF026B5B0C963CDB49BFA368C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2E4661638A6BABA0270AB47EE6A0EA /* GrowingAnalytics-cdp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingAnalytics-cdp/GrowingAnalytics-cdp-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GrowingAnalytics_cdp;
+				PRODUCT_NAME = "GrowingAnalytics-cdp";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A683C8BA3FF899A08CF80D9DF870153E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5331DF47B9E6C24344BC54B5C28F6E4F /* GrowingAnalytics-cdp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingAnalytics-cdp/GrowingAnalytics-cdp-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GrowingAnalytics_cdp;
+				PRODUCT_NAME = "GrowingAnalytics-cdp";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D45F447EED074535A42211BC48233723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A8C23F7A1F0E98765C33FE95BB0227 /* Pods-HelloCordova.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		0B8C6511754BCB25F2DE7447A7D79866 /* Build configuration list for PBXNativeTarget "GrowingAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */,
-				26F954BA177A9A46FFFD4E23ED11D67A /* Release */,
+				1B95BDF2DC3B08836FD31D7C123CCDF2 /* Debug */,
+				2A965C59740CF315BC171F7901E78FC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3D8801DFF5DE895ED3A447B9F99DA84 /* Build configuration list for PBXNativeTarget "Pods-HelloCordova" */ = {
+		0F32018AF013C5B35F1FC02116C1B8EF /* Build configuration list for PBXNativeTarget "Pods-HelloCordova" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EC1871CBA9A320EC79C6238DF0991EF /* Debug */,
-				DE7024DD03A474EE628A0A324B4244AA /* Release */,
+				298A656C458C65760C86AFB8542EFBEE /* Debug */,
+				D45F447EED074535A42211BC48233723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C75D95015869E2F4901615EBC9727E6B /* Build configuration list for PBXNativeTarget "GrowingAnalytics-cdp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A683C8BA3FF899A08CF80D9DF870153E /* Debug */,
+				447C0EF026B5B0C963CDB49BFA368C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

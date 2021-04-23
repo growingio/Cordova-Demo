@@ -1,15 +1,22 @@
 PODS:
-  - Growing (2.6.4)
-  - GrowingCoreKit (2.6.4):
-    - Growing (~> 2.6.4)
+  - GrowingAnalytics-cdp/Tracker (3.1.0):
+    - GrowingAnalytics-cdp/TrackerCore (= 3.1.0)
+  - GrowingAnalytics-cdp/TrackerCore (3.1.0):
+    - GrowingAnalytics/TrackerCore (= 3.1.0)
+  - GrowingAnalytics/TrackerCore (3.1.0)
 
 DEPENDENCIES:
-  - GrowingCoreKit
+  - GrowingAnalytics-cdp/Tracker
+
+SPEC REPOS:
+  trunk:
+    - GrowingAnalytics
+    - GrowingAnalytics-cdp
 
 SPEC CHECKSUMS:
-  Growing: b7367780b8bc61476de1f52fe2b04887a203e7cd
-  GrowingCoreKit: 904fd258f462b52b6b7b37a29051ad3eb5aa2fcc
+  GrowingAnalytics: d4bf0926fe0c203307b791a5ed4d2155f2fff128
+  GrowingAnalytics-cdp: a8ead40e31ecb653cfff33f7ac846723703f1ba0
 
-PODFILE CHECKSUM: cd73238d84429ad97666cd071e223a2a63688c01
+PODFILE CHECKSUM: 51c0b7035a8d4e78b42f05d3e405c470f4758955
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.10.1

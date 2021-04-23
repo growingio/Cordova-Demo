@@ -27,33 +27,50 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "Growing.h"
+#import "GrowingIOCordovaPlugin.h"
+#import "GrowingTrackConfiguration.h"
+#import "GrowingTracker.h"
+
+//static NSString *const kGrowingProjectId = @"0a1b4118dd954ec3bcc69da5138bdb96";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    //启动GrowingIO，替换为您的ID
-     [Growing startWithAccountId:@"您的项目ID"];
+    
+    // Config GrowingIO
+    // 参数需要从GrowingIO网站上，创建新应用，或从已知应用中获取
+    // YourProjectId eg:0a1b4118dd954ec3bcc69da5138bdb96
+    // YourServerHost eg:http://106.75.81.105:8080
+    // YourDatasourceId eg: 11223344aabbcc
+    GrowingTrackConfiguration *configuration = [GrowingTrackConfiguration configurationWithProjectId:@"91eaf9b283361032"];
+    configuration.dataCollectionServerHost = @"http://106.75.54.179";
+    configuration.dataSourceId = @"a6e379f4c6f56659";
+    configuration.debugEnabled = YES;
+    [GrowingTracker startWithConfiguration:configuration launchOptions:launchOptions];
+    
     // 其他配置
     // 开启Growing调试日志可以开启日志
-    // [Growing setEnableLog:YES];
+ //   [GrowingTracker setEnableLog:YES];
     
     self.viewController = [[MainViewController alloc] init];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    
-    
-    if ([Growing handleUrl:url]) // 请务必确保该函数被调用
-    {
-        return YES;
-    }
+// url scheme跳转
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+
     return NO;
-    
-    
+}
+
+// universal Link执行
+- (BOOL) application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+  restorationHandler:(void (^)(NSArray<id <UIUserActivityRestoring>> *_Nullable))restorationHandler {
+    return YES;
 }
 
 @end

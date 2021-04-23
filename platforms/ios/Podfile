@@ -7,7 +7,7 @@ target 'HelloCordova' do
 
   # Pods for HelloCordova
   
-pod 'GrowingCoreKit'
+  pod 'GrowingAnalytics-cdp/Tracker'
 
 end
 

@@ -7,7 +7,7 @@
 //
 
 #import "GrowingIOCordovaPlugin.h"
-#import "Growing.h"
+#import "GrowingTracker.h"
 
 @implementation GrowingIOCordovaPlugin
 
@@ -19,22 +19,86 @@ NS_INLINE NSString *GROWGetTimestamp() {
     return GROWGetTimestampFromTimeInterval([[NSDate date] timeIntervalSince1970]);
 }
 
-- (void)setUserId:(CDVInvokedUrlCommand*)command
+//- (void)trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> *)attributes;
+
+- (void)trackCustomEvent:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult * pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setUserId success"];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"trackCustomEvent success"];
+    
+    NSArray *arguments = command.arguments;
+    if (arguments.count == 4) {
+        id eventName = arguments[0];
+        id attributes = arguments[1];
+        id itemKey = arguments[2];
+        id itemId = arguments[3];
+        
+        if ([eventName isKindOfClass:[NSString class]]) {
+            
+            if ([itemKey isKindOfClass:[NSString class]] && [itemId isKindOfClass:[NSString class]]
+                    && [attributes isKindOfClass:[NSDictionary class]]) {
+                
+                [[GrowingTracker sharedInstance]  trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId withAttributes:(NSDictionary <NSString *, NSString *> *)attributes];
+            }
+            else if([itemKey isKindOfClass:[NSString class]] && [itemId isKindOfClass:[NSString class]]){
+
+                [[GrowingTracker sharedInstance]  trackCustomEvent:(NSString *)eventName itemKey:(NSString *)itemKey itemId:(NSString *)itemId];
+
+            }
+            else if([attributes isKindOfClass:[NSDictionary class]]){
+                [[GrowingTracker sharedInstance]  trackCustomEvent:(NSString *)eventName withAttributes:(NSDictionary <NSString *, NSString *> *)attributes];
+            
+            }
+            else{
+                [[GrowingTracker sharedInstance] trackCustomEvent:eventName];
+            }
+            
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument userId must be string type"];
+        }
+
+    } else {
+        //arguments count 一定是4,除非修改了js
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
+    }
+    
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)setLoginUserAttributes:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult * pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setLoginUserAttributes success"];
+    
+    NSArray *arguments = command.arguments;
+    if (arguments.count == 1) {
+        id attributes = arguments[0];
+        if ([attributes isKindOfClass:[NSDictionary class]]) {
+            [[GrowingTracker sharedInstance] setLoginUserAttributes:attributes];
+
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument userId must be NSDictionary type"];
+        }
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The arguments count must be 1"];
+    }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)setLoginUserId:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult * pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setLoginUserId success"];
     
     NSArray *arguments = command.arguments;
     if (arguments.count == 1) {
         id userId = arguments[0];
         if ([userId isKindOfClass:[NSString class]]) {
-            [self dispatchInMainThread:^{
-                [Growing setUserId:userId];
-            }];
+            [[GrowingTracker sharedInstance] setLoginUserId:userId];
+
         } else if ([userId isKindOfClass:[NSNumber class]]) {
-            [self dispatchInMainThread:^{
-                [Growing setUserId:((NSNumber *)userId).stringValue];
-            }];
+            [[GrowingTracker sharedInstance] setLoginUserId:((NSNumber *)userId).stringValue];
+
         } else {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument userId must be string or number type"];
         }
@@ -44,130 +108,83 @@ NS_INLINE NSString *GROWGetTimestamp() {
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)clearUserId:(CDVInvokedUrlCommand*)command
+ 
+- (void)cleanLoginUserId:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult * pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"clearUserId success"];
-    [self dispatchInMainThread: ^{
-        [Growing clearUserId];
-    }];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"cleanLoginUserId success"];
+    [[GrowingTracker sharedInstance] cleanLoginUserId];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
-
-- (void)track:(CDVInvokedUrlCommand*)command
+ 
+- (void)setLocation:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult * pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"track success"];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setLocation success"];
     
-    NSArray *arguments = command.arguments;
-    if (arguments.count == 3) {
-        NSString *eventId = arguments[0];
-        id argument1 = arguments[1];
-        id argument2 = arguments[2];
-        if ([argument1 isKindOfClass:[NSNumber class]]) {
-            if ([argument2 isKindOfClass:[NSDictionary class]]) {
-                [self dispatchInMainThread:^{
-                    [Growing track:eventId withNumber:argument1 andVariable:argument2];
-                }];
-            } else {
-                [self dispatchInMainThread:^{
-                    [Growing track:eventId withNumber:argument1];
-                }];
-            }
-            
-        } else if ([argument1 isKindOfClass:[NSDictionary class]]) {
-            [self dispatchInMainThread:^{
-                [Growing track:eventId withVariable:argument1];
-            }];
-        } else {
-            [Growing track:eventId];
-        }
-    } else {
-        //arguments count 一定是3,除非修改了js
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
-- (void)page:(CDVInvokedUrlCommand*)command
-{
-    CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"page success"];
-    NSArray *arguments = command.arguments;
-    if (arguments.count == 1) {
-        NSString *pageName = arguments[0];
-        [self dispatchInMainThread:^{
-//            [Growing trackPageWithPageName:pageName pageTime:GROWGetTimestamp()];
-        }];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
-
-
-- (void)setEvar:(CDVInvokedUrlCommand*)command
-{
-    [self performPluginSelName:@"setEvar" command:command];
-}
-
-- (void)setPeopleVariable:(CDVInvokedUrlCommand*)command
-{
-    [self performPluginSelName:@"setPeopleVariable" command:command];
-}
-
-- (void)setPageVariable:(CDVInvokedUrlCommand*)command
-{
-    CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setPageVariable success"];
     NSArray *arguments = command.arguments;
     if (arguments.count == 2) {
-        NSString *pageName = arguments[0];
-        NSDictionary *pageLevelVariables = arguments[1];
-        [self dispatchInMainThread:^{
-//            [Growing setPageVariable:pageLevelVariables toPage:pageName];
-        }];
+        id _latitude = arguments[0];
+        id _longitude = arguments[1];
+        
+        if ([_latitude isKindOfClass:[NSNumber class]] && [_longitude isKindOfClass:[NSNumber class]]) {
+
+            [[GrowingTracker sharedInstance] setLocation:[_latitude doubleValue] longitude:[_longitude doubleValue]];
+
+        }
+        else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument location must be double type"];
+        }
     } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The arguments count must be 2"];
     }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+ 
+- (void)cleanLocation:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult * pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"cleanLocation success"];
+
+    [[GrowingTracker sharedInstance] cleanLocation];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)performPluginSelName:(NSString *)selName command:(CDVInvokedUrlCommand *)command
+- (void)setDataCollectionEnabled:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult * pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[NSString stringWithFormat:@"%@ success", selName]];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"setDataCollectionEnabled success"];
     
     NSArray *arguments = command.arguments;
     if (arguments.count == 1) {
-        id variables = arguments[0];
-        if ([variables isKindOfClass:[NSDictionary class]]) {
-            [self dispatchInMainThread: ^{
-                if ([selName isEqualToString:@"setEvar"]) {
-                    [Growing setEvar:variables];
-                } else if ([selName isEqualToString:@"setPeopleVariable"]) {
-                    [Growing setPeopleVariable:variables];
-                }
-            }];
-        } else {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The Variables must be object type"];
+        id enabled = arguments[0];
+        
+        if ([enabled isKindOfClass:[NSNumber class]]) {
+            [[GrowingTracker sharedInstance] setDataCollectionEnabled:(BOOL)enabled];
+        }
+        else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The argument location must be bool type"];
         }
     } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"JS error"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Argument error, The arguments count must be 1"];
     }
+    
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)dispatchInMainThread:(void (^)(void))block
+- (NSString *)getDeviceId:(CDVInvokedUrlCommand*)command
 {
-    if ([NSThread isMainThread]) {
-        block();
-    } else {
-        dispatch_async(dispatch_get_main_queue(), block);
-    }
+    CDVPluginResult * pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"getDeviceId success"];
+    
+    NSString* deviceId = [[GrowingTracker sharedInstance] getDeviceId];
+    
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    
+    return deviceId;
 }
 
 @end
