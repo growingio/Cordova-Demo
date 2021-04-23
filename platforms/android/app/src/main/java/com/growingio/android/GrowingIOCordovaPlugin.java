@@ -119,13 +119,6 @@ public class GrowingIOCordovaPlugin extends CordovaPlugin {
                     return true;
                 }
                 return false;
-//            case ONACTIVITYNEWINTENT:
-//                if(onActivityNewIntent(args, callbackContext)){
-//                    callbackContext.success("Success on activity new intent");
-//                    return true;
-//                }
-            // TODO: 2021/4/15
-//                return false;
 
         }
         return false;
